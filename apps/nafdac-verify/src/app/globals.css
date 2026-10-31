@@ -7,9 +7,38 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-public-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-heading: var(--font-public-sans), system-ui, sans-serif;
+
+  --color-canvas: var(--canvas);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-forest-tint: var(--forest-tint);
+  --color-coral: var(--coral);
+  --color-coral-tint: var(--coral-tint);
+  --color-amber: var(--amber);
+  --color-amber-tint: var(--amber-tint);
+  --color-slate: var(--slate);
+  --color-slate-tint: var(--slate-tint);
+  --color-scan: var(--scan);
+  --color-verified: var(--verified);
+  --color-verified-tint: var(--verified-tint);
+
+  --radius-card: 18px;
+  --radius-hero: 26px;
+  --radius-pill: 999px;
+  --radius-field: 12px;
+
+  --shadow-card: 0 1px 2px rgba(14, 26, 43, 0.06), 0 8px 20px -14px rgba(14, 26, 43, 0.22);
+  --shadow-float: 0 1px 2px rgba(14, 26, 43, 0.08), 0 16px 34px -14px rgba(14, 26, 43, 0.3);
+  --shadow-hero: 0 2px 4px rgba(14, 26, 43, 0.1), 0 22px 40px -18px rgba(10, 20, 36, 0.65);
+  --shadow-cta: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 12px 24px -10px rgba(10, 20, 36, 0.6);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,30 +78,49 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --canvas: #f3f5f7;
+  --ink: #0e1a2b;
+  --ink-muted: #46556b;
+  --ink-faint: #5d6c82;
+  --line: #e1e6ec;
+  --surface-sunken: #eaeef2;
+  --forest: #0e1a2b;
+  --forest-deep: #0a1424;
+  --forest-tint: #e3e9f0;
+  --coral: #b02a18;
+  --coral-tint: #fbe7e3;
+  --amber: #8a5a12;
+  --amber-tint: #faeeda;
+  --slate: #3f5068;
+  --slate-tint: #e4e9f1;
+  --scan: #f5cf3f;
+  --verified: #0b7a42;
+  --verified-tint: #e0f3e8;
+
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--ink);
+  --primary: var(--forest);
+  --primary-foreground: #ffffff;
+  --secondary: var(--forest-tint);
+  --secondary-foreground: var(--forest);
+  --muted: var(--surface-sunken);
+  --muted-foreground: var(--ink-muted);
+  --accent: var(--forest-tint);
+  --accent-foreground: var(--forest);
+  --destructive: var(--coral);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--forest);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -117,6 +165,11 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* One stroke weight across every icon keeps the set consistent. */
+svg.lucide[stroke-width="2"] {
+  stroke-width: 1.75;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -126,5 +179,193 @@
   }
   html {
     @apply font-sans;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+}
+
+.bg-app {
+  background: linear-gradient(180deg, #f6f8fa 0%, #eef1f5 100%);
+}
+
+.bg-hero {
+  background: linear-gradient(150deg, #1a2f52 0%, #0a1424 100%);
+}
+
+/* Centre scan action: solid ink with a soft top highlight. */
+.glossy-scan {
+  background: linear-gradient(180deg, #1d3256 0%, #0e1a2b 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 0 0 6px var(--canvas),
+    0 12px 22px -8px rgba(10, 20, 36, 0.6);
+}
+
+.scan-sweep {
+  animation: scan-sweep 2.4s ease-in-out infinite alternate;
+}
+.scan-ring {
+  stroke-dasharray: 263.9;
+  animation: scan-ring var(--auto-ms, 2800ms) linear forwards;
+}
+
+@keyframes scan-sweep {
+  from {
+    top: 8%;
+  }
+  to {
+    top: 92%;
+  }
+}
+@keyframes scan-ring {
+  from {
+    stroke-dashoffset: 263.9;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-sweep {
+    animation: none;
+    top: 50%;
+  }
+}
+
+/* Mobile-first motion: tap feedback, glass tab highlight, and directional route transitions. All off for reduced-motion users. */
+a,
+button,
+summary,
+label[for] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.glass-pill {
+  translate: calc(var(--slot) * 100%) 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(222, 229, 238, 0.75));
+  backdrop-filter: blur(10px) saturate(1.8);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+    inset 0 -2px 6px rgba(14, 26, 43, 0.1),
+    0 8px 18px -8px rgba(14, 26, 43, 0.28);
+  transition: opacity 200ms ease;
+}
+.glass-pill[data-visible="false"] {
+  opacity: 0;
+}
+/* Specular sheen across the top of the glass. */
+.glass-pill::after {
+  content: "";
+  position: absolute;
+  inset: 2px 8px auto;
+  height: 40%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a,
+  button,
+  summary,
+  label[for] {
+    transition: scale 140ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  a:active,
+  button:active:not(:disabled),
+  summary:active,
+  label[for]:active {
+    scale: 0.94;
+  }
+
+  /* Spring overshoot makes the glass feel like it settles into the new tab. */
+  .glass-pill {
+    transition:
+      translate 560ms cubic-bezier(0.34, 1.45, 0.5, 1),
+      opacity 200ms ease;
+    animation: none;
+  }
+
+  .tab-content {
+    animation: tab-fade 220ms ease-out;
+  }
+
+  .tab-pop {
+    animation: tab-pop 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Root stays still; only named pages move, so there is no whole-screen crossfade to flicker. */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+  ::view-transition-old(.nav-forward) {
+    --slide-offset: -44px;
+    animation:
+      200ms ease-out both fade reverse,
+      420ms cubic-bezier(0.65, 0, 0.35, 1) both slide reverse;
+  }
+  ::view-transition-new(.nav-forward) {
+    --slide-offset: 44px;
+    animation:
+      200ms ease-out both fade,
+      480ms cubic-bezier(0.22, 1, 0.36, 1) both slide;
+  }
+  ::view-transition-old(.nav-back) {
+    --slide-offset: 44px;
+    animation:
+      200ms ease-out both fade reverse,
+      420ms cubic-bezier(0.65, 0, 0.35, 1) both slide reverse;
+  }
+  ::view-transition-new(.nav-back) {
+    --slide-offset: -44px;
+    animation:
+      200ms ease-out both fade,
+      480ms cubic-bezier(0.22, 1, 0.36, 1) both slide;
+  }
+
+}
+
+@keyframes tab-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    filter: blur(4px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    translate: var(--slide-offset) 0;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes tab-pop {
+  0% {
+    scale: 0.65;
+  }
+  100% {
+    scale: 1;
   }
 }

@@ -1,7 +1,7 @@
 // Deterministic comparison of scanned packaging fields against a reference record.
 // The training generator uses this to label examples, so labels always follow these rules.
 
-import type { ProductRecord } from "./schema.ts";
+import type { ProductRecord } from "./schema";
 
 export const UNREADABLE = "[unreadable]";
 
@@ -33,14 +33,14 @@ export interface Verdict {
   warnings: Warning[];
 }
 
-const COMPARED_FIELDS = {
+export const COMPARED_FIELDS = {
   registrationNumber: "Registration number",
   productName: "Product name",
   manufacturer: "Manufacturer",
   activeIngredients: "Active ingredients",
   strength: "Strength",
 } as const;
-type ComparedField = keyof typeof COMPARED_FIELDS;
+export type ComparedField = keyof typeof COMPARED_FIELDS;
 
 // Statuses treated as currently registered. Anything else non-empty raises a warning.
 const ACTIVE_STATUSES = new Set(["active", "approved", "registered", "valid", "current"]);
@@ -57,14 +57,14 @@ export function normalizeIngredients(value: string): string {
   return value.split(/[;,+]/).map(normalizeText).filter(Boolean).sort().join("|");
 }
 
-function referenceValue(record: ProductRecord, field: ComparedField): string | null {
+export function referenceValue(record: ProductRecord, field: ComparedField): string | null {
   if (field === "activeIngredients") {
     return record.activeIngredients.length > 0 ? record.activeIngredients.join("; ") : null;
   }
   return record[field];
 }
 
-function fieldsEqual(field: ComparedField, a: string, b: string): boolean {
+export function fieldsEqual(field: ComparedField, a: string, b: string): boolean {
   if (field === "registrationNumber") {
     return normalizeRegistrationNumber(a) === normalizeRegistrationNumber(b);
   }

@@ -13,10 +13,11 @@
     "data:training": "bun scripts/adaption/generate-training.ts",
     "data:build": "bun run data:normalize && bun run data:training",
     "data:demo": "bun scripts/data/normalize.ts --input data/demo/demo-products.csv --output data/demo/demo-products.json --fixture",
-    "test": "bun test scripts"
+    "test": "bun test scripts packages apps"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@hacktober/verify-core": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "^7"

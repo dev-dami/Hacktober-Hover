@@ -1,10 +1,17 @@
 import { describe, expect, test } from "bun:test";
 import { resolve } from "node:path";
 import { generate } from "../adaption/generate-training.ts";
-import { compareLabel, formatCompletion, isExpired, UNREADABLE, type ScannedLabel } from "./compare.ts";
+import {
+  CSV_COLUMNS,
+  compareLabel,
+  formatCompletion,
+  isExpired,
+  UNREADABLE,
+  type ProductRecord,
+  type ScannedLabel,
+} from "@hacktober/verify-core";
 import { parseCsv } from "./csv.ts";
 import { loadProductsCsv } from "./products.ts";
-import { CSV_COLUMNS, type ProductRecord } from "./schema.ts";
 
 const HEADER = CSV_COLUMNS.join(",");
 const REAL_ROW =
