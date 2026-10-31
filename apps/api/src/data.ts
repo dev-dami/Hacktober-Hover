@@ -2,9 +2,8 @@
 
 import { resolve } from "node:path";
 import type { Alert } from "../../../scripts/nafdac-alerts/reader.ts";
-import type { ProductRecord } from "../../../scripts/data/schema.ts";
-import { normalizeRegistrationNumber } from "../../../scripts/data/compare.ts";
-import { normalizeBatch, tokens } from "./fields.ts";
+import type { ProductRecord } from "@hacktober/verify-core";
+import { normalizeBatch, regKey, tokens } from "./fields.ts";
 
 export type { Alert, ProductRecord };
 
@@ -35,7 +34,7 @@ export function indexAlert(alert: Alert): IndexedAlert {
     alert,
     batches: new Set(alert.batchNumbers.map(normalizeBatch).filter((b) => b.length >= 3)),
     registrationNumbers: new Map(
-      alert.registrationNumbers.map((r) => [r.number, { flaggedFake: r.flaggedFake, context: r.context }]),
+      alert.registrationNumbers.map((r) => [regKey(r.number), { flaggedFake: r.flaggedFake, context: r.context }]),
     ),
     nameTokens: new Set([...alert.productNames.flatMap((n) => tokens(n)), ...tokens(alert.title)]),
     manufacturerTokens: new Set(alert.manufacturers.flatMap((m) => tokens(m))),
@@ -50,7 +49,7 @@ export function buildDatasets(alerts: Alert[], products: ProductRecord[]): Datas
   const indexed = alerts.map(indexAlert);
   const registry = new Map<string, ProductRecord[]>();
   for (const product of products) {
-    const key = normalizeRegistrationNumber(product.registrationNumber);
+    const key = regKey(product.registrationNumber);
     registry.set(key, [...(registry.get(key) ?? []), product]);
   }
   return {

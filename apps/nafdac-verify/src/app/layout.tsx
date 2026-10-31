@@ -1,32 +1,25 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { SiteFooter, SiteHeader } from "@/components/site-header";
+import type { Metadata, Viewport } from "next";
+import { IBM_Plex_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const jakarta = Plus_Jakarta_Sans({ variable: "--font-jakarta", subsets: ["latin"] });
+const plexMono = IBM_Plex_Mono({ variable: "--font-plex-mono", subsets: ["latin"], weight: ["500", "600"] });
 
 export const metadata: Metadata = {
-  title: "SafeMeds NG",
-  description:
-    "Scan a medicine, check it against official NAFDAC safety alerts, and report suspicious products.",
+  title: { default: "Medfify", template: "%s · Medfify" },
+  description: "Scan a medicine, check it against NAFDAC records and safety alerts, and report suspicious products.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#f6f7fb",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-background">
-        <SiteHeader />
-        <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6">{children}</main>
-        <SiteFooter />
-      </body>
+    <html lang="en" className={`${jakarta.variable} ${plexMono.variable} h-full antialiased`}>
+      <body className="min-h-dvh bg-[#e9ecf4]">{children}</body>
     </html>
   );
 }

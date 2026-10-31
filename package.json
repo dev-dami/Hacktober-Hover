@@ -17,10 +17,12 @@
     "data:training": "bun scripts/adaption/generate-training.ts",
     "data:build": "bun run data:normalize && bun run data:training",
     "data:demo": "bun scripts/data/normalize.ts --input data/demo/demo-products.csv --output data/demo/demo-products.json --fixture",
-    "test": "bun test scripts && bun run --filter safemeds-api test"
+    "test": "bun test scripts packages apps/nafdac-verify && bun run --filter safemeds-api test",
+    "eval:reader": "bun run --filter safemeds-api eval"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@hacktober/verify-core": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "^7"

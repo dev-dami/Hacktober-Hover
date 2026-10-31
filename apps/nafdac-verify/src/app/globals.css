@@ -2,129 +2,231 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* Medfify has no dark theme yet: dark: classes in components/ui apply only under an explicit .dark class. */
 @custom-variant dark (&:is(.dark *));
 
+/*
+ * Medfify design tokens.
+ * Brand: off-white, blue and pink. Off-white is the canvas, blue carries actions, pink is the accent.
+ * Green, amber and red are status colours only (safe, check, danger), never decoration.
+ * One radius scale (field 10px, card 12px, sheet 16px). No gradients.
+ */
+
 @theme inline {
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-heading: var(--font-jakarta), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+
+  --color-blue: var(--blue);
+  --color-blue-strong: var(--blue-strong);
+  --color-blue-tint: var(--blue-tint);
+  --color-pink: var(--pink);
+  --color-pink-strong: var(--pink-strong);
+  --color-pink-tint: var(--pink-tint);
+
+  --color-safe: var(--safe);
+  --color-safe-tint: var(--safe-tint);
+  --color-caution: var(--caution);
+  --color-caution-tint: var(--caution-tint);
+  --color-danger: var(--danger);
+  --color-danger-tint: var(--danger-tint);
+
+  --radius-field: 10px;
+  --radius-card: 12px;
+  --radius-sheet: 16px;
+
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.04), 0 1px 3px rgb(16 24 40 / 0.06);
+  --shadow-raised: 0 2px 4px rgb(16 24 40 / 0.04), 0 12px 24px -8px rgb(16 24 40 / 0.14);
+  --shadow-action: 0 1px 2px rgb(16 24 40 / 0.1), 0 4px 12px -4px rgb(47 91 234 / 0.35);
+
+  /* shadcn primitives (components/ui) read these. */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--blue);
+  --color-chart-2: var(--pink);
+  --color-chart-3: var(--safe);
+  --color-chart-4: var(--caution);
+  --color-chart-5: var(--danger);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 14px;
+  --radius-3xl: 16px;
+  --radius-4xl: 18px;
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+  --canvas: #faf8f4;
+  --surface: #ffffff;
+  --sunken: #f3f0ea;
+  --line: #e9e4dc;
+  --ink: #161821;
+  --ink-muted: #5c5f6b;
+  --ink-faint: #7d808c;
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --blue: #2f5bea;
+  --blue-strong: #2446c2;
+  --blue-tint: #ebf0fe;
+  --pink: #e04f8a;
+  --pink-strong: #c23a73;
+  --pink-tint: #fdebf2;
+
+  --safe: #1e7a4c;
+  --safe-tint: #e6f3eb;
+  --caution: #925a0d;
+  --caution-tint: #fbf0dd;
+  --danger: #bf3a2f;
+  --danger-tint: #fbeae8;
+
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--blue);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sunken);
+  --secondary-foreground: var(--ink);
+  --muted: var(--sunken);
+  --muted-foreground: var(--ink-muted);
+  --accent: var(--blue-tint);
+  --accent-foreground: var(--blue-strong);
+  --destructive: var(--danger);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--blue);
+  --radius: 10px;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply font-sans;
+  }
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-sans;
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    text-wrap: balance;
+  }
+  /* One stroke weight keeps every icon in the set consistent. */
+  svg.lucide[stroke-width="2"] {
+    stroke-width: 1.75;
+  }
+}
+
+/* Tap feedback and route motion; all of it is off for reduced-motion users. */
+a,
+button,
+summary,
+label[for] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:active,
+  button:active:not(:disabled),
+  summary:active,
+  label[for]:active {
+    scale: 0.97;
+  }
+  a,
+  button,
+  summary,
+  label[for] {
+    transition: scale 140ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .tab-content {
+    animation: tab-fade 200ms ease-out;
+  }
+
+  /* The root stays still; only named pages slide, so there is no whole-screen crossfade. */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+  ::view-transition-old(.nav-forward) {
+    --slide-offset: -32px;
+    animation:
+      180ms ease-out both fade reverse,
+      380ms cubic-bezier(0.65, 0, 0.35, 1) both slide reverse;
+  }
+  ::view-transition-new(.nav-forward) {
+    --slide-offset: 32px;
+    animation:
+      180ms ease-out both fade,
+      420ms cubic-bezier(0.22, 1, 0.36, 1) both slide;
+  }
+  ::view-transition-old(.nav-back) {
+    --slide-offset: 32px;
+    animation:
+      180ms ease-out both fade reverse,
+      380ms cubic-bezier(0.65, 0, 0.35, 1) both slide reverse;
+  }
+  ::view-transition-new(.nav-back) {
+    --slide-offset: -32px;
+    animation:
+      180ms ease-out both fade,
+      420ms cubic-bezier(0.22, 1, 0.36, 1) both slide;
+  }
+}
+
+@keyframes tab-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    translate: var(--slide-offset) 0;
+  }
+  to {
+    translate: 0 0;
   }
 }

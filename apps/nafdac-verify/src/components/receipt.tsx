@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { CheckCircle2, Copy, Download, Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { api, ApiError, formatDate } from "@/lib/api";
+import { Notice, Page, Pill, Section, SECONDARY_ACTION, Surface, type Tone } from "@/components/app/ui";
+import { api, ApiError } from "@/lib/api";
+import { formatDate } from "@/lib/format";
 import { useClientValue, useSearchParam } from "@/lib/use-client-value";
 
 interface MyReport {
@@ -14,11 +15,11 @@ interface MyReport {
   evidence: { markdown: string };
 }
 
-const STATUS: Record<string, string> = {
-  submitted: "Received, waiting for review",
-  in_review: "Being reviewed",
-  forwarded_to_nafdac: "Forwarded to NAFDAC",
-  dismissed: "Closed after review",
+const STATUS: Record<string, { label: string; tone: Tone }> = {
+  submitted: { label: "Waiting for review", tone: "info" },
+  in_review: { label: "Being reviewed", tone: "accent" },
+  forwarded_to_nafdac: { label: "Forwarded to NAFDAC", tone: "safe" },
+  dismissed: { label: "Closed after review", tone: "neutral" },
 };
 
 export function Receipt() {
@@ -37,56 +38,72 @@ export function Receipt() {
 
   // "" during the server render, "1" in the browser: avoids flashing the error before the URL is read.
   const hydrated = useClientValue(() => "1");
-  if (hydrated && (!id || !token)) return <p className="text-destructive">This receipt link is incomplete.</p>;
-  if (error) return <p className="text-destructive">{error}</p>;
-  if (!report) return <Loader2 className="animate-spin" />;
+  const failure = hydrated && (!id || !token) ? "This receipt link is incomplete." : error;
+
+  if (failure || !report) {
+    return (
+      <Page>
+        {failure ? <Notice tone="danger">{failure}</Notice> : <Loader2 className="size-6 animate-spin self-center text-ink-faint" aria-label="Loading" />}
+      </Page>
+    );
+  }
 
   function download() {
     const blob = new Blob([report!.evidence.markdown], { type: "text/markdown" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = `safemeds-report-${report!.id.slice(0, 8)}.md`;
+    link.download = `medfify-report-${report!.id.slice(0, 8)}.md`;
     link.click();
     URL.revokeObjectURL(link.href);
   }
 
+  const status = STATUS[report.status] ?? { label: report.status, tone: "neutral" as Tone };
+
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-900">
-        <CheckCircle2 className="mt-0.5 size-5 shrink-0" aria-hidden />
-        <div>
-          <p className="font-medium">Report received</p>
-          <p className="text-sm">
-            Bookmark this page to check its status. Anyone with this link can view the report, so share it carefully.
-          </p>
-        </div>
+    <Page>
+      <div className="flex flex-col items-center gap-3 pt-4 text-center">
+        <span className="flex size-16 items-center justify-center rounded-full bg-safe-tint text-safe">
+          <CheckCircle2 className="size-8" aria-hidden />
+        </span>
+        <h1 className="text-2xl font-semibold tracking-tight">Report received</h1>
+        <p className="text-sm leading-relaxed text-ink-muted">
+          Bookmark this page to follow its status. Anyone with the link can see the report, so share it with care.
+        </p>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Status: {STATUS[report.status] ?? report.status}</CardTitle>
-          <CardDescription>Submitted {formatDate(report.createdAt)}</CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-3">
-          <p className="text-sm text-muted-foreground">
-            This evidence pack is ready to send to NAFDAC through its Med Safety app or nafdac.gov.ng.
-          </p>
-          <pre className="max-h-96 overflow-auto rounded-lg bg-muted p-3 text-xs whitespace-pre-wrap">{report.evidence.markdown}</pre>
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              onClick={async () => {
-                await navigator.clipboard.writeText(report.evidence.markdown);
-                setCopied(true);
-              }}
-            >
-              <Copy /> {copied ? "Copied" : "Copy"}
-            </Button>
-            <Button variant="outline" onClick={download}>
-              <Download /> Download
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+
+      <Surface className="flex items-center justify-between gap-3 p-4">
+        <div className="flex flex-col gap-0.5">
+          <span className="text-xs text-ink-muted">Status</span>
+          <span className="text-sm font-semibold">Sent {formatDate(report.createdAt)}</span>
+        </div>
+        <Pill tone={status.tone}>{status.label}</Pill>
+      </Surface>
+
+      <Section title="Evidence pack">
+        <p className="text-sm text-ink-muted">Ready to send to NAFDAC through its Med Safety app or nafdac.gov.ng.</p>
+        <pre className="max-h-80 overflow-auto rounded-card border border-line bg-surface p-4 font-mono text-xs leading-relaxed whitespace-pre-wrap">
+          {report.evidence.markdown}
+        </pre>
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            type="button"
+            className={SECONDARY_ACTION}
+            onClick={async () => {
+              await navigator.clipboard.writeText(report.evidence.markdown);
+              setCopied(true);
+            }}
+          >
+            <Copy aria-hidden /> {copied ? "Copied" : "Copy"}
+          </button>
+          <button type="button" className={SECONDARY_ACTION} onClick={download}>
+            <Download aria-hidden /> Download
+          </button>
+        </div>
+      </Section>
+
+      <Link href="/" className="text-center text-sm font-semibold text-blue">
+        Back to home
+      </Link>
+    </Page>
   );
 }

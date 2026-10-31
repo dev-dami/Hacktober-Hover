@@ -71,7 +71,76 @@ CREATE TABLE IF NOT EXISTS reports (
   photos_json TEXT NOT NULL DEFAULT '[]'
 );
 CREATE INDEX IF NOT EXISTS reports_group ON reports(group_key);
+CREATE TABLE IF NOT EXISTS agent_runs (
+  id TEXT PRIMARY KEY,
+  scan_id TEXT NOT NULL REFERENCES scans(id),
+  kind TEXT NOT NULL,              -- verify | closeup
+  started_at TEXT NOT NULL,
+  ms INTEGER NOT NULL,
+  status TEXT NOT NULL,            -- verified | needs_review | needs_photo | failed
+  summary_json TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS agent_runs_scan ON agent_runs(scan_id);
+CREATE TABLE IF NOT EXISTS feedback (
+  id TEXT PRIMARY KEY,
+  created_at TEXT NOT NULL,
+  source TEXT NOT NULL,            -- user | reviewer
+  kind TEXT NOT NULL,              -- alert_relevance | explanation_rating | alert_verdict
+  scan_id TEXT,
+  report_id TEXT,
+  alert_id INTEGER,
+  match_strength TEXT,
+  value TEXT NOT NULL,
+  comment TEXT
+);
+CREATE TABLE IF NOT EXISTS submissions (
+  id TEXT PRIMARY KEY,
+  group_key TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL,
+  status TEXT NOT NULL,            -- draft | approved | sent
+  markdown TEXT NOT NULL,
+  model TEXT,
+  report_ids_json TEXT NOT NULL,
+  sent_note TEXT
+);
+CREATE INDEX IF NOT EXISTS submissions_group ON submissions(group_key);
 `;
+
+export interface AgentRunRow {
+  id: string;
+  scanId: string;
+  kind: "verify" | "closeup";
+  startedAt: string;
+  ms: number;
+  status: string;
+  summary: import("./agent.ts").RunSummary;
+}
+
+export interface FeedbackRow {
+  id: string;
+  createdAt: string;
+  source: "user" | "reviewer";
+  kind: "alert_relevance" | "explanation_rating" | "alert_verdict";
+  scanId: string | null;
+  reportId: string | null;
+  alertId: number | null;
+  matchStrength: string | null;
+  value: string;
+  comment: string | null;
+}
+
+export interface SubmissionRow {
+  id: string;
+  groupKey: string;
+  createdAt: string;
+  updatedAt: string;
+  status: "draft" | "approved" | "sent";
+  markdown: string;
+  model: string | null;
+  reportIds: string[];
+  sentNote: string | null;
+}
 
 const json = <T>(v: string | null): T | null => (v ? (JSON.parse(v) as T) : null);
 
@@ -110,6 +179,27 @@ export function openDb(path: string) {
     check: JSON.parse(r.check_json),
     groupKey: r.group_key,
     photos: JSON.parse(r.photos_json),
+  });
+
+  const toRun = (r: Record<string, any>): AgentRunRow => ({
+    id: r.id,
+    scanId: r.scan_id,
+    kind: r.kind,
+    startedAt: r.started_at,
+    ms: r.ms,
+    status: r.status,
+    summary: JSON.parse(r.summary_json),
+  });
+  const toSubmission = (r: Record<string, any>): SubmissionRow => ({
+    id: r.id,
+    groupKey: r.group_key,
+    createdAt: r.created_at,
+    updatedAt: r.updated_at,
+    status: r.status,
+    markdown: r.markdown,
+    model: r.model,
+    reportIds: JSON.parse(r.report_ids_json),
+    sentNote: r.sent_note,
   });
 
   return {
@@ -157,6 +247,82 @@ export function openDb(path: string) {
     setReportStatus(id: string, status: ReportStatus) {
       return db.query("UPDATE reports SET status = $status WHERE id = $id").run({ id, status }).changes > 0;
     },
+    listScans(): ScanRow[] {
+      return (db.query("SELECT * FROM scans ORDER BY created_at DESC").all() as Record<string, any>[]).map(toScan);
+    },
+    /** Store the agent's merged reading as the scan's model output. */
+    setScanExtraction(id: string, fields: LabelFields, model: string, notes: string | null) {
+      db.query("UPDATE scans SET extracted_json = $fields, model = $model, notes = $notes WHERE id = $id").run({
+        id,
+        fields: JSON.stringify(fields),
+        model,
+        notes,
+      });
+    },
+
+    insertRun(run: AgentRunRow) {
+      db.query(
+        `INSERT INTO agent_runs (id, scan_id, kind, started_at, ms, status, summary_json)
+         VALUES ($id, $scanId, $kind, $startedAt, $ms, $status, $summary)`,
+      ).run({ ...run, summary: JSON.stringify(run.summary) });
+    },
+    latestRun(scanId: string): AgentRunRow | null {
+      const row = db
+        .query("SELECT * FROM agent_runs WHERE scan_id = $scanId ORDER BY started_at DESC LIMIT 1")
+        .get({ scanId }) as Record<string, any> | null;
+      return row ? toRun(row) : null;
+    },
+    listRuns(): AgentRunRow[] {
+      return (db.query("SELECT * FROM agent_runs ORDER BY started_at DESC").all() as Record<string, any>[]).map(toRun);
+    },
+
+    insertFeedback(f: FeedbackRow) {
+      db.query(
+        `INSERT INTO feedback (id, created_at, source, kind, scan_id, report_id, alert_id, match_strength, value, comment)
+         VALUES ($id, $createdAt, $source, $kind, $scanId, $reportId, $alertId, $matchStrength, $value, $comment)`,
+      ).run({ ...f });
+    },
+    listFeedback(): FeedbackRow[] {
+      return (db.query("SELECT * FROM feedback ORDER BY created_at DESC").all() as Record<string, any>[]).map((r) => ({
+        id: r.id,
+        createdAt: r.created_at,
+        source: r.source,
+        kind: r.kind,
+        scanId: r.scan_id,
+        reportId: r.report_id,
+        alertId: r.alert_id,
+        matchStrength: r.match_strength,
+        value: r.value,
+        comment: r.comment,
+      }));
+    },
+
+    insertSubmission(s: SubmissionRow) {
+      db.query(
+        `INSERT INTO submissions (id, group_key, created_at, updated_at, status, markdown, model, report_ids_json, sent_note)
+         VALUES ($id, $groupKey, $createdAt, $updatedAt, $status, $markdown, $model, $reportIds, $sentNote)`,
+      ).run({ ...s, reportIds: JSON.stringify(s.reportIds) });
+    },
+    updateSubmission(id: string, patch: Partial<Pick<SubmissionRow, "status" | "markdown" | "sentNote" | "updatedAt">>) {
+      const current = this.getSubmission(id);
+      if (!current) return null;
+      const next = { ...current, ...patch };
+      db.query(
+        "UPDATE submissions SET status = $status, markdown = $markdown, sent_note = $sentNote, updated_at = $updatedAt WHERE id = $id",
+      ).run({ id, status: next.status, markdown: next.markdown, sentNote: next.sentNote, updatedAt: next.updatedAt });
+      return next;
+    },
+    getSubmission(id: string): SubmissionRow | null {
+      const row = db.query("SELECT * FROM submissions WHERE id = $id").get({ id }) as Record<string, any> | null;
+      return row ? toSubmission(row) : null;
+    },
+    listSubmissions(groupKey?: string): SubmissionRow[] {
+      const rows = groupKey
+        ? db.query("SELECT * FROM submissions WHERE group_key = $groupKey ORDER BY created_at DESC").all({ groupKey })
+        : db.query("SELECT * FROM submissions ORDER BY created_at DESC").all();
+      return (rows as Record<string, any>[]).map(toSubmission);
+    },
+
     counts() {
       const one = (sql: string) => (db.query(sql).get() as { n: number }).n;
       return {

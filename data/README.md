@@ -99,7 +99,7 @@ bun run data:build     # validate + normalize CSV, then write train/val JSONL
 ```
 
 Each verified record yields up to 12 controlled variations. Labels are computed by
-`scripts/data/compare.ts`, the same rules the app's comparison engine should use:
+`packages/verify-core/src/compare.ts`, the same rules the app's comparison engine should use:
 
 | Variation | Label |
 | --- | --- |

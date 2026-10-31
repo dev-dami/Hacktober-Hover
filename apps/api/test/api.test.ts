@@ -78,15 +78,36 @@ const PRODUCTS: ProductRecord[] = [
 
 const fields = (f: Partial<LabelFields>): LabelFields => ({ ...EMPTY_FIELDS, ...f });
 
+const ZINNAT = fields({ productName: "Zinnat Suspension", batchNumber: "349R", registrationNumber: "04-0463" });
 const fakeAi: Ai = {
   model: "fake-gemma",
-  async extractLabel() {
-    return { fields: fields({ productName: "Zinnat Suspension", batchNumber: "349R" }), notes: null, raw: "{}" };
+  async extractLabel(_i, _m, o) {
+    o?.log?.({ task: "read_label", mode: o.mode ?? "careful", ms: 5, attempts: 1, ok: true, thoughtTokens: 0, outputTokens: 1 });
+    return { fields: ZINNAT, notes: null, raw: "{}" };
+  },
+  async rereadFields(_i, _m, wanted) {
+    return Object.fromEntries(wanted.map((f) => [f, f === "batchNumber" ? "349R" : null]));
+  },
+  async suggestSearchTerms() {
+    return [];
   },
   async explain(_f, result) {
     return { text: "Matches [1].", sources: result.alerts.slice(0, 1).map((a, i) => ({ n: i + 1, alertId: a.alertId, title: a.title, url: a.url })) };
   },
+  async draftSubmission(evidence) {
+    return `# Draft\n\n${evidence.split("\n")[0]}`;
+  },
 };
+
+/** Parse a text/event-stream body into events. */
+async function readSse(res: Response) {
+  const text = await res.text();
+  return text
+    .split("\n\n")
+    .map((block) => block.split("\n").find((l) => l.startsWith("data:"))?.slice(5).trim())
+    .filter((d): d is string => !!d)
+    .map((d) => JSON.parse(d));
+}
 
 const tempDirs: string[] = [];
 async function makeApp(overrides: Partial<Deps> = {}) {
@@ -138,6 +159,14 @@ describe("check", () => {
     expect(body.summary).toContain("cannot prove");
   });
 
+  test("registration numbers match however they were written (spaces, dashes)", async () => {
+    const { app } = await makeApp();
+    for (const written of ["04 0463", "04–0463", "040463"]) {
+      const body = await (await app.request("/api/check", postJson({ fields: fields({ productName: "Zinnat", registrationNumber: written }) }))).json() as any;
+      expect(body.registry.status).toBe("registered");
+    }
+  });
+
   test("a different batch of the same product is only a possible match", async () => {
     const { app } = await makeApp();
     const body = await (await app.request("/api/check", postJson({ fields: fields({ productName: "Zinnat Suspension", batchNumber: "777X" }) }))).json() as any;
@@ -174,36 +203,75 @@ describe("alerts", () => {
 });
 
 describe("scans", () => {
-  test("upload saves the photo with the model reading, then the person's correction marks it reviewed", async () => {
-    const { app, deps } = await makeApp();
+  async function upload(app: Awaited<ReturnType<typeof makeApp>>["app"]) {
     const form = new FormData();
     form.append("image", new File([await png()], "label.png", { type: "image/png" }));
     const res = await app.request("/api/scans", { method: "POST", body: form });
     expect(res.status).toBe(201);
-    const scan = await res.json() as any;
-    expect(scan.fields.batchNumber).toBe("349R");
-    expect(deps.db.getScan(scan.id)?.status).toBe("unreviewed");
+    return (await res.json()) as any;
+  }
 
-    const image = await app.request(scan.imageUrl);
-    expect(image.headers.get("content-type")).toBe("image/jpeg");
+  test("upload, streamed verification, run stored, then the person's correction marks it reviewed", async () => {
+    const { app, deps } = await makeApp();
+    const scan = await upload(app);
+    expect(deps.db.getScan(scan.id)?.status).toBe("unreviewed");
+    expect((await app.request(scan.imageUrl)).headers.get("content-type")).toBe("image/jpeg");
+
+    const res = await app.request(`/api/scans/${scan.id}/verify`, { method: "POST" });
+    expect(res.headers.get("content-type")).toContain("text/event-stream");
+    const events = await readSse(res);
+    expect(events.map((e) => e.type)).toContain("check");
+    const done = events.at(-1);
+    expect(done.type).toBe("done");
+    expect(done.summary.status).toBe("verified");
+    expect(deps.db.latestRun(scan.id)?.status).toBe("verified");
+    expect(deps.db.getScan(scan.id)?.extracted?.batchNumber).toBe("349R");
 
     const patch = await app.request(`/api/scans/${scan.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ fields: fields({ productName: "Zinnat Suspension", batchNumber: "349R", expiryDate: "05/2027" }) }),
+      body: JSON.stringify({ fields: { ...ZINNAT, expiryDate: "05/2027" } }),
     });
     expect(patch.status).toBe(200);
     expect(deps.db.getScan(scan.id)?.corrected?.expiryDate).toBe("05/2027");
   });
 
+  test("close-up requires an earlier run, then streams a follow-up", async () => {
+    const { app } = await makeApp();
+    const scan = await upload(app);
+    const closeup = () => {
+      const form = new FormData();
+      form.append("image", new File([new Uint8Array(0)], "c.png", { type: "image/png" }));
+      return form;
+    };
+    expect((await app.request(`/api/scans/${scan.id}/closeup`, { method: "POST", body: closeup() })).status).toBe(409);
+    await readSse(await app.request(`/api/scans/${scan.id}/verify`, { method: "POST" }));
+    const form = new FormData();
+    form.append("image", new File([await png()], "c.png", { type: "image/png" }));
+    form.append("fields", JSON.stringify(["batchNumber"]));
+    const events = await readSse(await app.request(`/api/scans/${scan.id}/closeup`, { method: "POST", body: form }));
+    expect(events.at(-1).type).toBe("done");
+  });
+
   test("without an AI key the photo is still saved and the user is told to type details", async () => {
     const { app } = await makeApp({ ai: null });
-    const form = new FormData();
-    form.append("image", new File([await png()], "label.png", { type: "image/png" }));
-    const scan = await (await app.request("/api/scans", { method: "POST", body: form })).json() as any;
-    expect(scan.fields).toBeNull();
+    const scan = await upload(app);
+    expect(scan.aiAvailable).toBe(false);
     expect(scan.aiError).toContain("GEMINI_API_KEY");
+    expect((await app.request(`/api/scans/${scan.id}/verify`, { method: "POST" })).status).toBe(503);
     expect((await app.request("/api/explain", postJson({ fields: fields({}) }))).status).toBe(503);
+  });
+
+  test("feedback on alerts and explanations is stored", async () => {
+    const { app, deps } = await makeApp();
+    const scan = await upload(app);
+    const ok = await app.request(
+      "/api/feedback",
+      postJson({ kind: "alert_relevance", scanId: scan.id, alertId: 2, matchStrength: "strong", value: "not_relevant" }),
+    );
+    expect(ok.status).toBe(201);
+    expect((await app.request("/api/feedback", postJson({ kind: "explanation_rating", value: "meh" }))).status).toBe(400);
+    expect(deps.db.listFeedback()[0]?.value).toBe("not_relevant");
   });
 
   test("rejects non-images", async () => {
@@ -279,6 +347,52 @@ describe("reports", () => {
       body: JSON.stringify({ status: "in_review" }),
     });
     expect(patch.status).toBe(200);
+  });
+
+  test("verdicts, NAFDAC submission lifecycle (draft -> approved -> sent), anonymised evidence, metrics", async () => {
+    const { app, deps } = await makeApp();
+    await submit(app, { description: "Bitter taste, call me on 08031234567 or ada@example.com" });
+    await submit(app, { state: "Kano" });
+    const H = { "Content-Type": "application/json", Authorization: "Bearer secret" };
+    const { groups } = await (await app.request("/api/review/groups", { headers: H })).json() as any;
+    const group = groups[0];
+    const reportId = group.reportIds[0];
+
+    const verdict = await app.request(`/api/review/reports/${reportId}/alerts/2/verdict`, {
+      method: "POST",
+      headers: H,
+      body: JSON.stringify({ value: "confirmed" }),
+    });
+    expect(verdict.status).toBe(201);
+    expect((await app.request(`/api/review/reports/${reportId}/alerts/999/verdict`, { method: "POST", headers: H, body: JSON.stringify({ value: "confirmed" }) })).status).toBe(404);
+
+    const created = await app.request(`/api/review/groups/${encodeURIComponent(group.key)}/submission`, { method: "POST", headers: H });
+    expect(created.status).toBe(201);
+    const draft = await created.json() as any;
+    expect(draft.status).toBe("draft");
+    expect(draft.evidence).not.toContain("08031234567");
+    expect(draft.evidence).not.toContain("ada@example.com");
+    expect(draft.evidence).not.toContain("0800 000 0000");
+    expect(draft.evidence).toContain("Number of reports: 2");
+    expect(draft.evidence).toContain("reviewer confirmed relevant in 1 of 1");
+
+    const patch = (body: unknown) => app.request(`/api/review/submissions/${draft.id}`, { method: "PATCH", headers: H, body: JSON.stringify(body) });
+    expect((await app.request(`/api/review/submissions/${draft.id}/export`, { headers: H })).status).toBe(409);
+    expect((await patch({ status: "sent" })).status).toBe(409);
+    expect((await patch({ markdown: "# Edited submission for NAFDAC review" })).status).toBe(200);
+    expect((await patch({ status: "approved" })).status).toBe(200);
+    expect((await patch({ markdown: "# Sneaky edit after approval" })).status).toBe(409);
+    expect((await patch({ status: "sent", sentNote: "Emailed to NAFDAC PV desk" })).status).toBe(200);
+    expect((await patch({ status: "draft" })).status).toBe(409);
+    const exported = await app.request(`/api/review/submissions/${draft.id}/export`, { headers: H });
+    expect(await exported.text()).toBe("# Edited submission for NAFDAC review");
+    expect(deps.db.getReport(reportId)?.status).toBe("forwarded_to_nafdac");
+
+    const metrics = await (await app.request("/api/review/metrics", { headers: H })).json() as any;
+    expect(metrics.usage.reports).toBe(2);
+    expect(metrics.reports.submissions).toEqual({ sent: 1 });
+    expect(metrics.feedback.reviewerAlertVerdicts.strong).toEqual({ n: 1, precision: 100 });
+    expect(metrics.reports.byState).toEqual({ Lagos: 1, Kano: 1 });
   });
 
   test("reviewer endpoints are off without ADMIN_TOKEN", async () => {

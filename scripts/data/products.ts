@@ -1,8 +1,13 @@
 // Load, validate and normalize the master product CSV.
 
 import { parseCsv } from "./csv.ts";
-import { normalizeRegistrationNumber } from "./compare.ts";
-import { CSV_COLUMNS, type CsvColumn, type ProductRecord, type RawProductRow } from "./schema.ts";
+import {
+  CSV_COLUMNS,
+  normalizeRegistrationNumber,
+  type CsvColumn,
+  type ProductRecord,
+  type RawProductRow,
+} from "@hacktober/verify-core";
 
 export interface Issue {
   level: "error" | "warning";

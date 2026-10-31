@@ -1,9 +1,9 @@
 // Deterministic checks of scanned label fields against the official datasets.
 // The AI never decides these results; it only explains them afterwards.
 
-import { normalizeRegistrationNumber, normalizeText } from "../../../scripts/data/compare.ts";
+import { normalizeRegistrationNumber, normalizeText } from "@hacktober/verify-core";
 import type { Datasets, IndexedAlert, ProductRecord } from "./data.ts";
-import { normalizeBatch, tokens, type LabelFields } from "./fields.ts";
+import { normalizeBatch, regKey, tokens, type LabelFields } from "./fields.ts";
 
 export type MatchStrength = "strong" | "possible";
 
@@ -71,7 +71,8 @@ export function scoreAlert(fields: LabelFields, indexed: IndexedAlert): { score:
   }
 
   const reg = fields.registrationNumber ? normalizeRegistrationNumber(fields.registrationNumber) : "";
-  const regHit = reg ? indexed.registrationNumbers.get(reg) : undefined;
+  const key = reg ? regKey(reg) : "";
+  const regHit = key ? indexed.registrationNumbers.get(key) : undefined;
   if (regHit) {
     score += 40;
     reasons.push(
@@ -129,7 +130,7 @@ export function checkRegistry(fields: LabelFields, datasets: Datasets): Registry
     };
   }
   const number = normalizeRegistrationNumber(fields.registrationNumber);
-  const found = datasets.registry.get(number) ?? [];
+  const found = datasets.registry.get(regKey(number)) ?? [];
   if (found.length === 0) {
     return {
       status: "not_in_greenbook",

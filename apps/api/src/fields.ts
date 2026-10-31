@@ -29,6 +29,14 @@ export function normalizeBatch(value: string): string {
   return value.toUpperCase().replace(/^(?:BATCH|LOT)\s*(?:NO\.?|NUMBER)?\s*[:#]?\s*/i, "").replace(/[^A-Z0-9]/g, "");
 }
 
+/**
+ * Comparison key for NAFDAC registration numbers: letters and digits only, so "04-0463",
+ * "04 0463" and "04–0463" (as OCR or people write them) are the same number.
+ */
+export function regKey(value: string): string {
+  return value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+}
+
 const STOPWORDS = new Set([
   "tablet", "tablets", "tab", "tabs", "capsule", "capsules", "caps", "syrup", "suspension", "injection",
   "solution", "oral", "cream", "ointment", "drops", "for", "and", "the", "with", "film", "coated", "dispersible",

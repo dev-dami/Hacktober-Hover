@@ -7,6 +7,7 @@ import { secureHeaders } from "hono/secure-headers";
 import type { Deps } from "./deps.ts";
 import { alertRoutes } from "./routes/alerts.ts";
 import { reportRoutes } from "./routes/reports.ts";
+import { reviewRoutes } from "./routes/review.ts";
 import { scanRoutes } from "./routes/scans.ts";
 
 export function createApp(deps: Deps, options: { log?: boolean } = {}) {
@@ -29,6 +30,7 @@ export function createApp(deps: Deps, options: { log?: boolean } = {}) {
   app.route("/api/alerts", alertRoutes(deps));
   app.route("/api", scanRoutes(deps));
   app.route("/api", reportRoutes(deps));
+  app.route("/api/review", reviewRoutes(deps));
 
   app.notFound((c) => c.json({ error: "Not found" }, 404));
   app.onError((error, c) => {

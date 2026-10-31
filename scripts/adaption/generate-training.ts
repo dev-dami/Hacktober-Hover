@@ -18,8 +18,8 @@ import {
   type Label,
   type Reference,
   type ScannedLabel,
-} from "../data/compare.ts";
-import type { ProductRecord } from "../data/schema.ts";
+} from "@hacktober/verify-core";
+import type { ProductRecord } from "@hacktober/verify-core";
 
 export interface Example {
   prompt: string;

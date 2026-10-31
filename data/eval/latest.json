@@ -1,0 +1,588 @@
+{
+  "ranAt": "2026-10-31T13:18:58.055Z",
+  "model": "gemma-4-26b-a4b-it",
+  "cases": 12,
+  "note": "Weak labels from NAFDAC alert tables; a photo may not show the listed number (counted as not visible).",
+  "summary": [
+    {
+      "strategy": "fast",
+      "runs": 12,
+      "failed": 1,
+      "p50Ms": 5627,
+      "p90Ms": 7981,
+      "avgCalls": 1,
+      "batch": {
+        "cases": 7,
+        "hit": 2,
+        "wrong": 3,
+        "notVisible": 2
+      },
+      "registration": {
+        "cases": 6,
+        "hit": 0,
+        "wrong": 0,
+        "notVisible": 6
+      }
+    },
+    {
+      "strategy": "careful",
+      "runs": 12,
+      "failed": 2,
+      "p50Ms": 45937,
+      "p90Ms": 180001,
+      "avgCalls": 1,
+      "batch": {
+        "cases": 7,
+        "hit": 1,
+        "wrong": 2,
+        "notVisible": 4
+      },
+      "registration": {
+        "cases": 6,
+        "hit": 0,
+        "wrong": 0,
+        "notVisible": 6
+      }
+    },
+    {
+      "strategy": "agent",
+      "runs": 12,
+      "failed": 1,
+      "p50Ms": 43972,
+      "p90Ms": 150003,
+      "avgCalls": 2.5,
+      "batch": {
+        "cases": 7,
+        "hit": 2,
+        "wrong": 3,
+        "notVisible": 2
+      },
+      "registration": {
+        "cases": 6,
+        "hit": 0,
+        "wrong": 0,
+        "notVisible": 6
+      },
+      "verified": 2,
+      "verifiedButWrong": 0
+    }
+  ],
+  "rows": [
+    {
+      "case": "011/2026",
+      "strategy": "agent",
+      "ms": 34765,
+      "calls": 2,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "0002172",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "011/2026",
+      "strategy": "careful",
+      "ms": 35527,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "0002172",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "011/2026",
+      "strategy": "fast",
+      "ms": 7449,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "0002172",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "016/2026",
+      "strategy": "agent",
+      "ms": 150004,
+      "calls": 2,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "N2110109",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "016/2026",
+      "strategy": "careful",
+      "ms": 180001,
+      "calls": 1,
+      "failed": true,
+      "batch": "not_visible",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "016/2026",
+      "strategy": "fast",
+      "ms": 5617,
+      "calls": 1,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "N2110109",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "017/2026",
+      "strategy": "agent",
+      "ms": 102741,
+      "calls": 3,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "A8519834",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "017/2026",
+      "strategy": "careful",
+      "ms": 92248,
+      "calls": 1,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "A8519834",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "017/2026",
+      "strategy": "fast",
+      "ms": 7981,
+      "calls": 1,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "A8519834",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "021/2026",
+      "strategy": "agent",
+      "ms": 33050,
+      "calls": 3,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "001",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "021/2026",
+      "strategy": "careful",
+      "ms": 17127,
+      "calls": 1,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "001",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "021/2026",
+      "strategy": "fast",
+      "ms": 3876,
+      "calls": 1,
+      "failed": false,
+      "batch": "wrong",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "001",
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "023/2026",
+      "strategy": "agent",
+      "ms": 29751,
+      "calls": 2,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "023/2026",
+      "strategy": "careful",
+      "ms": 25833,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "023/2026",
+      "strategy": "fast",
+      "ms": 5572,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "03/2026",
+      "strategy": "agent",
+      "ms": 59083,
+      "calls": 3,
+      "failed": false,
+      "batch": "hit",
+      "registration": "no_truth",
+      "status": "verified",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "ELB01723",
+        "registrationNumber": "26.02.1999 - 190/49"
+      }
+    },
+    {
+      "case": "03/2026",
+      "strategy": "careful",
+      "ms": 45937,
+      "calls": 1,
+      "failed": false,
+      "batch": "not_visible",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": "26.02.1999 - 190/49"
+      }
+    },
+    {
+      "case": "03/2026",
+      "strategy": "fast",
+      "ms": 5627,
+      "calls": 1,
+      "failed": false,
+      "batch": "hit",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "ELB01723",
+        "registrationNumber": "26.02.1999 - 190/49"
+      }
+    },
+    {
+      "case": "036/2026",
+      "strategy": "agent",
+      "ms": 84438,
+      "calls": 3,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "036/2026",
+      "strategy": "careful",
+      "ms": 80675,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "036/2026",
+      "strategy": "fast",
+      "ms": 5932,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "037/2026",
+      "strategy": "agent",
+      "ms": 42389,
+      "calls": 3,
+      "failed": false,
+      "batch": "not_visible",
+      "registration": "no_truth",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "037/2026",
+      "strategy": "careful",
+      "ms": 41358,
+      "calls": 1,
+      "failed": false,
+      "batch": "not_visible",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "037/2026",
+      "strategy": "fast",
+      "ms": 5440,
+      "calls": 1,
+      "failed": false,
+      "batch": "not_visible",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "042/2026",
+      "strategy": "agent",
+      "ms": 29523,
+      "calls": 2,
+      "failed": false,
+      "batch": "hit",
+      "registration": "no_truth",
+      "status": "verified",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "BP5203",
+        "registrationNumber": "02-3457"
+      }
+    },
+    {
+      "case": "042/2026",
+      "strategy": "careful",
+      "ms": 61903,
+      "calls": 1,
+      "failed": false,
+      "batch": "hit",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "BP5203",
+        "registrationNumber": "02-3457"
+      }
+    },
+    {
+      "case": "042/2026",
+      "strategy": "fast",
+      "ms": 5565,
+      "calls": 1,
+      "failed": false,
+      "batch": "hit",
+      "registration": "no_truth",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": "BP5203",
+        "registrationNumber": "02-3457"
+      }
+    },
+    {
+      "case": "043/2026",
+      "strategy": "agent",
+      "ms": 150003,
+      "calls": 2,
+      "failed": true,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "status": "failed",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "043/2026",
+      "strategy": "careful",
+      "ms": 180008,
+      "calls": 1,
+      "failed": true,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "043/2026",
+      "strategy": "fast",
+      "ms": 6944,
+      "calls": 1,
+      "failed": true,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "06/2026",
+      "strategy": "agent",
+      "ms": 10543,
+      "calls": 2,
+      "failed": false,
+      "batch": "not_visible",
+      "registration": "not_visible",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "06/2026",
+      "strategy": "careful",
+      "ms": 9797,
+      "calls": 1,
+      "failed": false,
+      "batch": "not_visible",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "06/2026",
+      "strategy": "fast",
+      "ms": 36754,
+      "calls": 1,
+      "failed": false,
+      "batch": "not_visible",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "08/2026",
+      "strategy": "agent",
+      "ms": 43972,
+      "calls": 3,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "status": "needs_photo",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "08/2026",
+      "strategy": "careful",
+      "ms": 22446,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    },
+    {
+      "case": "08/2026",
+      "strategy": "fast",
+      "ms": 4208,
+      "calls": 1,
+      "failed": false,
+      "batch": "no_truth",
+      "registration": "not_visible",
+      "verifiedButWrong": false,
+      "read": {
+        "batchNumber": null,
+        "registrationNumber": null
+      }
+    }
+  ]
+}

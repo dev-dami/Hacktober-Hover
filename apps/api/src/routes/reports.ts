@@ -1,9 +1,8 @@
 import { Hono } from "hono";
-import { bearerAuth } from "hono/bearer-auth";
 import { mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { z } from "zod";
-import type { ReportRow, ReportStatus } from "../db.ts";
+import type { ReportRow } from "../db.ts";
 import type { Deps } from "../deps.ts";
 import { LabelFields, normalizeBatch, tokens } from "../fields.ts";
 import { ImageError, prepareImage } from "../images.ts";
@@ -30,7 +29,7 @@ export function groupKey(fields: LabelFields): string {
   return `${name}|${batch || "no-batch"}`;
 }
 
-function evidencePack(report: ReportRow) {
+export function evidencePack(report: ReportRow) {
   const f = report.fields;
   const line = (label: string, value: string | null | undefined) => `- ${label}: ${value || "not recorded"}`;
   const alerts = report.check.alerts;
@@ -140,60 +139,5 @@ export function reportRoutes(deps: Deps) {
     return c.json({ ...visible, evidence: evidencePack(report) });
   });
 
-  // --- Reviewer endpoints (ADMIN_TOKEN) ---
-  const review = new Hono();
-  review.use("*", async (c, next) => {
-    if (!deps.config.adminToken) return c.json({ error: "Reviewer access is disabled (set ADMIN_TOKEN)." }, 503);
-    return bearerAuth({ token: deps.config.adminToken })(c, next);
-  });
-
-  // Reports about the same product + batch, for human review. Not a public finding.
-  review.get("/groups", (c) => {
-    const groups = new Map<string, ReportRow[]>();
-    for (const r of deps.db.listReports()) groups.set(r.groupKey, [...(groups.get(r.groupKey) ?? []), r]);
-    const result = [...groups.entries()]
-      .map(([key, reports]) => ({
-        key,
-        productName: reports[0]!.fields.productName,
-        batchNumber: reports[0]!.fields.batchNumber,
-        reportCount: reports.length,
-        states: [...new Set(reports.map((r) => r.state))],
-        firstReportedAt: reports.at(-1)!.createdAt,
-        lastReportedAt: reports[0]!.createdAt,
-        matchingAlerts: [...new Map(reports.flatMap((r) => r.check.alerts).map((a) => [a.alertId, { id: a.alertId, title: a.title, url: a.url }])).values()],
-        statuses: Object.fromEntries(
-          [...new Set(reports.map((r) => r.status))].map((s) => [s, reports.filter((r) => r.status === s).length]),
-        ),
-        reportIds: reports.map((r) => r.id),
-      }))
-      .sort((a, b) => b.reportCount - a.reportCount || b.lastReportedAt.localeCompare(a.lastReportedAt));
-    return c.json({ groups: result });
-  });
-
-  review.get("/reports/:id", (c) => {
-    const report = deps.db.getReport(c.req.param("id"));
-    if (!report) return c.json({ error: "Report not found" }, 404);
-    return c.json({ ...report, evidence: evidencePack(report) });
-  });
-
-  review.get("/reports/:id/photos/:name{photo-[0-9]+\\.jpg}", (c) => {
-    const report = deps.db.getReport(c.req.param("id"));
-    const name = c.req.param("name");
-    if (!report || !report.photos.includes(name)) return c.json({ error: "Not found" }, 404);
-    return new Response(Bun.file(resolve(reportsDir, report.id, name)), { headers: { "Content-Type": "image/jpeg" } });
-  });
-
-  review.patch("/reports/:id", async (c) => {
-    const body = z
-      .object({ status: z.enum(["submitted", "in_review", "forwarded_to_nafdac", "dismissed"]) })
-      .safeParse(await c.req.json().catch(() => null));
-    if (!body.success) return c.json({ error: "status must be submitted, in_review, forwarded_to_nafdac or dismissed" }, 400);
-    if (!deps.db.setReportStatus(c.req.param("id"), body.data.status as ReportStatus)) {
-      return c.json({ error: "Report not found" }, 404);
-    }
-    return c.json({ id: c.req.param("id"), status: body.data.status });
-  });
-
-  app.route("/review", review);
   return app;
 }

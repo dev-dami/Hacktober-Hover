@@ -20,4 +20,10 @@ if (!config.geminiApiKey) console.warn("[ai] GEMINI_API_KEY not set: scans save 
 if (!config.adminToken) console.warn("[review] ADMIN_TOKEN not set: reviewer endpoints are disabled");
 console.log(`SafeMeds NG API on http://localhost:${config.port}`);
 
-export default { port: config.port, fetch: app.fetch, maxRequestBodySize: 50 * 1024 * 1024 };
+export default {
+  port: config.port,
+  fetch: app.fetch,
+  maxRequestBodySize: 50 * 1024 * 1024,
+  // Bun closes connections idle for 10 s by default; agent streams also send a 5 s heartbeat.
+  idleTimeout: 120,
+};
