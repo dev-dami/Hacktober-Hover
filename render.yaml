@@ -1,0 +1,75 @@
+# Render Blueprint for Medfify: the Bun API (apps/api) and the Next.js web app (apps/nafdac-verify).
+# Spec: https://render.com/docs/blueprint-spec
+#
+# Both services use Render's native runtime, which has Bun preinstalled. They build from the repo
+# root because the Bun workspace (apps/*, packages/*) installs from one lockfile.
+#
+# The two services find each other by their public onrender.com URLs, which a Blueprint cannot
+# look up. If Render gives either service a different URL (for example, a name is already taken),
+# update CORS_ORIGINS on the API and NEXT_PUBLIC_API_URL on the web app, then redeploy the web app:
+# Next.js bakes NEXT_PUBLIC_* values in at build time.
+
+services:
+  - type: web
+    name: medfify-ng-api
+    runtime: node
+    region: frankfurt
+    # No plan is set: Render's default instance type is paid, and a persistent disk needs a paid plan.
+    buildCommand: bun install --frozen-lockfile
+    startCommand: bun apps/api/src/index.ts
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - apps/api/**
+        - packages/**
+        - data/**
+        - package.json
+        - bun.lock
+    # SQLite database, scan photos and report photos. Without a disk they are lost on every deploy.
+    disk:
+      name: medfify-ng-storage
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      # Production mode: Bun.serve does not show stack traces to clients.
+      - key: NODE_ENV
+        value: production
+      - key: BUN_VERSION
+        value: 1.4.2
+      - key: STORAGE_DIR
+        value: /var/data/storage
+      - key: CORS_ORIGINS
+        value: https://medfify-ng-web.onrender.com
+      - key: GEMMA_MODEL
+        value: gemma-4-26b-a4b-it
+      # Google AI Studio key. Render asks for it when the Blueprint is first created.
+      - key: GEMINI_API_KEY
+        sync: false
+      # Reviewer console token. Copy it from the service's Environment page.
+      - key: ADMIN_TOKEN
+        generateValue: true
+
+  - type: web
+    name: medfify-ng-web
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: bun install --frozen-lockfile && bun run --filter nafdac-verify build
+    startCommand: bun run --filter nafdac-verify start
+    healthCheckPath: /
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - apps/nafdac-verify/**
+        - packages/**
+        - package.json
+        - bun.lock
+    envVars:
+      - key: BUN_VERSION
+        value: 1.4.2
+      # `next start` runs on Node. Next.js 16 needs Node 20.9 or later.
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEXT_PUBLIC_API_URL
+        value: https://medfify-ng-api.onrender.com

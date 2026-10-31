@@ -26,6 +26,24 @@ bun run dev                                     # API on :8787, web on :3000
 
 `bun run test` runs the data-pipeline and API tests. `bun run build` / `bun run lint` check the frontend.
 
+## Deploy on Render
+
+[`render.yaml`](render.yaml) is a Render Blueprint for two services in Frankfurt:
+
+| Service | What it runs | Plan |
+| --- | --- | --- |
+| `medfify-ng-api` | `bun apps/api/src/index.ts`, with a 1 GB disk at `/var/data` for SQLite and photos | Paid (a disk needs one) |
+| `medfify-ng-web` | `next start` for the web app | Free |
+
+1. In the Render Dashboard, select **New > Blueprint** and connect this repository.
+2. Enter `GEMINI_API_KEY` when Render asks for it. Render generates `ADMIN_TOKEN`: copy it from the API's
+   **Environment** page to sign in to `/reviewer`.
+3. After the first deploy, compare the two `onrender.com` URLs with `CORS_ORIGINS` (API) and
+   `NEXT_PUBLIC_API_URL` (web). If Render added a suffix to a name, update the value and redeploy the web app.
+   `NEXT_PUBLIC_API_URL` is set at build time.
+
+The alert and Greenbook data ship in `data/` in the repository, so the API needs no crawl on Render.
+
 ## How a check works
 
 1. **Scan** (`POST /api/scans`): the photo is made upright, stripped of metadata (GPS), and saved.
