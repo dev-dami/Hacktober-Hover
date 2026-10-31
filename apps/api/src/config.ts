@@ -21,8 +21,8 @@ export function loadConfig(env: Record<string, string | undefined> = process.env
     dataDir: resolve(env.DATA_DIR ?? resolve(REPO_ROOT, "data")),
     storageDir: resolve(env.STORAGE_DIR ?? resolve(import.meta.dir, "../storage")),
     geminiApiKey: env.GEMINI_API_KEY || null,
-    // Gemma 4 IDs on the Gemini API: gemma-4-31b-it, gemma-4-26b-a4b-it.
-    gemmaModel: env.GEMMA_MODEL || "gemma-4-31b-it",
+    // Gemma 4 on the Gemini API: gemma-4-26b-a4b-it (works) or gemma-4-31b-it (HTTP 500 for us on 2026-10-31).
+    gemmaModel: env.GEMMA_MODEL || "gemma-4-26b-a4b-it",
     adminToken: env.ADMIN_TOKEN || null,
     corsOrigins: (env.CORS_ORIGINS ?? "http://localhost:3000").split(",").map((s) => s.trim()),
   };

@@ -29,7 +29,7 @@ bun run dev                                     # API on :8787, web on :3000
 ## How a check works
 
 1. **Scan** (`POST /api/scans`): the photo is made upright, stripped of metadata (GPS), and saved.
-   Gemma 4 (`gemma-4-31b-it` via the Gemini API) reads the label into fields. The photo and reading are
+   Gemma 4 (`gemma-4-26b-a4b-it` via the Gemini API) reads the label into fields. The photo and reading are
    stored as an *unreviewed* example.
 2. **Confirm** (`PATCH /api/scans/:id`): the person corrects the fields. The scan becomes *reviewed*,
    i.e. a labeled training example for improving the reader later.
