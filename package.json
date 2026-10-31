@@ -5,15 +5,19 @@
   "private": true,
   "workspaces": ["apps/*", "packages/*"],
   "scripts": {
-    "dev": "bun run --filter nafdac-verify dev",
+    "dev": "bun run --filter '*' dev",
+    "dev:api": "bun run --filter safemeds-api dev",
+    "dev:web": "bun run --filter nafdac-verify dev",
     "build": "bun run --filter nafdac-verify build",
     "lint": "bun run --filter nafdac-verify lint",
+    "data:crawl": "bun scripts/greenbook/crawl.ts",
+    "data:alerts": "bun scripts/nafdac-alerts/crawl.ts",
     "data:check": "bun scripts/data/normalize.ts --check",
     "data:normalize": "bun scripts/data/normalize.ts",
     "data:training": "bun scripts/adaption/generate-training.ts",
     "data:build": "bun run data:normalize && bun run data:training",
     "data:demo": "bun scripts/data/normalize.ts --input data/demo/demo-products.csv --output data/demo/demo-products.json --fixture",
-    "test": "bun test scripts"
+    "test": "bun test scripts && bun run --filter safemeds-api test"
   },
   "devDependencies": {
     "@types/bun": "latest"

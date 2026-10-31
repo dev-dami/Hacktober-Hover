@@ -1,0 +1,5766 @@
+[
+ {
+  "id": 1,
+  "name": "Pending"
+ },
+ {
+  "id": 3,
+  "name": "Kesar Pharma Pvt Ltd."
+ },
+ {
+  "id": 4,
+  "name": "Merck S.L."
+ },
+ {
+  "id": 5,
+  "name": "Dana Pharmaceuticals Limited"
+ },
+ {
+  "id": 6,
+  "name": "Fidson Healthcare PLC"
+ },
+ {
+  "id": 7,
+  "name": "Orfema Pharmaceutical Ind. Ltd"
+ },
+ {
+  "id": 8,
+  "name": "PT Dankos Farma Tbk."
+ },
+ {
+  "id": 9,
+  "name": "P.T. Bintang Toedjoe"
+ },
+ {
+  "id": 10,
+  "name": "Nemel Pharmaceuticals Limited"
+ },
+ {
+  "id": 11,
+  "name": "Getz Pharma (Private) Limited"
+ },
+ {
+  "id": 12,
+  "name": "Genix Pharma (Private) Limited"
+ },
+ {
+  "id": 13,
+  "name": "Lark Laboratories (India) Limited"
+ },
+ {
+  "id": 14,
+  "name": "Jiangsu Pengyao Pharmaceutical Co. Ltd."
+ },
+ {
+  "id": 15,
+  "name": "Maxheal Laboratories Pvt Ltd"
+ },
+ {
+  "id": 17,
+  "name": "Rhydburg Pharmaceuticals Ltd."
+ },
+ {
+  "id": 18,
+  "name": "Alpa Laboratories Pvt Ltd"
+ },
+ {
+  "id": 19,
+  "name": "Emzor Pharmaceutical Industries Limited"
+ },
+ {
+  "id": 20,
+  "name": "Evergreen Morning Star Pharmaceutical Ind. Ltd"
+ },
+ {
+  "id": 21,
+  "name": "Fredun Pharmaceuticals Limited"
+ },
+ {
+  "id": 22,
+  "name": "Novartis Pharma Stein AG"
+ },
+ {
+  "id": 23,
+  "name": "Vardhman Exports"
+ },
+ {
+  "id": 24,
+  "name": "Torrent Pharmaceuticals Ltd"
+ },
+ {
+  "id": 25,
+  "name": "Sakar Healthcare Pvt Ltd"
+ },
+ {
+  "id": 26,
+  "name": "Jiangsu Ruinian Qianjin Pharmaceutical Co. Ltd."
+ },
+ {
+  "id": 27,
+  "name": "Coral Laboratories Ltd"
+ },
+ {
+  "id": 28,
+  "name": "Brussels Laboratories Pvt Ltd"
+ },
+ {
+  "id": 29,
+  "name": "Shalina Laboratories Pvt Ltd"
+ },
+ {
+  "id": 31,
+  "name": "Dexcel Ltd. A Dexon Company"
+ },
+ {
+  "id": 32,
+  "name": "Incepta Pharmaceuticals Ltd"
+ },
+ {
+  "id": 33,
+  "name": "Psychotropics India Limited"
+ },
+ {
+  "id": 34,
+  "name": "Halewood Laboratories Pvt. Ltd"
+ },
+ {
+  "id": 35,
+  "name": "Krishat Pharma Industries Ltd"
+ },
+ {
+  "id": 36,
+  "name": "IPR Pharmaceuticals Inc."
+ },
+ {
+  "id": 37,
+  "name": "Jawa International Limited"
+ },
+ {
+  "id": 38,
+  "name": "Olive Healthcare"
+ },
+ {
+  "id": 39,
+  "name": "Scott-Edil Pharmacia Ltd"
+ },
+ {
+  "id": 40,
+  "name": "Strides Pharma Science Limited"
+ },
+ {
+  "id": 41,
+  "name": "Bharat Parenterals Limited"
+ },
+ {
+  "id": 42,
+  "name": "Michelle Laboratories Limited"
+ },
+ {
+  "id": 43,
+  "name": "Me Cure Industries Limited"
+ },
+ {
+  "id": 44,
+  "name": "SKG - Pharma Ltd"
+ },
+ {
+  "id": 45,
+  "name": "Zunamediks Pharm Ltd"
+ },
+ {
+  "id": 46,
+  "name": "Hello Products Limited, Previously Jagal Pharma Limited"
+ },
+ {
+  "id": 47,
+  "name": "Neimeth International Pharmaceuticals PLC"
+ },
+ {
+  "id": 49,
+  "name": "Unique Pharmaceuticals Limited"
+ },
+ {
+  "id": 50,
+  "name": "Ciron Drugs & Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 51,
+  "name": "Bliss GVS Pharma Limited"
+ },
+ {
+  "id": 52,
+  "name": "Dortmund Laboratories Pvt. Ltd"
+ },
+ {
+  "id": 53,
+  "name": "Gopaldas Visram & Company Ltd"
+ },
+ {
+  "id": 54,
+  "name": "AnnyGod Pharmaceutical Co Ltd"
+ },
+ {
+  "id": 55,
+  "name": "Rotamedics Pharmacy"
+ },
+ {
+  "id": 57,
+  "name": "Relax Biotech Pvt Ltd"
+ },
+ {
+  "id": 58,
+  "name": "Hospira Australia Pty Ltd."
+ },
+ {
+  "id": 59,
+  "name": "Cambridge Health Care Limited"
+ },
+ {
+  "id": 61,
+  "name": "Dupen Laboratories Pvt Ltd"
+ },
+ {
+  "id": 62,
+  "name": "Cipla Limited"
+ },
+ {
+  "id": 63,
+  "name": "Norris Medicines Limited"
+ },
+ {
+  "id": 64,
+  "name": "Ocean Healthcare Pvt Ltd"
+ },
+ {
+  "id": 65,
+  "name": "Impulse Pharma Pvt. Ltd"
+ },
+ {
+  "id": 67,
+  "name": "Micro Labs Limited"
+ },
+ {
+  "id": 68,
+  "name": "JFL Life Sciences Pvt. Ltd"
+ },
+ {
+  "id": 69,
+  "name": "Shandong Xier Kangtai Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 70,
+  "name": "Joyfad Pharmaceutical Laboratories Limited"
+ },
+ {
+  "id": 71,
+  "name": "Nuel Pharmaceutical Limited"
+ },
+ {
+  "id": 72,
+  "name": "Sagar Vitaceuticals Nigeria Ltd"
+ },
+ {
+  "id": 73,
+  "name": "Phamatex Industries Ltd"
+ },
+ {
+  "id": 74,
+  "name": "Chemiron Care Ltd"
+ },
+ {
+  "id": 75,
+  "name": "Krishat Pharma Ltd"
+ },
+ {
+  "id": 76,
+  "name": "Richygold International Limited"
+ },
+ {
+  "id": 77,
+  "name": "New Healthway Company Limited"
+ },
+ {
+  "id": 78,
+  "name": "Makcur Laboratories Limited"
+ },
+ {
+  "id": 79,
+  "name": "Saffron Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 80,
+  "name": "Cris Pharma (India) Limited"
+ },
+ {
+  "id": 82,
+  "name": "Baroque Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 83,
+  "name": "PT Bintang Toedjoe JI"
+ },
+ {
+  "id": 84,
+  "name": "Front Pharmaceuticals PLC"
+ },
+ {
+  "id": 85,
+  "name": "Popular Pharmaceuticals Ltd"
+ },
+ {
+  "id": 87,
+  "name": "Jay Formulations Limited"
+ },
+ {
+  "id": 88,
+  "name": "Alcon-Couvreur N.V."
+ },
+ {
+  "id": 89,
+  "name": "Lincoln Pharmaceuticals Ltd"
+ },
+ {
+  "id": 90,
+  "name": "BAL Pharma Limited"
+ },
+ {
+  "id": 91,
+  "name": "Globela Pharma Pvt Ltd"
+ },
+ {
+  "id": 92,
+  "name": "Macleods Pharmaceuticals Ltd."
+ },
+ {
+  "id": 93,
+  "name": "Mancare Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 94,
+  "name": "Soaps & Chemicals Industrial & Trading Co. (SCITRA)"
+ },
+ {
+  "id": 95,
+  "name": "Vapi Care Pharma Pvt Ltd"
+ },
+ {
+  "id": 96,
+  "name": "Greenfield Pharmaceutical (Jiangsu) Co Ltd"
+ },
+ {
+  "id": 97,
+  "name": "West Coast Pharmaceutical Works Ltd"
+ },
+ {
+  "id": 98,
+  "name": "Jiangxi Xierkangtai Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 99,
+  "name": "Lek Pharmaceuticals d.d."
+ },
+ {
+  "id": 100,
+  "name": "Hubei Tianyao Pharmaceutical Co Ltd"
+ },
+ {
+  "id": 101,
+  "name": "Harbin Pharmaceutical Group Co LTD General Pharm Factory"
+ },
+ {
+  "id": 102,
+  "name": "Sandoz GmbH"
+ },
+ {
+  "id": 103,
+  "name": "Nitin Lifesciences Limited"
+ },
+ {
+  "id": 105,
+  "name": "Kotra Pharma (M) Sdn Bhd"
+ },
+ {
+  "id": 106,
+  "name": "Reyoung Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 107,
+  "name": "Osaka Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 108,
+  "name": "Bayer Pharma AG"
+ },
+ {
+  "id": 109,
+  "name": "Aristopharma Limited"
+ },
+ {
+  "id": 110,
+  "name": "STERLING HEALTH LIMITED"
+ },
+ {
+  "id": 111,
+  "name": "Sterling Healthcare Limited"
+ },
+ {
+  "id": 112,
+  "name": "Reckitt Benckiser Healthcare International Limited"
+ },
+ {
+  "id": 113,
+  "name": "Shanxi Shuguang Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 114,
+  "name": "Sichuan Kelun Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 115,
+  "name": "NA"
+ },
+ {
+  "id": 116,
+  "name": "Ecomed Pharma Limited"
+ },
+ {
+  "id": 117,
+  "name": "GlaxoSmithKline Consumer Nigeria PLC"
+ },
+ {
+  "id": 118,
+  "name": "AstraZeneca AB"
+ },
+ {
+  "id": 119,
+  "name": "Pt Kimia Farma (Persero) Tbk"
+ },
+ {
+  "id": 121,
+  "name": "Comed Chemicals Limited"
+ },
+ {
+  "id": 122,
+  "name": "Unither Liquid Manufacturing"
+ },
+ {
+  "id": 123,
+  "name": "Stallion Laboratories Pvt Ltd"
+ },
+ {
+  "id": 124,
+  "name": "Ashford Laboratories Ltd"
+ },
+ {
+  "id": 125,
+  "name": "Medreich Limited"
+ },
+ {
+  "id": 126,
+  "name": "Saga Lifesciences Limited"
+ },
+ {
+  "id": 127,
+  "name": "Innova Captab Pvt. Ltd"
+ },
+ {
+  "id": 128,
+  "name": "T.U. Woods Pharmaceutical Industries Ltd"
+ },
+ {
+  "id": 129,
+  "name": "May & Baker Nigeria PLC"
+ },
+ {
+  "id": 130,
+  "name": "Drugfield Pharmaceuticals Limited"
+ },
+ {
+  "id": 131,
+  "name": "North China Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 133,
+  "name": "Abiskata Pharmaceuticals Limited"
+ },
+ {
+  "id": 134,
+  "name": "Innothera Chouzy"
+ },
+ {
+  "id": 135,
+  "name": "Laboratorios Menarini SA"
+ },
+ {
+  "id": 136,
+  "name": "Mylan Laboratories Limited"
+ },
+ {
+  "id": 137,
+  "name": "Glenmark Pharmaceuticals Ltd"
+ },
+ {
+  "id": 138,
+  "name": "Maphar"
+ },
+ {
+  "id": 139,
+  "name": "Swiss Garnier Life Sciences"
+ },
+ {
+  "id": 140,
+  "name": "Glaxo Operations UK Limited"
+ },
+ {
+  "id": 141,
+  "name": "Sunways Rohto Pharmaceutical Pvt. Ltd"
+ },
+ {
+  "id": 142,
+  "name": "A. Menarini Manufacturing Logistics And Services S.r.l."
+ },
+ {
+  "id": 143,
+  "name": "Medicef Pharma Pvt Ltd"
+ },
+ {
+  "id": 145,
+  "name": "Afrab-Chem Limited"
+ },
+ {
+  "id": 146,
+  "name": "Troikaa Pharmaceuticals Ltd"
+ },
+ {
+  "id": 147,
+  "name": "Hetero Labs Limited"
+ },
+ {
+  "id": 148,
+  "name": "AstraZeneca UK Limited"
+ },
+ {
+  "id": 149,
+  "name": "Unijules Life Sciences Ltd"
+ },
+ {
+  "id": 150,
+  "name": "Merck Healthcare KGaA"
+ },
+ {
+  "id": 151,
+  "name": "Protech Biosystems Pvt. Ltd"
+ },
+ {
+  "id": 152,
+  "name": "GoldMoore International Ltd"
+ },
+ {
+  "id": 153,
+  "name": "Merck Santé S.A.S."
+ },
+ {
+  "id": 154,
+  "name": "Sanofi Winthrop Industrie"
+ },
+ {
+  "id": 155,
+  "name": "Theon Pharmaceuticals Ltd"
+ },
+ {
+  "id": 156,
+  "name": "Biomedical Limited"
+ },
+ {
+  "id": 157,
+  "name": "Teva Pharmaceuticals Ltd"
+ },
+ {
+  "id": 158,
+  "name": "NATCO Pharma Limited"
+ },
+ {
+  "id": 159,
+  "name": "Medico Remedies Pvt Ltd"
+ },
+ {
+  "id": 160,
+  "name": "Vitabiotics Nigeria Limited"
+ },
+ {
+  "id": 161,
+  "name": "Brawn Laboratories Limited"
+ },
+ {
+  "id": 162,
+  "name": "Divine Laboratories Pvt Limited"
+ },
+ {
+  "id": 163,
+  "name": "Les Laboratoires Servier Industrie"
+ },
+ {
+  "id": 165,
+  "name": "IPCA Laboratories Ltd."
+ },
+ {
+  "id": 168,
+  "name": "Beximco Pharmaceuticals Limited"
+ },
+ {
+  "id": 171,
+  "name": "Balkanpharma Dupnitsa"
+ },
+ {
+  "id": 172,
+  "name": "ZEE Laboratories Limited"
+ },
+ {
+  "id": 173,
+  "name": "Pfizer Manufacturing Belgium NV"
+ },
+ {
+  "id": 174,
+  "name": "Cenexi"
+ },
+ {
+  "id": 175,
+  "name": "Sanofi-Aventis Deutschland GmbH"
+ },
+ {
+  "id": 176,
+  "name": "Gelnova Laboratories India Pvt. Ltd"
+ },
+ {
+  "id": 177,
+  "name": "Inject Care Parenterals Pvt. Ltd"
+ },
+ {
+  "id": 178,
+  "name": "Lincoln Parenterals Ltd"
+ },
+ {
+  "id": 179,
+  "name": "Cooper Pharma Limited"
+ },
+ {
+  "id": 180,
+  "name": "Shukra Pharmaceuticals Limited"
+ },
+ {
+  "id": 181,
+  "name": "V.S. International Pvt. Ltd"
+ },
+ {
+  "id": 182,
+  "name": "Chiros Pharma"
+ },
+ {
+  "id": 183,
+  "name": "Swiss Pharma Pvt. Ltd"
+ },
+ {
+  "id": 184,
+  "name": "Sun Pharmaceutical Industries Limited"
+ },
+ {
+  "id": 185,
+  "name": "Artesan Pharma GmbH & Co. KG"
+ },
+ {
+  "id": 186,
+  "name": "A. Nattermann & Cie. GmbH"
+ },
+ {
+  "id": 187,
+  "name": "Novartis Saglik Gida Ve Tarim Urunleri Sanayi Ve Ticaret A/S"
+ },
+ {
+  "id": 188,
+  "name": "PT. PIM Pharmaceuticals"
+ },
+ {
+  "id": 189,
+  "name": "Scott-Edil Advance Research Laboratories & Education Limited"
+ },
+ {
+  "id": 190,
+  "name": "Daily-Need Industries Limited"
+ },
+ {
+  "id": 191,
+  "name": "Nalis Pharmaceuticals Ltd"
+ },
+ {
+  "id": 192,
+  "name": "Blueworld Pharmaceuticals, Foods and Cosmetics Limited"
+ },
+ {
+  "id": 193,
+  "name": "Glaxo Wellcome, S.A."
+ },
+ {
+  "id": 194,
+  "name": "Associated Biotech"
+ },
+ {
+  "id": 195,
+  "name": "Yangzhou No. 3 Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 196,
+  "name": "Nucleus Formulation Pvt Ltd"
+ },
+ {
+  "id": 197,
+  "name": "Lesanto Laboratories"
+ },
+ {
+  "id": 198,
+  "name": "Kremoint Pharma Pvt. Limited"
+ },
+ {
+  "id": 199,
+  "name": "Samarth Life Sciences Pvt. Ltd"
+ },
+ {
+  "id": 200,
+  "name": "Sam Pharmaceuticals Limited"
+ },
+ {
+  "id": 201,
+  "name": "Efunpo Pharma Limited"
+ },
+ {
+  "id": 202,
+  "name": "Afromed Industries Limited"
+ },
+ {
+  "id": 203,
+  "name": "Sunij Pharma Pvt Ltd"
+ },
+ {
+  "id": 204,
+  "name": "Shamshree Lifesciences Limited"
+ },
+ {
+  "id": 205,
+  "name": "Unichem Laboratories Limited"
+ },
+ {
+  "id": 206,
+  "name": "Cadila Pharmaceuticals Ltd"
+ },
+ {
+  "id": 207,
+  "name": "Bond Chemical Industries Limited"
+ },
+ {
+  "id": 208,
+  "name": "Ivee Aqua EPZ Limited"
+ },
+ {
+  "id": 209,
+  "name": "Harbin Pharmaceutical Group Bioengineering Co. Ltd"
+ },
+ {
+  "id": 210,
+  "name": "Avro Pharma Limited"
+ },
+ {
+  "id": 211,
+  "name": "Guilin Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 213,
+  "name": "Farmalabor - Produtos Farmaceuticos, S.A."
+ },
+ {
+  "id": 214,
+  "name": "Juhel Nigeria Limited"
+ },
+ {
+  "id": 215,
+  "name": "Delpharm Huningue SAS"
+ },
+ {
+  "id": 216,
+  "name": "Aesica Queenborough Ltd"
+ },
+ {
+  "id": 218,
+  "name": "Tuyil Pharmaceutical Industries Ltd"
+ },
+ {
+  "id": 219,
+  "name": "Huangshan Shengji Pharmaceutical Co. Limited"
+ },
+ {
+  "id": 220,
+  "name": "B. Braun Melsungen AG"
+ },
+ {
+  "id": 221,
+  "name": "Gauze Pharmaceutical and Laboratories Nigeria Ltd"
+ },
+ {
+  "id": 222,
+  "name": "Anhui Chengshi Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 223,
+  "name": "Janssen-Cilag S.P.A."
+ },
+ {
+  "id": 224,
+  "name": "Exeltis Ilac San. ve Tic. A.S."
+ },
+ {
+  "id": 225,
+  "name": "Nature & Nurture Industries Limited"
+ },
+ {
+  "id": 226,
+  "name": "Shanxi Zhongbao Shuguang Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 227,
+  "name": "Palghar, Maharastra stale"
+ },
+ {
+  "id": 228,
+  "name": "Ardeypharm GmbH"
+ },
+ {
+  "id": 229,
+  "name": "Novartis Tech Operations"
+ },
+ {
+  "id": 230,
+  "name": "Pharco Pharm Limited"
+ },
+ {
+  "id": 231,
+  "name": "Egyptian International Pharmaceutical Industries Co. (EIPICO)"
+ },
+ {
+  "id": 232,
+  "name": "Jinzhou Jinyang Pharma Co. Ltd"
+ },
+ {
+  "id": 233,
+  "name": "Brookes Pharma Private Limited"
+ },
+ {
+  "id": 234,
+  "name": "Pfizer Manufacturing Deutschland GmbH"
+ },
+ {
+  "id": 235,
+  "name": "Emcure Pharmaceuticals Limited"
+ },
+ {
+  "id": 236,
+  "name": "Maneesh Exports (EOU)"
+ },
+ {
+  "id": 237,
+  "name": "McW Healthcare Pvt Limited"
+ },
+ {
+  "id": 238,
+  "name": "Synokem Pharmaceuticals Limited"
+ },
+ {
+  "id": 239,
+  "name": "Surmount Laboratories Pvt Ltd"
+ },
+ {
+  "id": 240,
+  "name": "Kwality Pharmaceuticals Ltd"
+ },
+ {
+  "id": 241,
+  "name": "Brooks Laboratories Limited"
+ },
+ {
+  "id": 242,
+  "name": "Abbott Biologicals B.V."
+ },
+ {
+  "id": 243,
+  "name": "Catalent UK Swindon Zydis Limited"
+ },
+ {
+  "id": 244,
+  "name": "Dragenopharm Apotheker Pueschl GmbH"
+ },
+ {
+  "id": 245,
+  "name": "Ferring International Center S.A."
+ },
+ {
+  "id": 246,
+  "name": "Ferring-Leciva A.S."
+ },
+ {
+  "id": 247,
+  "name": "Janssen Pharmaceutica NV"
+ },
+ {
+  "id": 248,
+  "name": "The United Pharmaceuticals Manufacturing Co Ltd"
+ },
+ {
+  "id": 249,
+  "name": "Colep Laupheim GmbH & Co. KG"
+ },
+ {
+  "id": 250,
+  "name": "Sofarimex - Industria Quimica e Farmaceutica, S.A."
+ },
+ {
+  "id": 251,
+  "name": "Ernest Chemist Limited"
+ },
+ {
+  "id": 252,
+  "name": "Hovid Bhd"
+ },
+ {
+  "id": 253,
+  "name": "B. Braun Medical, S.A."
+ },
+ {
+  "id": 254,
+  "name": "Boehringer Ingelheim Pharma GmbH & Co. KG"
+ },
+ {
+  "id": 255,
+  "name": "Ordain Health Care Global Pvt. Ltd"
+ },
+ {
+  "id": 256,
+  "name": "Bioraj Pharmaceuticals Limited"
+ },
+ {
+  "id": 257,
+  "name": "Jopan Pharmaceuticals Nigeria Limited"
+ },
+ {
+  "id": 258,
+  "name": "Esapharma S.p.A. Pharmaceutical Laboratory"
+ },
+ {
+  "id": 259,
+  "name": "Astamed Healthcare (I) Pvt. Ltd"
+ },
+ {
+  "id": 260,
+  "name": "Gujarat Liqui Pharmacaps Pvt. Ltd"
+ },
+ {
+  "id": 261,
+  "name": "Ratnamani Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 262,
+  "name": "Mediwin Pharmaceuticals"
+ },
+ {
+  "id": 263,
+  "name": "Pulse Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 264,
+  "name": "Aurobindo Pharma Ltd"
+ },
+ {
+  "id": 265,
+  "name": "SmithKline Beecham PLC"
+ },
+ {
+  "id": 267,
+  "name": "GlaxoSmithKline Consumer Healthcare S.A."
+ },
+ {
+  "id": 268,
+  "name": "Ferozsons Laboratories Limited"
+ },
+ {
+  "id": 269,
+  "name": "Wrapsa (Pty) Ltd"
+ },
+ {
+  "id": 270,
+  "name": "Shandong Shenglu Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 271,
+  "name": "Arwan Pharmaceutical Industries Lebanon s.a.l."
+ },
+ {
+  "id": 272,
+  "name": "Navketan Pharma Pvt Ltd"
+ },
+ {
+  "id": 273,
+  "name": "Johnson & Johnson (Pty) Limited"
+ },
+ {
+  "id": 275,
+  "name": "Themis Medicare Limited"
+ },
+ {
+  "id": 276,
+  "name": "Catalent Germany Schorndorf GmbH"
+ },
+ {
+  "id": 277,
+  "name": "GlaxoSmithKline Inc."
+ },
+ {
+  "id": 278,
+  "name": "Bayer Schering Pharma AG"
+ },
+ {
+  "id": 279,
+  "name": "PT Dankos Laboratories Tbk"
+ },
+ {
+  "id": 280,
+  "name": "Bafna Pharmaceuticals Ltd"
+ },
+ {
+  "id": 281,
+  "name": "TIL Healthcare Pvt Ltd"
+ },
+ {
+  "id": 282,
+  "name": "Aurochem Laboratories (I) Pvt. Ltd"
+ },
+ {
+  "id": 283,
+  "name": "Softech Pharma Pvt. Ltd"
+ },
+ {
+  "id": 284,
+  "name": "Glow Pharma Pvt. Ltd"
+ },
+ {
+  "id": 285,
+  "name": "NuGale Pharmaceutical Inc."
+ },
+ {
+  "id": 286,
+  "name": "Galentic Pharma (India) Pvt. Ltd"
+ },
+ {
+  "id": 287,
+  "name": "Syncom Healthcare Limited"
+ },
+ {
+  "id": 288,
+  "name": "Sirio Pharma Co. Ltd"
+ },
+ {
+  "id": 289,
+  "name": "Vitabiotics Ltd"
+ },
+ {
+  "id": 290,
+  "name": "Abbott GmbH & Co. KG"
+ },
+ {
+  "id": 291,
+  "name": "Therapeutic Laboratories Nigeria Limited"
+ },
+ {
+  "id": 292,
+  "name": "Contract Manufacturing & Packaging Services Pty Ltd"
+ },
+ {
+  "id": 293,
+  "name": "Pfizer (Perth) Pty Limited"
+ },
+ {
+  "id": 294,
+  "name": "MSN Laboratories Private Limited"
+ },
+ {
+  "id": 295,
+  "name": "Bayer Weimar GmbH und Co. KG"
+ },
+ {
+  "id": 296,
+  "name": "Apex Formulations Pvt. Ltd"
+ },
+ {
+  "id": 297,
+  "name": "Centurion Laboratories Pvt Ltd"
+ },
+ {
+  "id": 298,
+  "name": "Briyosis Soft Caps Pvt. Ltd"
+ },
+ {
+  "id": 299,
+  "name": "Akums Drugs & Pharmaceuticals Ltd"
+ },
+ {
+  "id": 300,
+  "name": "Yash Medicare Pvt. Ltd"
+ },
+ {
+  "id": 301,
+  "name": "Bell, Sons & Co. (Druggists) Ltd"
+ },
+ {
+  "id": 302,
+  "name": "Mars Remedies Pvt. Ltd"
+ },
+ {
+  "id": 303,
+  "name": "Global Pharma Healthcare Pvt Ltd"
+ },
+ {
+  "id": 304,
+  "name": "TianJin KingYork Group Hubei Tianyao Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 305,
+  "name": "Asoj Soft Caps Pvt. Ltd"
+ },
+ {
+  "id": 307,
+  "name": "Hanlim Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 308,
+  "name": "Chemo-Pharma Laboratories Ltd"
+ },
+ {
+  "id": 309,
+  "name": "Novartis Consumer Healthcare"
+ },
+ {
+  "id": 310,
+  "name": "GlaxoSmithKline Manufacturing S.P.A."
+ },
+ {
+  "id": 311,
+  "name": "Unicure Pharmaceuticals Limited"
+ },
+ {
+  "id": 312,
+  "name": "Nigerian-German Chemicals PLC"
+ },
+ {
+  "id": 313,
+  "name": "Jinling Pharmaceutical Co., Ltd., Zhejiang Tianfeng Pharmaceutical Factory"
+ },
+ {
+  "id": 314,
+  "name": "Ige Pharmacy Nigeria Ltd"
+ },
+ {
+  "id": 315,
+  "name": "Mekophar Chemical Pharmaceutical Joint Stock Company"
+ },
+ {
+  "id": 316,
+  "name": "Cilag AG"
+ },
+ {
+  "id": 317,
+  "name": "Admac Lifesciences"
+ },
+ {
+  "id": 318,
+  "name": "Salud Care (I) Pvt. Ltd"
+ },
+ {
+  "id": 319,
+  "name": "Sandoz Srl"
+ },
+ {
+  "id": 320,
+  "name": "Adley Formulations"
+ },
+ {
+  "id": 321,
+  "name": "Fourrts (India) Laboratories Pvt. Limited"
+ },
+ {
+  "id": 322,
+  "name": "Clarion India"
+ },
+ {
+  "id": 323,
+  "name": "Shanxi Xinyitong Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 324,
+  "name": "Ahlcon Parenterals (India) Limited"
+ },
+ {
+  "id": 325,
+  "name": "Barka Pharmaceutical Company Limited"
+ },
+ {
+  "id": 326,
+  "name": "Indiana Ophthalmics"
+ },
+ {
+  "id": 327,
+  "name": "Baader Schulz Laboratories"
+ },
+ {
+  "id": 328,
+  "name": "Seebest Pharmaceutical Chemist Ltd"
+ },
+ {
+  "id": 329,
+  "name": "Antila Lifesciences Pvt. Ltd"
+ },
+ {
+  "id": 330,
+  "name": "Unique Pharmaceutical Laboratories (A Div. of J.B. Chemicals & Pharmaceuticals Ltd)"
+ },
+ {
+  "id": 331,
+  "name": "Bentos Pharmaceutical Products Limited"
+ },
+ {
+  "id": 332,
+  "name": "Lupin Limited"
+ },
+ {
+  "id": 333,
+  "name": "Alben Healthcare Industries Limited"
+ },
+ {
+  "id": 334,
+  "name": "Vitaline Sociedad Anonima Cerrada (S.A.C)"
+ },
+ {
+  "id": 335,
+  "name": "A.C. Drugs Ltd"
+ },
+ {
+  "id": 336,
+  "name": "Cachet Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 337,
+  "name": "Oak-Faith Pharmaceutical Resources Limited"
+ },
+ {
+  "id": 338,
+  "name": "FDC Limited"
+ },
+ {
+  "id": 339,
+  "name": "Auscel Laboratories Limited"
+ },
+ {
+  "id": 340,
+  "name": "Kamron Laboratories Ltd"
+ },
+ {
+  "id": 341,
+  "name": "New Divine Favour Pharmaceutical Industries Ltd"
+ },
+ {
+  "id": 342,
+  "name": "Virchow Biotech Pvt. Limited"
+ },
+ {
+  "id": 343,
+  "name": "Intracell Therapeutics Pvt. Ltd"
+ },
+ {
+  "id": 344,
+  "name": "Renown Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 345,
+  "name": "Meyer Organics Pvt Ltd"
+ },
+ {
+  "id": 346,
+  "name": "Beenie Industries Limited"
+ },
+ {
+  "id": 347,
+  "name": "Enicar Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 348,
+  "name": "Kessington Global Synergy Ltd"
+ },
+ {
+  "id": 349,
+  "name": "Zenith Healthcare Limited"
+ },
+ {
+  "id": 350,
+  "name": "Unilink Pharma Pvt. Ltd"
+ },
+ {
+  "id": 351,
+  "name": "Rajrab Ltd"
+ },
+ {
+  "id": 352,
+  "name": "The Madras Pharmaceuticals"
+ },
+ {
+  "id": 353,
+  "name": "Asad Pharmaceuticals Limited"
+ },
+ {
+  "id": 354,
+  "name": "Apacco Pharma Nig. Ltd"
+ },
+ {
+  "id": 355,
+  "name": "Ugolab Productions Nigeria Limited"
+ },
+ {
+  "id": 356,
+  "name": "Ozah Chemicals and Pharmaceutical Ltd"
+ },
+ {
+  "id": 357,
+  "name": "Wintech Pharmaceuticals"
+ },
+ {
+  "id": 358,
+  "name": "Celogen Generics Pvt Ltd"
+ },
+ {
+  "id": 359,
+  "name": "Verve Human Care Laboratories Ltd"
+ },
+ {
+  "id": 360,
+  "name": "Sunlife Productions Und Vertical Gese"
+ },
+ {
+  "id": 362,
+  "name": "Kunimed PharmaChem Limited"
+ },
+ {
+  "id": 363,
+  "name": "Inventia Healthcare Limited"
+ },
+ {
+  "id": 364,
+  "name": "Ajanta Pharma Limited"
+ },
+ {
+  "id": 365,
+  "name": "Ind-Swift Limited"
+ },
+ {
+  "id": 366,
+  "name": "Baxter Pharmaceuticals India Private Limited"
+ },
+ {
+  "id": 367,
+  "name": "Ningbo Dahongying Pharmaceutical Co Ltd"
+ },
+ {
+  "id": 369,
+  "name": "Laborate Pharmaceuticals India Ltd"
+ },
+ {
+  "id": 370,
+  "name": "GlaxoSmithKline LLC"
+ },
+ {
+  "id": 371,
+  "name": "Swiss Parenterals Pvt Ltd"
+ },
+ {
+  "id": 372,
+  "name": "Aculife Healthcare Pvt Ltd"
+ },
+ {
+  "id": 373,
+  "name": "McCoy Pharma Pvt Ltd"
+ },
+ {
+  "id": 374,
+  "name": "Sunrise International Labs Limited"
+ },
+ {
+  "id": 375,
+  "name": "Cure Quick Pharmaceuticals"
+ },
+ {
+  "id": 376,
+  "name": "Alchemy Medicine Pvt. Ltd"
+ },
+ {
+  "id": 377,
+  "name": "MEDGEL Pvt. Ltd"
+ },
+ {
+  "id": 378,
+  "name": "Novartis Farma S.p.A."
+ },
+ {
+  "id": 379,
+  "name": "A & J Pharmaceutical Nigeria Limited"
+ },
+ {
+  "id": 380,
+  "name": "Laboratorios Basi-Industria Farmaceutica S.A."
+ },
+ {
+  "id": 381,
+  "name": "Divine Essentials Formulations Limited"
+ },
+ {
+  "id": 382,
+  "name": "Nichben Pharmaceutical Industries Nig. Ltd"
+ },
+ {
+  "id": 383,
+  "name": "Swiss Pharma Nigeria Ltd"
+ },
+ {
+  "id": 384,
+  "name": "Corona Remedies Pvt. Ltd"
+ },
+ {
+  "id": 385,
+  "name": "Laboratoires Merck Sharp & Dohme-Chibret"
+ },
+ {
+  "id": 386,
+  "name": "Medopharm Pvt Ltd"
+ },
+ {
+  "id": 387,
+  "name": "Zen Pharma (P) Ltd"
+ },
+ {
+  "id": 388,
+  "name": "Diamond Pharma"
+ },
+ {
+  "id": 389,
+  "name": "Jewim Pharmaceutical (Shandong) Co. Ltd"
+ },
+ {
+  "id": 390,
+  "name": "Peace Standard Pharmaceutical Industries Ltd"
+ },
+ {
+  "id": 391,
+  "name": "D.D.D. Limited"
+ },
+ {
+  "id": 392,
+  "name": "World Medicine Ilac San"
+ },
+ {
+  "id": 393,
+  "name": "Servier Egypt Industries Limited"
+ },
+ {
+  "id": 394,
+  "name": "PT. Harsen Laboratories"
+ },
+ {
+  "id": 395,
+  "name": "Replek Farm Ltd. Skopje"
+ },
+ {
+  "id": 396,
+  "name": "Medisure Laboratories Pakistan (Pvt.) Limited"
+ },
+ {
+  "id": 397,
+  "name": "Hab Pharmaceuticals & Research Ltd"
+ },
+ {
+  "id": 398,
+  "name": "Delta Pharma Limited"
+ },
+ {
+  "id": 399,
+  "name": "European Egyptian Pharmaceutical Industries (EEPI)"
+ },
+ {
+  "id": 400,
+  "name": "AbbVie Deutschland GmbH & Co. KG"
+ },
+ {
+  "id": 401,
+  "name": "Nigerian Army Drug Manufacturing Co. (NADMACO)"
+ },
+ {
+  "id": 402,
+  "name": "Medibios Laboratories Pvt Ltd"
+ },
+ {
+  "id": 403,
+  "name": "UMEDICA Laboratories Pvt Ltd"
+ },
+ {
+  "id": 404,
+  "name": "Mihika Pharmaceuticals"
+ },
+ {
+  "id": 405,
+  "name": "Ce-Chem Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 406,
+  "name": "Milan Laboratories (India) Pvt. Ltd"
+ },
+ {
+  "id": 407,
+  "name": "Rottendorf Pharma GmbH"
+ },
+ {
+  "id": 408,
+  "name": "Shin Poong Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 409,
+  "name": "Faes Farma S.A."
+ },
+ {
+  "id": 410,
+  "name": "Neopharma LLC"
+ },
+ {
+  "id": 411,
+  "name": "R-Pharm Germany GmbH"
+ },
+ {
+  "id": 412,
+  "name": "Pregna International Ltd"
+ },
+ {
+  "id": 413,
+  "name": "ICPA Health Products Ltd"
+ },
+ {
+  "id": 414,
+  "name": "CSPC Zhongnuo Pharmaceutical (Shijiazhuang) Co., Ltd"
+ },
+ {
+  "id": 415,
+  "name": "Nouvasant Pharmhealth Ltd"
+ },
+ {
+  "id": 416,
+  "name": "Zeiss Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 417,
+  "name": "Advance Pharma GmbH"
+ },
+ {
+  "id": 418,
+  "name": "Jash Pharma Pvt. Ltd"
+ },
+ {
+  "id": 419,
+  "name": "Mcneil & Argus Pharmaceuticals Ltd"
+ },
+ {
+  "id": 420,
+  "name": "Medicamen Biotech Ltd"
+ },
+ {
+  "id": 421,
+  "name": "Midas Care Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 422,
+  "name": "Medley Pharmaceuticals Ltd"
+ },
+ {
+  "id": 423,
+  "name": "Health Care Formulations Pvt. Ltd"
+ },
+ {
+  "id": 424,
+  "name": "J. B. Chemicals & Pharmaceuticals Ltd"
+ },
+ {
+  "id": 425,
+  "name": "Ranbaxy Laboratories Limited"
+ },
+ {
+  "id": 426,
+  "name": "Pell Tech Healthcare Pvt Ltd"
+ },
+ {
+  "id": 427,
+  "name": "BDH Industries Ltd"
+ },
+ {
+  "id": 429,
+  "name": "DFL Industria e Comercio S.A."
+ },
+ {
+  "id": 430,
+  "name": "Zhejiang Jingwei Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 431,
+  "name": "Grand Pharmaceutical (China) Co., Ltd"
+ },
+ {
+  "id": 432,
+  "name": "PharmEvo (Pvt.) Ltd"
+ },
+ {
+  "id": 433,
+  "name": "Renata Limited"
+ },
+ {
+  "id": 434,
+  "name": "Bharat Serums and Vaccines Ltd"
+ },
+ {
+  "id": 435,
+  "name": "Celon Laboratories Pvt Ltd"
+ },
+ {
+  "id": 436,
+  "name": "Acino Pharma AG"
+ },
+ {
+  "id": 437,
+  "name": "Shine Pharmaceuticals Ltd"
+ },
+ {
+  "id": 438,
+  "name": "Laboratorios Leon Farma, S.A."
+ },
+ {
+  "id": 439,
+  "name": "Unicure Remedies Pvt. Ltd"
+ },
+ {
+  "id": 440,
+  "name": "Yangzhou Norier Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 441,
+  "name": "Zhejiang Kangle Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 442,
+  "name": "Hebei Tiancheng Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 443,
+  "name": "Win-Medicare Pvt Ltd"
+ },
+ {
+  "id": 444,
+  "name": "Sunrise Remedies Pvt. Limited"
+ },
+ {
+  "id": 445,
+  "name": "Jordan Sweden Medical & Sterilization Co. (JOSWE Medical)"
+ },
+ {
+  "id": 446,
+  "name": "Jubilant Generics Ltd"
+ },
+ {
+  "id": 447,
+  "name": "Imperial Life Sciences"
+ },
+ {
+  "id": 448,
+  "name": "Wuhu Kangqi Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 449,
+  "name": "Vindas Chemical Industries Pvt. Ltd"
+ },
+ {
+  "id": 450,
+  "name": "Hamax Pharmaceuticals"
+ },
+ {
+  "id": 451,
+  "name": "Shelys Pharmaceuticals Ltd"
+ },
+ {
+  "id": 452,
+  "name": "Eurolife Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 453,
+  "name": "S.M. Farmaceutici S.r.l."
+ },
+ {
+  "id": 454,
+  "name": "Sofak Pharmaceutical Ind Ltd"
+ },
+ {
+  "id": 455,
+  "name": "PT. Tempo Scan Pacific Tbk"
+ },
+ {
+  "id": 456,
+  "name": "Vinco Pharmaceuticals Nigeria Ltd"
+ },
+ {
+  "id": 457,
+  "name": "Salutas Pharma GmbH"
+ },
+ {
+  "id": 458,
+  "name": "Beta Healthcare International Ltd"
+ },
+ {
+  "id": 459,
+  "name": "Aeropharm GmbH"
+ },
+ {
+  "id": 460,
+  "name": "Corden Pharma S.p.A."
+ },
+ {
+  "id": 461,
+  "name": "Danadams Pharmaceuticals Industry Ltd"
+ },
+ {
+  "id": 462,
+  "name": "Mipharm S.p.A."
+ },
+ {
+  "id": 463,
+  "name": "Anhui Nuhu Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 464,
+  "name": "Pierre Fabre Medicament Production"
+ },
+ {
+  "id": 465,
+  "name": "Kesar Swasthya Pvt. Ltd"
+ },
+ {
+  "id": 466,
+  "name": "Eva Pharma For Pharmaceuticals & Medical Appliances S.A.E."
+ },
+ {
+  "id": 467,
+  "name": "NHMB Company Ltd"
+ },
+ {
+  "id": 468,
+  "name": "EBEWE Pharma GmbH Nfg KG"
+ },
+ {
+  "id": 469,
+  "name": "Navketan Research & Laboratories Pvt Ltd"
+ },
+ {
+  "id": 470,
+  "name": "Naxpar Pharma Pvt. Ltd"
+ },
+ {
+  "id": 471,
+  "name": "Takeda GmbH"
+ },
+ {
+  "id": 472,
+  "name": "Glaxo Wellcome Production"
+ },
+ {
+  "id": 473,
+  "name": "Fisons Ltd. T A Sanofi Aventis"
+ },
+ {
+  "id": 474,
+  "name": "Rafarm S.A."
+ },
+ {
+  "id": 475,
+  "name": "LEO Laboratories Ltd"
+ },
+ {
+  "id": 476,
+  "name": "Unimed Pharmaceuticals Inc."
+ },
+ {
+  "id": 477,
+  "name": "Janssen-Cilag Manufacturing, LLC"
+ },
+ {
+  "id": 478,
+  "name": "Syncom Formulations (India) Ltd"
+ },
+ {
+  "id": 479,
+  "name": "Principle Healthcare Group"
+ },
+ {
+  "id": 480,
+  "name": "Thompson And Capper Limited"
+ },
+ {
+  "id": 481,
+  "name": "Lek S.A."
+ },
+ {
+  "id": 482,
+  "name": "Sanofi Aventis SpA"
+ },
+ {
+  "id": 483,
+  "name": "PT Dexa Medica"
+ },
+ {
+  "id": 484,
+  "name": "Denk Pharma GmbH & Co. KG"
+ },
+ {
+  "id": 485,
+  "name": "Maxtar Bio-Genics"
+ },
+ {
+  "id": 486,
+  "name": "Pfizer Pharmaceuticals LLC"
+ },
+ {
+  "id": 487,
+  "name": "US Pharma USA Co., Ltd"
+ },
+ {
+  "id": 488,
+  "name": "Gufic Biosciences Ltd"
+ },
+ {
+  "id": 489,
+  "name": "Zhejiang DND Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 490,
+  "name": "Catalent Germany Eberbach GmbH"
+ },
+ {
+  "id": 492,
+  "name": "Neros Pharmaceuticals Ltd"
+ },
+ {
+  "id": 493,
+  "name": "Kilitch Drugs (India) Ltd"
+ },
+ {
+  "id": 494,
+  "name": "Maxheal Pharmaceuticals (India) Ltd"
+ },
+ {
+  "id": 495,
+  "name": "UCB Pharma S.A."
+ },
+ {
+  "id": 496,
+  "name": "PT. Marin Liza Farmasi"
+ },
+ {
+  "id": 497,
+  "name": "AbbVie Inc."
+ },
+ {
+  "id": 498,
+  "name": "Merkle GmbH"
+ },
+ {
+  "id": 499,
+  "name": "Rock Pharmaceutical Laboratories Pvt Ltd"
+ },
+ {
+  "id": 500,
+  "name": "Laboratoria Qualiphar NV/SA"
+ },
+ {
+  "id": 501,
+  "name": "Lusomedicamenta S.A."
+ },
+ {
+  "id": 502,
+  "name": "Ferring GmbH"
+ },
+ {
+  "id": 503,
+  "name": "Sao Kim Pharmaceutical Joint Stock Company"
+ },
+ {
+  "id": 504,
+  "name": "Remedica Ltd"
+ },
+ {
+  "id": 505,
+  "name": "DHG Pharmaceutical One-Member Company Limited"
+ },
+ {
+  "id": 506,
+  "name": "Finecure Pharmaceuticals Limited"
+ },
+ {
+  "id": 507,
+  "name": "Med-In Pharma Ltd"
+ },
+ {
+  "id": 508,
+  "name": "Apollo Pharma Ltd"
+ },
+ {
+  "id": 509,
+  "name": "PZ Cussons Nigeria PLC"
+ },
+ {
+  "id": 510,
+  "name": "Sinopharm Xingsha Pharmaceuticals (Xiamen) Co., Ltd"
+ },
+ {
+  "id": 511,
+  "name": "Aspiro Pharma Limited"
+ },
+ {
+  "id": 513,
+  "name": "Sance Laboratories Pvt. Ltd"
+ },
+ {
+  "id": 514,
+  "name": "Sai Mirra Innopharm Pvt Ltd"
+ },
+ {
+  "id": 515,
+  "name": "Zest Pharma Ltd"
+ },
+ {
+  "id": 516,
+  "name": "Sparsh Bio-Tech Pvt Ltd"
+ },
+ {
+  "id": 517,
+  "name": "Amriya Pharmaceutical Industries"
+ },
+ {
+  "id": 518,
+  "name": "Khandekwal Laboratories Pvt Ltd"
+ },
+ {
+  "id": 519,
+  "name": "Aqua Vitoe Laboratories"
+ },
+ {
+  "id": 520,
+  "name": "Pauco Pharmaceutical Industries Nig Ltd"
+ },
+ {
+  "id": 521,
+  "name": "EDO PHARM LTD NIGERIA"
+ },
+ {
+  "id": 522,
+  "name": "Cardinal Drugs Limited"
+ },
+ {
+  "id": 523,
+  "name": "Jesil Pharmaceutical Industries Limited"
+ },
+ {
+  "id": 524,
+  "name": "Morison Industries PLC"
+ },
+ {
+  "id": 525,
+  "name": "ACME Formulation Pvt. Ltd"
+ },
+ {
+  "id": 526,
+  "name": "JC Udeozor & Sons Global Industrial Limited"
+ },
+ {
+  "id": 527,
+  "name": "Abaris Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 528,
+  "name": "Samrudh Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 529,
+  "name": "Pinnacle Life Science Pvt Ltd (subsidiary of AARTI Drugs Ltd)"
+ },
+ {
+  "id": 530,
+  "name": "ATOZ PHARMACEUTICALS PVT LTD"
+ },
+ {
+  "id": 531,
+  "name": "Campharm Products Limited"
+ },
+ {
+  "id": 532,
+  "name": "Farmex Meyer Limited"
+ },
+ {
+  "id": 533,
+  "name": "Feccox Pharmacy and General Enterprises Ltd"
+ },
+ {
+  "id": 534,
+  "name": "NIGERIAN GERMAN CHEMICALS PLC"
+ },
+ {
+  "id": 535,
+  "name": "Pal Pharmaceutical Industries Ltd"
+ },
+ {
+  "id": 537,
+  "name": "Agary Pharmaceutical Limited"
+ },
+ {
+  "id": 538,
+  "name": "Archy Pharmaceuticals Limited"
+ },
+ {
+  "id": 539,
+  "name": "Esehi Pharmaceutical Industries Ltd"
+ },
+ {
+  "id": 540,
+  "name": "Miraflash Nig Ltd"
+ },
+ {
+  "id": 541,
+  "name": "Gentle Hills Limited"
+ },
+ {
+  "id": 542,
+  "name": "Kingsize Pharmaceuticals Nig Limited"
+ },
+ {
+  "id": 543,
+  "name": "Sewell Pharmaceuticals Limited"
+ },
+ {
+  "id": 544,
+  "name": "Yeluri Formulations Pvt. Ltd"
+ },
+ {
+  "id": 545,
+  "name": "Damazo Pharmaceutical Industries (WA) Limited"
+ },
+ {
+  "id": 546,
+  "name": "MAAN Pharmaceuticals Ltd"
+ },
+ {
+  "id": 548,
+  "name": "De-Shalom Pharmaceutical Lab. Nig. Ltd"
+ },
+ {
+  "id": 549,
+  "name": "Reagan Remedies Limited"
+ },
+ {
+  "id": 550,
+  "name": "Orange Kalbe Limited"
+ },
+ {
+  "id": 551,
+  "name": "Nino Pharma & Chemical Company Limited"
+ },
+ {
+  "id": 553,
+  "name": "Oncotec Pharma Produktion GmbH"
+ },
+ {
+  "id": 554,
+  "name": "Universal Medicare Ltd"
+ },
+ {
+  "id": 555,
+  "name": "Stedman Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 556,
+  "name": "Ronald Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 557,
+  "name": "Centaur Pharmaceuticals Pvt Ltd"
+ },
+ {
+  "id": 558,
+  "name": "Unimax Laboratories"
+ },
+ {
+  "id": 559,
+  "name": "Servier (Ireland) Industries Ltd"
+ },
+ {
+  "id": 560,
+  "name": "Novartis Farmaceutica S.A."
+ },
+ {
+  "id": 561,
+  "name": "Ambix Healthcare LLP"
+ },
+ {
+  "id": 562,
+  "name": "MMC Healthcare Limited"
+ },
+ {
+  "id": 563,
+  "name": "G.D. Laboratories (India) Pvt. Ltd"
+ },
+ {
+  "id": 564,
+  "name": "Sophia Pharmaceutical Company Ltd"
+ },
+ {
+  "id": 565,
+  "name": "Shandong Yikang Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 566,
+  "name": "Cipla Quality Chemical Industries Limited"
+ },
+ {
+  "id": 567,
+  "name": "Oxalis Labs"
+ },
+ {
+  "id": 568,
+  "name": "Sunlovis Pharmaceuticals LLP"
+ },
+ {
+  "id": 569,
+  "name": "Hubei Kangzheng Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 570,
+  "name": "Pharmax India Pvt. Ltd"
+ },
+ {
+  "id": 571,
+  "name": "Centurion Remedies Pvt. Ltd"
+ },
+ {
+  "id": 572,
+  "name": "Zhongshan Lean & Leap Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 573,
+  "name": "Medrugs Limited"
+ },
+ {
+  "id": 574,
+  "name": "Saitech Medicare Pvt. Ltd"
+ },
+ {
+  "id": 575,
+  "name": "Evans Baroque Limited"
+ },
+ {
+  "id": 576,
+  "name": "Huazhong Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 577,
+  "name": "Saga Laboratories Ltd"
+ },
+ {
+  "id": 578,
+  "name": "Regal Laboratories"
+ },
+ {
+  "id": 579,
+  "name": "Pfizer Italia S.r.l"
+ },
+ {
+  "id": 580,
+  "name": "Bio-Pharmachemie Joint Venture Co."
+ },
+ {
+  "id": 581,
+  "name": "Swiss Caps GmbH"
+ },
+ {
+  "id": 582,
+  "name": "Ranbaxy Nigeria Limited"
+ },
+ {
+  "id": 583,
+  "name": "Sapphire Lifesciences Pvt Ltd"
+ },
+ {
+  "id": 584,
+  "name": "Klassic Formulations Ltd"
+ },
+ {
+  "id": 585,
+  "name": "Chris-Ejik Pharmaceuticals & Healthcare Products Ltd"
+ },
+ {
+  "id": 586,
+  "name": "Flourish Pharma"
+ },
+ {
+  "id": 587,
+  "name": "Global Frankele Enterprises"
+ },
+ {
+  "id": 588,
+  "name": "Ajebi Trado-Medical Company"
+ },
+ {
+  "id": 589,
+  "name": "Bakannagba Alternative Medicine"
+ },
+ {
+  "id": 590,
+  "name": "Evergreen Herbs Limited"
+ },
+ {
+  "id": 591,
+  "name": "Piramal Healthcare UK Limited"
+ },
+ {
+  "id": 592,
+  "name": "Curetech Skincare"
+ },
+ {
+  "id": 593,
+  "name": "Schering-Plough Labo NV"
+ },
+ {
+  "id": 594,
+  "name": "Zhejiang Jingxin Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 595,
+  "name": "Advanced Chemical Industries Limited"
+ },
+ {
+  "id": 596,
+  "name": "Naari Pharma Private Limited"
+ },
+ {
+  "id": 597,
+  "name": "Sanofi Aventis SA"
+ },
+ {
+  "id": 598,
+  "name": "Medreich PLC"
+ },
+ {
+  "id": 599,
+  "name": "Shijiazhuang No.4 Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 600,
+  "name": "Siegfried Hameln GmbH"
+ },
+ {
+  "id": 601,
+  "name": "Haupt Pharma Latina S.r.l."
+ },
+ {
+  "id": 602,
+  "name": "Mega Lifesciences Public Company Limited"
+ },
+ {
+  "id": 603,
+  "name": "ZIM Laboratories Ltd"
+ },
+ {
+  "id": 604,
+  "name": "Aglowmed Limited"
+ },
+ {
+  "id": 605,
+  "name": "Mackur Laboratories Ltd"
+ },
+ {
+  "id": 606,
+  "name": "Intracin Pharmaceutical Pvt. Ltd"
+ },
+ {
+  "id": 607,
+  "name": "Kontam Pharmaceuticals (Zhongshan) Co., Ltd"
+ },
+ {
+  "id": 608,
+  "name": "NCPC Hebei Huamin Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 609,
+  "name": "Montage Laboratories Pvt. Ltd"
+ },
+ {
+  "id": 610,
+  "name": "TOCHUKS DRUGS LIMITED NIGERIA"
+ },
+ {
+  "id": 611,
+  "name": "INNO-CREATIVE WORLD SOLUTIONS"
+ },
+ {
+  "id": 612,
+  "name": "Triton Pharmacare Corporate Pty Ltd"
+ },
+ {
+  "id": 613,
+  "name": "Everdon Global Magnet Ltd"
+ },
+ {
+  "id": 614,
+  "name": "Adore Pharmaceutical Pvt. Ltd"
+ },
+ {
+  "id": 615,
+  "name": "Nem Laboratories Pvt. Ltd"
+ },
+ {
+  "id": 616,
+  "name": "Korea Pharma Co., Ltd"
+ },
+ {
+  "id": 617,
+  "name": "Lilly SA"
+ },
+ {
+  "id": 618,
+  "name": "Novartis Pharma Produktions GmbH"
+ },
+ {
+  "id": 619,
+  "name": "Gilead Sciences"
+ },
+ {
+  "id": 620,
+  "name": "Medical Union Pharmaceuticals Co."
+ },
+ {
+  "id": 621,
+  "name": "Haupt Pharma Amareg GmbH"
+ },
+ {
+  "id": 622,
+  "name": "Modi-Mundi Pharma Pvt Ltd"
+ },
+ {
+  "id": 623,
+  "name": "Yuria Pharm Limited"
+ },
+ {
+  "id": 624,
+  "name": "Bayer Schering Pharma Oy"
+ },
+ {
+  "id": 625,
+  "name": "Excella GmbH & Co. KG"
+ },
+ {
+  "id": 626,
+  "name": "Laurus Labs Limited"
+ },
+ {
+  "id": 627,
+  "name": "Indchemie Health Specialities Pvt. Ltd"
+ },
+ {
+  "id": 628,
+  "name": "Bactolac Pharmaceutical Inc."
+ },
+ {
+  "id": 629,
+  "name": "Patheon Inc."
+ },
+ {
+  "id": 630,
+  "name": "Gedeon Richter"
+ },
+ {
+  "id": 631,
+  "name": "Atewolabala Ethnopharma International Limited"
+ },
+ {
+  "id": 632,
+  "name": "Kerrienta Nig. Limited"
+ },
+ {
+  "id": 633,
+  "name": "Healing Tree Nig"
+ },
+ {
+  "id": 634,
+  "name": "Delpharm Gaillard SAS"
+ },
+ {
+  "id": 635,
+  "name": "Vitane Pharmawolfratshusen"
+ },
+ {
+  "id": 636,
+  "name": "Dr M. Nwagbara Traditional Medicine"
+ },
+ {
+  "id": 637,
+  "name": "Grace Line Herbal Product"
+ },
+ {
+  "id": 638,
+  "name": "Greenlife Herbal Network Limited"
+ },
+ {
+  "id": 639,
+  "name": "Dome Info Tech Venture"
+ },
+ {
+  "id": 640,
+  "name": "E.D.M.T W/A Ltd"
+ },
+ {
+  "id": 641,
+  "name": "Fathersico Herbal Manufacturing Company"
+ },
+ {
+  "id": 642,
+  "name": "Remsol Herbal Medical Production"
+ },
+ {
+  "id": 643,
+  "name": "Pharmasol Limited"
+ },
+ {
+  "id": 644,
+  "name": "Ayrton Saunders Limited"
+ },
+ {
+  "id": 645,
+  "name": "Korea United Pharm. Inc."
+ },
+ {
+  "id": 646,
+  "name": "Accord-UK Ltd"
+ },
+ {
+  "id": 647,
+  "name": "The Government Pharm. Organisation, Thailand"
+ },
+ {
+  "id": 648,
+  "name": "Mankind Pharma Ltd, india"
+ },
+ {
+  "id": 649,
+  "name": "Aarge Healthcraft"
+ },
+ {
+  "id": 650,
+  "name": "Swiss Parenterals Limited"
+ },
+ {
+  "id": 651,
+  "name": "Hunan Kelnun Pharmaceuticals Co. Limited"
+ },
+ {
+  "id": 652,
+  "name": "Gland Pharma Limited"
+ },
+ {
+  "id": 653,
+  "name": "M/S PT Tempo Scan Pacific"
+ },
+ {
+  "id": 654,
+  "name": "ACS Dobfar SpA"
+ },
+ {
+  "id": 655,
+  "name": "Martindale Pharmaceuticals"
+ },
+ {
+  "id": 656,
+  "name": "Sterile-Gene Life Sciences Pvt. Ltd"
+ },
+ {
+  "id": 657,
+  "name": "Micro Labs Ltd"
+ },
+ {
+  "id": 658,
+  "name": "Trugen Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 659,
+  "name": "Ucan Concept Ltd"
+ },
+ {
+  "id": 660,
+  "name": "Charles Mekus Pharmaceutical & Stores Ltd"
+ },
+ {
+  "id": 661,
+  "name": "Indasi Lifescience Pvt Ltd"
+ },
+ {
+  "id": 662,
+  "name": "Catalent Pharma Solutions LLC"
+ },
+ {
+  "id": 663,
+  "name": "Almac Pharma Services Limited"
+ },
+ {
+  "id": 665,
+  "name": "AR Lifesciences"
+ },
+ {
+  "id": 666,
+  "name": "Fresenius Kabi India Private Limited"
+ },
+ {
+  "id": 668,
+  "name": "Fareva Amboise"
+ },
+ {
+  "id": 669,
+  "name": "ARTEPHARM CO. LTD."
+ },
+ {
+  "id": 671,
+  "name": "Ohad Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 672,
+  "name": "COTECH HEALTHCARE PVT. LTD, India"
+ },
+ {
+  "id": 674,
+  "name": "CSPC Ouyi Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 676,
+  "name": "CORMART NIG LTD,"
+ },
+ {
+  "id": 677,
+  "name": "HMA Medical Ltd"
+ },
+ {
+  "id": 678,
+  "name": "CORMART(NIG) LIMITED"
+ },
+ {
+  "id": 679,
+  "name": "De - Godstime Industry Nig. Ltd"
+ },
+ {
+  "id": 680,
+  "name": "Belco Pharma"
+ },
+ {
+  "id": 681,
+  "name": "Fareva Unterach GmbH"
+ },
+ {
+  "id": 682,
+  "name": "Jamjoom Pharma Co. Ltd"
+ },
+ {
+  "id": 683,
+  "name": "M/S KWALITY PHARMACEUTICALS LTD"
+ },
+ {
+  "id": 684,
+  "name": "M/S Glow Pharma Pvt Ltd"
+ },
+ {
+  "id": 686,
+  "name": "M/S Vovantis Laboratories Pvt Ltd"
+ },
+ {
+  "id": 687,
+  "name": "Siegfried Babera S.L, Ronda de Santa Maria"
+ },
+ {
+  "id": 690,
+  "name": "Merit Organics Limited"
+ },
+ {
+  "id": 691,
+  "name": "HUMANWELL PURACAP PHARMACEUTICALS (WUHAN) CO., LTD"
+ },
+ {
+  "id": 692,
+  "name": "Leady Pharmaceuticals Industries Limited"
+ },
+ {
+  "id": 693,
+  "name": "KCH Consumer Healthcare Limited"
+ },
+ {
+  "id": 694,
+  "name": "Vincal Pharmaceuticals Limited"
+ },
+ {
+  "id": 695,
+  "name": "DIZPHARM (NIGERIA) LIMITED"
+ },
+ {
+  "id": 697,
+  "name": "MBL Pharma. LTD"
+ },
+ {
+  "id": 698,
+  "name": "Gracure Pharmaceutical Ltd"
+ },
+ {
+  "id": 699,
+  "name": "Panacea Biotec Pharma Ltd"
+ },
+ {
+  "id": 700,
+  "name": "S Kant Healthcare Ltd"
+ },
+ {
+  "id": 701,
+  "name": "PLIVA HRVATSKA D.O.O"
+ },
+ {
+  "id": 702,
+  "name": "Curis Lifesciences Pvt. Ltd"
+ },
+ {
+  "id": 703,
+  "name": "Accretion Pharmaceuticals"
+ },
+ {
+  "id": 704,
+  "name": "M/S LACTOSE (INDIA) LTD."
+ },
+ {
+  "id": 705,
+  "name": "Zota Health Care Ltd"
+ },
+ {
+  "id": 706,
+  "name": "Cisen Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 707,
+  "name": "Novagen Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 708,
+  "name": "Sygen Pharmaceuticals Limited"
+ },
+ {
+  "id": 709,
+  "name": "MARLEYSHREE PHARMACEUTICAL NIGERIA LIMITED"
+ },
+ {
+  "id": 710,
+  "name": "Jehyson Healthcare Ltd"
+ },
+ {
+  "id": 711,
+  "name": "Reagan Remedies Ltd"
+ },
+ {
+  "id": 712,
+  "name": "COPAC Nigeria Limited"
+ },
+ {
+  "id": 713,
+  "name": "EVANS MEDICALPLC"
+ },
+ {
+  "id": 714,
+  "name": "Aspen Port Elizabeth (Pty) Ltd"
+ },
+ {
+  "id": 715,
+  "name": "UCB Farchim SA"
+ },
+ {
+  "id": 716,
+  "name": "S. A Alcon - Couvreur NV,"
+ },
+ {
+  "id": 718,
+  "name": "GlaxoSmithKline LLC"
+ },
+ {
+  "id": 719,
+  "name": "Patheon France S.A.S"
+ },
+ {
+  "id": 720,
+  "name": "Reckitt Benckiser Nigeria Limited"
+ },
+ {
+  "id": 721,
+  "name": "Black-trend Intl Ltd Nigeria"
+ },
+ {
+  "id": 722,
+  "name": "Uniza Lifecare Private Limited"
+ },
+ {
+  "id": 723,
+  "name": "Guizhou Tiandi Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 724,
+  "name": "GERI-CARE PHARMACEUTICALS, CORP."
+ },
+ {
+  "id": 725,
+  "name": "Claroid Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 726,
+  "name": "Magbro Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 727,
+  "name": "Healthy Life Pharma Pvt. Ltd"
+ },
+ {
+  "id": 728,
+  "name": "G.S PHARMBUTOR PVT"
+ },
+ {
+  "id": 729,
+  "name": "Special Product's Line S.P.A"
+ },
+ {
+  "id": 730,
+  "name": "HISAMITSU VIET NAM PHARMACEUTICAL COMPANY LIMITED"
+ },
+ {
+  "id": 731,
+  "name": "DAIZO CORPORATION"
+ },
+ {
+  "id": 732,
+  "name": "Systacare Remedies"
+ },
+ {
+  "id": 733,
+  "name": "East African (India) Overseas"
+ },
+ {
+  "id": 734,
+  "name": "LABORATORIES SOPHARTEX"
+ },
+ {
+  "id": 735,
+  "name": "GlaxoSmithKline Pharmaceuticals"
+ },
+ {
+  "id": 737,
+  "name": "PT.SUPRA FERBINDO FARMA"
+ },
+ {
+  "id": 738,
+  "name": "SOFTGEL Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 740,
+  "name": "KHAIRAT PHARMACY & VETINARY CO. LTD"
+ },
+ {
+  "id": 741,
+  "name": "Bora Pharma Services Inc."
+ },
+ {
+  "id": 743,
+  "name": "Dyntec spol. s r.o."
+ },
+ {
+  "id": 744,
+  "name": "Komipharm International Co. Ltd"
+ },
+ {
+  "id": 745,
+  "name": "GlaxoSmithKline Biologicals"
+ },
+ {
+  "id": 749,
+  "name": "PT Bio Farma (Persero)"
+ },
+ {
+  "id": 750,
+  "name": "Roche Diagnostics GmbH"
+ },
+ {
+  "id": 752,
+  "name": "Gennova Biopharmaceuticals Limited"
+ },
+ {
+  "id": 753,
+  "name": "Indovax Private Limited"
+ },
+ {
+  "id": 756,
+  "name": "Eli Lilly and Company Pharmaceuticals Delivery Systems"
+ },
+ {
+  "id": 757,
+  "name": "Novo Nordisk A/S"
+ },
+ {
+  "id": 758,
+  "name": "PT Bio Farma"
+ },
+ {
+  "id": 759,
+  "name": "F. Hoffmann-La Roche Ltd"
+ },
+ {
+  "id": 760,
+  "name": "Lilly France"
+ },
+ {
+  "id": 761,
+  "name": "Jiangxi Institute of Biological Products Inc."
+ },
+ {
+  "id": 762,
+  "name": "Zoetis MANUFACTURING AND RESEARCH SPAIN, S.L."
+ },
+ {
+  "id": 763,
+  "name": "Chugai Pharma Manufacturing Co. Ltd Utsunomiya Plant"
+ },
+ {
+  "id": 764,
+  "name": "Merck Serono S.P.A"
+ },
+ {
+  "id": 765,
+  "name": "Intervet International B.V."
+ },
+ {
+  "id": 766,
+  "name": "Vetter Pharma-Fertigung GmbH & Co. KG"
+ },
+ {
+  "id": 767,
+  "name": "Izo S.R.L. A Socio Unico"
+ },
+ {
+  "id": 768,
+  "name": "Zoetis Inc"
+ },
+ {
+  "id": 769,
+  "name": "Fatro S.p.A."
+ },
+ {
+  "id": 770,
+  "name": "IDT Biologika GmbH"
+ },
+ {
+  "id": 771,
+  "name": "MERIAL"
+ },
+ {
+  "id": 773,
+  "name": "Bharat Biotech International Limited"
+ },
+ {
+  "id": 774,
+  "name": "Baxter Pharmaceutical Solutions LLC"
+ },
+ {
+  "id": 775,
+  "name": "Beijing Sinder-Vet Technology Co. Ltd"
+ },
+ {
+  "id": 777,
+  "name": "Sanzyme (P) Ltd"
+ },
+ {
+  "id": 778,
+  "name": "Merck Sharp & Dohme LLC"
+ },
+ {
+  "id": 779,
+  "name": "Changchun Keygen Biological Products Co. Limited"
+ },
+ {
+  "id": 780,
+  "name": "Beijing Institude of Biological Products Ltd"
+ },
+ {
+  "id": 781,
+  "name": "Serum Institute of India Pvt. Ltd"
+ },
+ {
+  "id": 786,
+  "name": "Merial S.A.S"
+ },
+ {
+  "id": 789,
+  "name": "Zoetis Incoporation"
+ },
+ {
+  "id": 792,
+  "name": "Boehringer Ingelheim Vetmedica, S.A. de C.V."
+ },
+ {
+  "id": 794,
+  "name": "Sanofi Healthcare India Private Limited"
+ },
+ {
+  "id": 795,
+  "name": "Wockhard Limited"
+ },
+ {
+  "id": 796,
+  "name": "Sanofi Pasteur Limited"
+ },
+ {
+  "id": 797,
+  "name": "Sanofi Pasteur, Inc."
+ },
+ {
+  "id": 799,
+  "name": "Biocodex"
+ },
+ {
+  "id": 800,
+  "name": "Bayer Bitterfeld GmbH"
+ },
+ {
+  "id": 801,
+  "name": "Farbe Firma Private Limited"
+ },
+ {
+  "id": 802,
+  "name": "Radiant Parenterals Limited"
+ },
+ {
+  "id": 803,
+  "name": "Pil Pharmaceuticals Limited"
+ },
+ {
+  "id": 804,
+  "name": "JW Life Science Corporation"
+ },
+ {
+  "id": 805,
+  "name": "Liaoning Huarui Union Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 806,
+  "name": "Kamla Lifesciences Limited"
+ },
+ {
+  "id": 807,
+  "name": "GUANGDONG SHUNDE NEW SENSE HYGIENE PRODUCTS CO. LTD"
+ },
+ {
+  "id": 808,
+  "name": "Systochem Laboratories Ltd"
+ },
+ {
+  "id": 809,
+  "name": "Kwara Chemical Company Limited"
+ },
+ {
+  "id": 810,
+  "name": "ORCHIDIA PHARM INDUSTRIES"
+ },
+ {
+  "id": 811,
+  "name": "ANG Lifesciences India Limited"
+ },
+ {
+  "id": 812,
+  "name": "Zambon Switzerland Ltd"
+ },
+ {
+  "id": 813,
+  "name": "SAFE PARENTERALS LTD"
+ },
+ {
+  "id": 814,
+  "name": "Towa Pharma Private Limited"
+ },
+ {
+  "id": 815,
+  "name": "Shree Venkatesh International Limited"
+ },
+ {
+  "id": 816,
+  "name": "Twenty First Century Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 817,
+  "name": "Base Medico Pvt. Ltd"
+ },
+ {
+  "id": 818,
+  "name": "Marine Lifesciences"
+ },
+ {
+  "id": 819,
+  "name": "SSM Formulations Private Limited"
+ },
+ {
+  "id": 820,
+  "name": "GlaxoSmithKline S.A.E"
+ },
+ {
+  "id": 821,
+  "name": "Don Valley Pharmaceuticals (Pvt) Limited"
+ },
+ {
+  "id": 822,
+  "name": "Daily Sun Pharmaceutical Company Limited"
+ },
+ {
+  "id": 823,
+  "name": "NAILS PHARMACEUTICALS LTD"
+ },
+ {
+  "id": 824,
+  "name": "Shalina Healthcare Nigeria Limited"
+ },
+ {
+  "id": 825,
+  "name": "Glaxosmithkline Biologicals S.A"
+ },
+ {
+  "id": 826,
+  "name": "Zhejiang Pukang Biotechnology Co. Ltd"
+ },
+ {
+  "id": 827,
+  "name": "Yuxi Walvax Biotechnology Co. Ltd."
+ },
+ {
+  "id": 828,
+  "name": "Longtime Biopharmceautical Co. Ltd"
+ },
+ {
+  "id": 829,
+  "name": "Boehringer Ingelheim Animal Health USA Inc"
+ },
+ {
+  "id": 830,
+  "name": "Merck Animal Health (Intervet Inc.)"
+ },
+ {
+  "id": 832,
+  "name": "Sanofi Pasteur S.A."
+ },
+ {
+  "id": 833,
+  "name": "Boehringer Ingelheim Animal Health Italia S.p.A."
+ },
+ {
+  "id": 835,
+  "name": "Boehringer Ingelheim Animal Health France SCS"
+ },
+ {
+  "id": 836,
+  "name": "Bristol-Myers Squibb Manufacturing Company"
+ },
+ {
+  "id": 837,
+  "name": "Wyeth Lederle S.r.l."
+ },
+ {
+  "id": 838,
+  "name": "Hester Biosciences Limited"
+ },
+ {
+  "id": 839,
+  "name": "RAVENBHEL HEALTHCARE PVT. LTD"
+ },
+ {
+  "id": 840,
+  "name": "Annora Pharma Private Limited"
+ },
+ {
+  "id": 841,
+  "name": "PT Tunggal Idaman Abdi"
+ },
+ {
+  "id": 842,
+  "name": "ENDURANCE HEALTHCARE PVT LTD"
+ },
+ {
+  "id": 843,
+  "name": "Esoma Pharmacy Limited"
+ },
+ {
+  "id": 844,
+  "name": "Maxmed Lifesciences PVT. LTD"
+ },
+ {
+  "id": 845,
+  "name": "PAR LABORATORY"
+ },
+ {
+  "id": 846,
+  "name": "Fantasy Drugs Pvt. Ltd"
+ },
+ {
+  "id": 847,
+  "name": "PT. BETA PHARMACON"
+ },
+ {
+  "id": 848,
+  "name": "ulf center cosmetic manufacturing LLC"
+ },
+ {
+  "id": 849,
+  "name": "Gulf Center Cosmetics Manufacturing LLC"
+ },
+ {
+  "id": 850,
+  "name": "CENEXI."
+ },
+ {
+  "id": 851,
+  "name": "Ratnatris Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 852,
+  "name": "Agron Remedies Pvt. Ltd"
+ },
+ {
+  "id": 854,
+  "name": "ORIGIN FORMULATIONS PVT LTD"
+ },
+ {
+  "id": 855,
+  "name": "AISHWARYA LIFESCIENCES"
+ },
+ {
+  "id": 856,
+  "name": "BRASSICA PHARMA PVT. LTD"
+ },
+ {
+  "id": 857,
+  "name": "Jiangsu Wanbang Biochemical Pharmaceuticals Co. Ltd"
+ },
+ {
+  "id": 858,
+  "name": "SINOPHARM WEIQIDA PHARMACEUTICAL CO. LIMITED"
+ },
+ {
+  "id": 859,
+  "name": "WNSFEILD PHARMACEUTICALS"
+ },
+ {
+  "id": 860,
+  "name": "G.R. Lane Health Products Ltd"
+ },
+ {
+  "id": 861,
+  "name": "Santa (ZhangJiakou) Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 862,
+  "name": "Espen Pharm Ind Ltd"
+ },
+ {
+  "id": 863,
+  "name": "Acdima International Trading"
+ },
+ {
+  "id": 864,
+  "name": "GOLPALDAS VISRAM & CO., LTD"
+ },
+ {
+  "id": 865,
+  "name": "Corden Pharma GmbH"
+ },
+ {
+  "id": 866,
+  "name": "Orion Pharma Ltd"
+ },
+ {
+  "id": 867,
+  "name": "Janssen Ortho, LLC"
+ },
+ {
+  "id": 868,
+  "name": "Biopharma Nigeria Limited"
+ },
+ {
+  "id": 869,
+  "name": "Gongoni Company Limited"
+ },
+ {
+  "id": 870,
+  "name": "First Vadis Pharmaceutical Industries Limited"
+ },
+ {
+  "id": 871,
+  "name": "M/S ENICAR PHARMACEUTICALS PVT LTD."
+ },
+ {
+  "id": 872,
+  "name": "Vellinton Healthcare"
+ },
+ {
+  "id": 873,
+  "name": "Bhanu Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 874,
+  "name": "Esapharma Srl Pharmaceutical Laboratory"
+ },
+ {
+  "id": 875,
+  "name": "IVES DRUGS (INDIA) PVT., LTD"
+ },
+ {
+  "id": 876,
+  "name": "Cyndea Pharma S.L."
+ },
+ {
+  "id": 877,
+  "name": "Laboratoires Besins International"
+ },
+ {
+  "id": 878,
+  "name": "Labiana Pharmaceuticals, SLU"
+ },
+ {
+  "id": 879,
+  "name": "Medico Labs"
+ },
+ {
+  "id": 880,
+  "name": "Lunan Better Pharmaceuticals Co. Ltd"
+ },
+ {
+  "id": 881,
+  "name": "QPharma AB"
+ },
+ {
+  "id": 882,
+  "name": "Bisista Pharma Pvt. Ltd"
+ },
+ {
+  "id": 883,
+  "name": "Dr. Smiths Biotech Pvt. Ltd"
+ },
+ {
+  "id": 884,
+  "name": "Hiral Labs Ltd"
+ },
+ {
+  "id": 885,
+  "name": "Bliss Indasi Life Science Private Limited"
+ },
+ {
+  "id": 886,
+  "name": "Shandong Qidu Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 887,
+  "name": "Surelife Pharmacentical Industries Limited"
+ },
+ {
+  "id": 888,
+  "name": "Aicon Pharmacueticals Limited"
+ },
+ {
+  "id": 889,
+  "name": "Enzymatic Therapy Llc"
+ },
+ {
+  "id": 890,
+  "name": "Intas Pharmaceuticals Ltd"
+ },
+ {
+  "id": 891,
+  "name": "Abbott Laboratories GmbH"
+ },
+ {
+  "id": 892,
+  "name": "Famar Orleans"
+ },
+ {
+  "id": 893,
+  "name": "STP Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 894,
+  "name": "Sandoz Private Ltd"
+ },
+ {
+  "id": 895,
+  "name": "Petsow Laboratories Limited"
+ },
+ {
+  "id": 896,
+  "name": "STANFORD LABORATORIES PVT. LTD"
+ },
+ {
+  "id": 897,
+  "name": "Novartis Pharma"
+ },
+ {
+  "id": 898,
+  "name": "Sanofi Aventis de Mexico SA de CV"
+ },
+ {
+  "id": 899,
+  "name": "Naprod Life Sciences Pvt. Ltd"
+ },
+ {
+  "id": 900,
+  "name": "OTSUKA PHARM INDIA PVT LTD"
+ },
+ {
+  "id": 901,
+  "name": "Shandong Lukang Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 902,
+  "name": "Vital Formulations Ltd"
+ },
+ {
+  "id": 903,
+  "name": "SYNTHON HISPANA S.L, C/Castello"
+ },
+ {
+  "id": 904,
+  "name": "Naxcure Healthcare Private Limited"
+ },
+ {
+  "id": 905,
+  "name": "Nestor Pharmaceuticals Limited"
+ },
+ {
+  "id": 906,
+  "name": "AAN Pharma Private Limited, Survey"
+ },
+ {
+  "id": 907,
+  "name": "Laboratories Servier Industrie"
+ },
+ {
+  "id": 908,
+  "name": "Mercury Laboratories Ltd"
+ },
+ {
+  "id": 909,
+  "name": "Hanuchem Laboratories"
+ },
+ {
+  "id": 910,
+  "name": "Unison Pharmaceuticals Pvt. Limited"
+ },
+ {
+  "id": 911,
+  "name": "Pharmacia and Upjohn Company LLC"
+ },
+ {
+  "id": 912,
+  "name": "Daffodills Pharmaceutical Ltd"
+ },
+ {
+  "id": 913,
+  "name": "Memphis Vision Care Pvt. Ltd"
+ },
+ {
+  "id": 914,
+  "name": "Dagon Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 915,
+  "name": "Zhuhai Kinhoo Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 916,
+  "name": "Fleet Laboratories Ltd"
+ },
+ {
+  "id": 917,
+  "name": "JALAN TUNKU ABDULRAHMAN"
+ },
+ {
+  "id": 918,
+  "name": "Gulf Pharmaceutical Industries"
+ },
+ {
+  "id": 919,
+  "name": "Adnova Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 920,
+  "name": "AstraZeneca Pharmaceuticals LP"
+ },
+ {
+  "id": 921,
+  "name": "BUSHU PHARMACEUTICALS LTD"
+ },
+ {
+  "id": 922,
+  "name": "October Pharma S.A.E"
+ },
+ {
+  "id": 923,
+  "name": "Fresenius Kabi Austria GmbH"
+ },
+ {
+  "id": 924,
+  "name": "Teva Pharma S.L.U"
+ },
+ {
+  "id": 925,
+  "name": "Handok Pharm Co. Ltd"
+ },
+ {
+  "id": 926,
+  "name": "Aesica Pharmaceuticals S.R.L"
+ },
+ {
+  "id": 927,
+  "name": "Patneon Puerto Rico Inc Manati,"
+ },
+ {
+  "id": 928,
+  "name": "Datong Weihua Pharmaceutical Co Ltd"
+ },
+ {
+  "id": 929,
+  "name": "Cramlington Northtuberland"
+ },
+ {
+  "id": 930,
+  "name": "BRIAN MUNRO LIMITED"
+ },
+ {
+  "id": 931,
+  "name": "Funag Pharmaceutical Limited"
+ },
+ {
+  "id": 932,
+  "name": "Femina Hygienical Products (Nigeria) Limited"
+ },
+ {
+  "id": 933,
+  "name": "Bonnesante Medicals"
+ },
+ {
+  "id": 934,
+  "name": "Clinical Health Technologies Limited"
+ },
+ {
+  "id": 935,
+  "name": "Megasoft (China) Co., Ltd"
+ },
+ {
+  "id": 936,
+  "name": "Anhui Kangning Industrial (Group) Co., LTD"
+ },
+ {
+  "id": 937,
+  "name": "Abani Industrial Company Limited"
+ },
+ {
+  "id": 938,
+  "name": "Standard Diagnostics Inc."
+ },
+ {
+  "id": 939,
+  "name": "Abbott Diagnostics Korea Inc."
+ },
+ {
+  "id": 940,
+  "name": "Abbott Diagnostics Medical Co., Ltd"
+ },
+ {
+  "id": 941,
+  "name": "Abbott Rapid Diagnostics Jena GmbH"
+ },
+ {
+  "id": 942,
+  "name": "Alere Scarborough Inc."
+ },
+ {
+  "id": 943,
+  "name": "Shandong Weigao Group Medical Polymer Co., Ltd"
+ },
+ {
+  "id": 944,
+  "name": "Nantong Egens Biotechnology Co., Ltd"
+ },
+ {
+  "id": 945,
+  "name": "Adcem Pharmaceutical Nig Ltd"
+ },
+ {
+  "id": 946,
+  "name": "Silver Lake Research Corporation"
+ },
+ {
+  "id": 947,
+  "name": "Align Technology Inc."
+ },
+ {
+  "id": 948,
+  "name": "Asma Rubber Products Pvt. Ltd"
+ },
+ {
+  "id": 949,
+  "name": "Jiaozuo League Hygiene Material Co., Ltd"
+ },
+ {
+  "id": 950,
+  "name": "Jiangxi Jinsheng Medical Devices Group Co., Ltd"
+ },
+ {
+  "id": 951,
+  "name": "Sanhill Medical Instrument Co. Ltd"
+ },
+ {
+  "id": 952,
+  "name": "Changzhou Yuekang Medical Appliance Co., Ltd"
+ },
+ {
+  "id": 953,
+  "name": "Huaian Angel Medical Instruments Co., Ltd"
+ },
+ {
+  "id": 954,
+  "name": "Changzhou Yaping Medical Material Co., Ltd"
+ },
+ {
+  "id": 955,
+  "name": "Hebei Chaoran Medical Instruments Co., Ltd"
+ },
+ {
+  "id": 956,
+  "name": "Roosin Medical Co., Ltd"
+ },
+ {
+  "id": 957,
+  "name": "Andon Health Co., Ltd"
+ },
+ {
+  "id": 958,
+  "name": "Healthium Medtech Limited"
+ },
+ {
+  "id": 959,
+  "name": "Tablets (India) Limited"
+ },
+ {
+  "id": 960,
+  "name": "Disposafe Health and Life Care Limited"
+ },
+ {
+  "id": 961,
+  "name": "Amgen Manufacturing Limited"
+ },
+ {
+  "id": 962,
+  "name": "Patheon Italia S.p.A."
+ },
+ {
+  "id": 963,
+  "name": "VENKAT PHARMA. LTD."
+ },
+ {
+  "id": 964,
+  "name": "Stivaph Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 965,
+  "name": "Afrimedical Manufacturing and Supplies Limited"
+ },
+ {
+  "id": 966,
+  "name": "Agree (Fujian) Sanitary Products Co Ltd"
+ },
+ {
+  "id": 967,
+  "name": "Agrim Pharmaceutical and Healthcare Industries FZE"
+ },
+ {
+  "id": 968,
+  "name": "Agriun Limited"
+ },
+ {
+  "id": 969,
+  "name": "ALCHEM LABS (PTY)"
+ },
+ {
+  "id": 970,
+  "name": "Alexandria Co. for Pharmaceuticals and Chemical Industries"
+ },
+ {
+  "id": 971,
+  "name": "Allergan"
+ },
+ {
+  "id": 972,
+  "name": "Allergan Limited"
+ },
+ {
+  "id": 973,
+  "name": "UNI MEDICOLABS"
+ },
+ {
+  "id": 974,
+  "name": "Allergan Pharmaceuticals Ireland"
+ },
+ {
+  "id": 975,
+  "name": "Allergan Sales LLC"
+ },
+ {
+  "id": 976,
+  "name": "Alora Reusable Pads"
+ },
+ {
+  "id": 977,
+  "name": "Amfes Global Success Ventures"
+ },
+ {
+  "id": 978,
+  "name": "Acon Biotech (Hangzhou) Co. Ltd"
+ },
+ {
+  "id": 979,
+  "name": "Anau Limited"
+ },
+ {
+  "id": 980,
+  "name": "Anhui Kangning Industrial (Group) Co. Ltd"
+ },
+ {
+  "id": 981,
+  "name": "Anhui Kangda Medical Product Co. Ltd"
+ },
+ {
+  "id": 982,
+  "name": "Anhui Tiankang Medical Technology Co. Limited"
+ },
+ {
+  "id": 983,
+  "name": "Anji HengFeng Sanitary Material Co. Ltd"
+ },
+ {
+  "id": 984,
+  "name": "Anji Hongde Medical Products Co. Ltd"
+ },
+ {
+  "id": 985,
+  "name": "Apex Medical Devices"
+ },
+ {
+  "id": 986,
+  "name": "Aqua Medikal Tibbi Arac Ve Gerecler Insaat San. Dis. Tic. Ltd Sti"
+ },
+ {
+  "id": 987,
+  "name": "Arkray Healthcare Pvt Ltd"
+ },
+ {
+  "id": 988,
+  "name": "Artron Laboratories Inc."
+ },
+ {
+  "id": 989,
+  "name": "Ascent Meditech Limited"
+ },
+ {
+  "id": 991,
+  "name": "Bain Medical Equipment (Guangzhou) Co., Ltd"
+ },
+ {
+  "id": 992,
+  "name": "Bard Access Systems, Inc"
+ },
+ {
+  "id": 993,
+  "name": "Bard Peripheral Vascular Inc."
+ },
+ {
+  "id": 994,
+  "name": "Bayer AG"
+ },
+ {
+  "id": 995,
+  "name": "Bdferm Co. Ltd"
+ },
+ {
+  "id": 996,
+  "name": "Bearing Sachs Global Services Limited"
+ },
+ {
+  "id": 997,
+  "name": "Becton Dickinson and Company"
+ },
+ {
+  "id": 998,
+  "name": "Becton Dickinson and Company Ireland"
+ },
+ {
+  "id": 999,
+  "name": "Becton Dickinson India Pvt. Ltd"
+ },
+ {
+  "id": 1000,
+  "name": "Becton Dickinson Medical - Diabetes Care"
+ },
+ {
+  "id": 1001,
+  "name": "Becton Dickinson Medicals Pte Ltd"
+ },
+ {
+  "id": 1002,
+  "name": "BECTON DICKINSON S.A."
+ },
+ {
+  "id": 1003,
+  "name": "Becton, Dickinson and Company (B.D)"
+ },
+ {
+  "id": 1004,
+  "name": "Beijing Beishute Maternity & Child Articles Co. Ltd"
+ },
+ {
+  "id": 1005,
+  "name": "Bennett Health Inc."
+ },
+ {
+  "id": 1006,
+  "name": "Biolab Diagnostics (I) Pvt Ltd"
+ },
+ {
+  "id": 1007,
+  "name": "Biomax Rubber Industries Sdn Bhd"
+ },
+ {
+  "id": 1008,
+  "name": "Bio-Med Healthcare Products Pvt. Ltd"
+ },
+ {
+  "id": 1009,
+  "name": "BioMerieux Inc."
+ },
+ {
+  "id": 1010,
+  "name": "BioMerieux SA"
+ },
+ {
+  "id": 1011,
+  "name": "Biosurge Healthcare India Pvt Limited"
+ },
+ {
+  "id": 1013,
+  "name": "Bordar Industrial FZE"
+ },
+ {
+  "id": 1014,
+  "name": "Breadmart Services International Ltd"
+ },
+ {
+  "id": 1015,
+  "name": "Breech Oralcare Pvt Ltd"
+ },
+ {
+  "id": 1016,
+  "name": "Brightway Holdings Sdn. Bhd."
+ },
+ {
+  "id": 1017,
+  "name": "Bundi Internatonal Diagnostics Ltd"
+ },
+ {
+  "id": 1018,
+  "name": "C. R. Bard Inc."
+ },
+ {
+  "id": 1019,
+  "name": "Candelax Chemicals Limited"
+ },
+ {
+  "id": 1020,
+  "name": "Cedar and Cradle Ltd"
+ },
+ {
+  "id": 1021,
+  "name": "Centaur Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 1022,
+  "name": "Century Industrial Fze"
+ },
+ {
+  "id": 1023,
+  "name": "Cepo Chemical Industry Ltd"
+ },
+ {
+  "id": 1024,
+  "name": "Changsha Sinocare Inc."
+ },
+ {
+  "id": 1025,
+  "name": "Changzhou Jiafeng Medical Equipment Co. Ltd"
+ },
+ {
+  "id": 1026,
+  "name": "Changzhou Chunguang Medical Equipment Co. Ltd"
+ },
+ {
+  "id": 1027,
+  "name": "Changzhou Holinx Industry Co Ltd"
+ },
+ {
+  "id": 1028,
+  "name": "Changzhou Hualian Health Dressing Co. Ltd"
+ },
+ {
+  "id": 1029,
+  "name": "Chembio Diagnostic Systems Inc."
+ },
+ {
+  "id": 1030,
+  "name": "Chengdu OCI Medical Devices Co. Ltd"
+ },
+ {
+  "id": 1031,
+  "name": "Cherian Pharmaceutical Company Limited"
+ },
+ {
+  "id": 1032,
+  "name": "Choo Kim Soon Plastic Manufacturing Sdn. Bhd."
+ },
+ {
+  "id": 1033,
+  "name": "Church & Dwight Co. Inc."
+ },
+ {
+  "id": 1034,
+  "name": "Colexa Biosensor"
+ },
+ {
+  "id": 1035,
+  "name": "Colgate Palmolive Vietnam Ltd"
+ },
+ {
+  "id": 1036,
+  "name": "Colgate Sanxiao Co. Ltd"
+ },
+ {
+  "id": 1037,
+  "name": "Colgate Tolaram Lftz Enterprise"
+ },
+ {
+  "id": 1038,
+  "name": "Concmed-Sol Industry Ltd"
+ },
+ {
+  "id": 1039,
+  "name": "Cormart Nig Ltd"
+ },
+ {
+  "id": 1040,
+  "name": "Cybele Cosmetics Limited"
+ },
+ {
+  "id": 1041,
+  "name": "Daraju Industries Limited"
+ },
+ {
+  "id": 1042,
+  "name": "Davol, Inc., Subsidiary of C. R. Bard, Inc"
+ },
+ {
+  "id": 1043,
+  "name": "Davsolest Cotton Wool Company"
+ },
+ {
+  "id": 1044,
+  "name": "Dela Medics Ltd"
+ },
+ {
+  "id": 1045,
+  "name": "Diana Medical Factory Co. Ltd"
+ },
+ {
+  "id": 1046,
+  "name": "Dongyang Songpu Latex (jinzhou) Co. Ltd"
+ },
+ {
+  "id": 1047,
+  "name": "Doppel Farmaceutici Srl, Martiri Delle Foibe, 1 29016 Cortemaggiore"
+ },
+ {
+  "id": 1048,
+  "name": "Dpt Laboratories Ltd"
+ },
+ {
+  "id": 1049,
+  "name": "DR AM'S HEALTHCARE INDIA"
+ },
+ {
+  "id": 1050,
+  "name": "Dr Sabharwal's Wound Care"
+ },
+ {
+  "id": 1051,
+  "name": "Easy Cleaning Solutions Ltd"
+ },
+ {
+  "id": 1052,
+  "name": "ecabiotec AG"
+ },
+ {
+  "id": 1053,
+  "name": "Echonous, Inc."
+ },
+ {
+  "id": 1054,
+  "name": "El-Salmat Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 1055,
+  "name": "Eleganza Industrial City Ltd"
+ },
+ {
+  "id": 1056,
+  "name": "Elox Bio Technologies Limited"
+ },
+ {
+  "id": 1057,
+  "name": "Environmental Science Hygiene Ltd"
+ },
+ {
+  "id": 1058,
+  "name": "Evergood and Associates Ltd"
+ },
+ {
+  "id": 1059,
+  "name": "Executive Hobbs Ltd"
+ },
+ {
+  "id": 1060,
+  "name": "Exxon Pharma Nigeria Limited"
+ },
+ {
+  "id": 1061,
+  "name": "Famzy Nigeria Limited"
+ },
+ {
+  "id": 1062,
+  "name": "Femina Hygienical Products Nigeria Limited"
+ },
+ {
+  "id": 1063,
+  "name": "FFEI Ltd"
+ },
+ {
+  "id": 1064,
+  "name": "Fomed Industries Inc."
+ },
+ {
+  "id": 1065,
+  "name": "Fouani Nigeria Limited"
+ },
+ {
+  "id": 1066,
+  "name": "Fujian Hanhe Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1067,
+  "name": "Fujian BBC Inc."
+ },
+ {
+  "id": 1068,
+  "name": "Fujian Hanhe Sanitary Products Co. Limited"
+ },
+ {
+  "id": 1069,
+  "name": "Fujian Lome Nursing Materials Co. Ltd"
+ },
+ {
+  "id": 1070,
+  "name": "Fujian Nicepapaer Hygiene Products Co. Ltd"
+ },
+ {
+  "id": 1071,
+  "name": "Fujian Shengjie Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1072,
+  "name": "Fujian Time and Tianhe Industrial Co. Ltd"
+ },
+ {
+  "id": 1073,
+  "name": "Fujian Yuejian Care Products Co. Ltd"
+ },
+ {
+  "id": 1074,
+  "name": "G.S.T Corporation Ltd"
+ },
+ {
+  "id": 1075,
+  "name": "REM G. PHARMACEUTICAL LIMITED"
+ },
+ {
+  "id": 1076,
+  "name": "Delpharm Reims SAS"
+ },
+ {
+  "id": 1077,
+  "name": "Gaobeidian Prises Biotechnology Co. Ltd"
+ },
+ {
+  "id": 1078,
+  "name": "Gebbra Pharmaceuticals Limited"
+ },
+ {
+  "id": 1079,
+  "name": "Girlified Ltd"
+ },
+ {
+  "id": 1080,
+  "name": "Global Infection Control Consultants LLC"
+ },
+ {
+  "id": 1081,
+  "name": "Global Medikit Limited"
+ },
+ {
+  "id": 1082,
+  "name": "Globe Spinning Mills Nig. Ltd"
+ },
+ {
+  "id": 1083,
+  "name": "Goldworth Manufacturing Company Limited"
+ },
+ {
+  "id": 1084,
+  "name": "Gongoni Company Limited 89 A Phase III, Sharada Industrial Estate, Kano"
+ },
+ {
+  "id": 1085,
+  "name": "Gooddays Food Co. Ltd"
+ },
+ {
+  "id": 1086,
+  "name": "Goonite (NG) Hygiene Products FZE"
+ },
+ {
+  "id": 1087,
+  "name": "GST Corporation Ltd"
+ },
+ {
+  "id": 1088,
+  "name": "Guangdong Baihe Medical Technology Co. Ltd"
+ },
+ {
+  "id": 1089,
+  "name": "Guangdong Haiou Medical Apparatus Co. Ltd"
+ },
+ {
+  "id": 1090,
+  "name": "Guangdong Shunde New Sense Hygiene Products Co. Ltd China"
+ },
+ {
+  "id": 1091,
+  "name": "Guangzhou Alice & Lee Daily Use Commodity Co. Ltd"
+ },
+ {
+  "id": 1092,
+  "name": "Guangzhou BBG Sanitary Commodity Co. Ltd"
+ },
+ {
+  "id": 1093,
+  "name": "Guangzhou BBQ Sanitary Commodity Co. Ltd"
+ },
+ {
+  "id": 1094,
+  "name": "Guangzhou Wondfo Biotech Co. Ltd"
+ },
+ {
+  "id": 1095,
+  "name": "Guangzhou Yamaza Sanitary Products Co. Limited"
+ },
+ {
+  "id": 1096,
+  "name": "Guilin Hbm Health Protections Inc"
+ },
+ {
+  "id": 1097,
+  "name": "Guilin Royalze Medical Instruments Co. Ltd"
+ },
+ {
+  "id": 1098,
+  "name": "Guilin Zhonghui Technology Co. Ltd"
+ },
+ {
+  "id": 1099,
+  "name": "Hangzhou Biotech Co. Ltd"
+ },
+ {
+  "id": 1100,
+  "name": "Hangzhou Health Shining Co. Ltd"
+ },
+ {
+  "id": 1101,
+  "name": "Hayat Egypt Hygienic Products S.A.E"
+ },
+ {
+  "id": 1102,
+  "name": "Hayat Kimya Nigeria Ltd"
+ },
+ {
+  "id": 1104,
+  "name": "Healthium Medtech Ltd"
+ },
+ {
+  "id": 1105,
+  "name": "Jiangxi Hongda Medical Equipment Group Ltd"
+ },
+ {
+  "id": 1106,
+  "name": "Heartland Alliance Ltd/Gte"
+ },
+ {
+  "id": 1107,
+  "name": "Hebei Guohua Latex Product Co. Ltd"
+ },
+ {
+  "id": 1108,
+  "name": "Hitachi High-Tech Corporation Naka Division"
+ },
+ {
+  "id": 1109,
+  "name": "Hitachi High-Technologies Corporation Naka Division"
+ },
+ {
+  "id": 1110,
+  "name": "Hitachi High-Technologies Corporation Omuta Division"
+ },
+ {
+  "id": 1111,
+  "name": "Hma Medical Limited"
+ },
+ {
+  "id": 1112,
+  "name": "Huaiyin Medical Instruments Company Ltd"
+ },
+ {
+  "id": 1113,
+  "name": "Huanggang Huangzhou Xianghui Textiles Co. Ltd"
+ },
+ {
+  "id": 1114,
+  "name": "Hubei Guohua Latex Products"
+ },
+ {
+  "id": 1115,
+  "name": "Hubei Joy Bone Medical Products Co. Ltd"
+ },
+ {
+  "id": 1116,
+  "name": "Hydrachem Limited"
+ },
+ {
+  "id": 1117,
+  "name": "Hypo Homecare Products Limited"
+ },
+ {
+  "id": 1118,
+  "name": "Hyposource Ltd"
+ },
+ {
+  "id": 1119,
+  "name": "Ikangsino Gen. Ent."
+ },
+ {
+  "id": 1120,
+  "name": "Ileke Coalition Limited"
+ },
+ {
+  "id": 1121,
+  "name": "IMMY Inc."
+ },
+ {
+  "id": 1122,
+  "name": "Innolatex Sdn. Bhd"
+ },
+ {
+  "id": 1123,
+  "name": "InTec Products Inc."
+ },
+ {
+  "id": 1124,
+  "name": "International Company for Medical Necessities"
+ },
+ {
+  "id": 1125,
+  "name": "I-SENS Inc"
+ },
+ {
+  "id": 1126,
+  "name": "Ishwari Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 1127,
+  "name": "Jiangsu Shenli Medical Production Co. Ltd"
+ },
+ {
+  "id": 1128,
+  "name": "Jiangsu Zhengkang Medical Apparatus Co. Limited"
+ },
+ {
+  "id": 1129,
+  "name": "Jiangyin Nanquan Macromolecule Product Co. Ltd"
+ },
+ {
+  "id": 1130,
+  "name": "Jiangyin Jinfeng Medical Equipment Co.Ltd"
+ },
+ {
+  "id": 1131,
+  "name": "Jimit Medico Surgicals Pvt Ltd"
+ },
+ {
+  "id": 1132,
+  "name": "JINDRICH SOLUTION LIMITED"
+ },
+ {
+  "id": 1133,
+  "name": "Jinjiang Anting Sanitary Products Co. Limited"
+ },
+ {
+  "id": 1134,
+  "name": "Jinjiang Hengle Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1135,
+  "name": "Jinjiang Huangyun Hygienic Products Co. Ltd"
+ },
+ {
+  "id": 1136,
+  "name": "Jiujiang Huada Medical Dressing Co. Ltd"
+ },
+ {
+  "id": 1137,
+  "name": "Jodas Expoim Private Limited"
+ },
+ {
+  "id": 1138,
+  "name": "Joekimval Global Limited"
+ },
+ {
+  "id": 1139,
+  "name": "John-Paul Pharmaceutical Ltd"
+ },
+ {
+  "id": 1140,
+  "name": "Joladex Enterprises"
+ },
+ {
+  "id": 1141,
+  "name": "Jos-Phil Limited"
+ },
+ {
+  "id": 1142,
+  "name": "Jubilee Syringe Manufacturing Company Limited"
+ },
+ {
+  "id": 1143,
+  "name": "Jucee Biochemicals Limited"
+ },
+ {
+  "id": 1144,
+  "name": "Karex Industries Sdn Bhd"
+ },
+ {
+  "id": 1145,
+  "name": "Katsan Katcut Sanayi Ticaret A.S"
+ },
+ {
+  "id": 1146,
+  "name": "KCSSA West Africa Limited"
+ },
+ {
+  "id": 1147,
+  "name": "Kimberly-Clark of South Africa (Pty) Limited"
+ },
+ {
+  "id": 1148,
+  "name": "Kimberly-Clark S.R.O"
+ },
+ {
+  "id": 1149,
+  "name": "Kimberly-Clark South Africa Limited"
+ },
+ {
+  "id": 1150,
+  "name": "Kommanditgesellschaft Behnk Elektronik GmbH & Co."
+ },
+ {
+  "id": 1151,
+  "name": "Laboratoires Gilbert"
+ },
+ {
+  "id": 1152,
+  "name": "Laboratorios Liconsa S.A."
+ },
+ {
+  "id": 1153,
+  "name": "Lady Special Sanitary Pad Ventures"
+ },
+ {
+  "id": 1154,
+  "name": "Lakshmi Life Sciences Private Limited"
+ },
+ {
+  "id": 1155,
+  "name": "Lars Medicare Pvt Limited"
+ },
+ {
+  "id": 1156,
+  "name": "Lasec International Limited"
+ },
+ {
+  "id": 1157,
+  "name": "M/s Anhui Kangning Medical Products Co. Ltd"
+ },
+ {
+  "id": 1158,
+  "name": "M/s Johnson & Johnson International"
+ },
+ {
+  "id": 1159,
+  "name": "SPM Medicare Pvt. Ltd"
+ },
+ {
+  "id": 1160,
+  "name": "M/s Suture Planet"
+ },
+ {
+  "id": 1162,
+  "name": "M/s UP Pharmaceutical"
+ },
+ {
+  "id": 1163,
+  "name": "M/s. Spm Medicare Pvt. Ltd"
+ },
+ {
+  "id": 1164,
+  "name": "Mais India Medical Devices Pvt. Ltd"
+ },
+ {
+  "id": 1165,
+  "name": "Marvico Chemical and Allied Products Limited"
+ },
+ {
+  "id": 1166,
+  "name": "Maxter Glove Manufacturing Sdn. Bhd."
+ },
+ {
+  "id": 1167,
+  "name": "Medcomp Inc"
+ },
+ {
+  "id": 1168,
+  "name": "MEDCu"
+ },
+ {
+  "id": 1169,
+  "name": "Medico (Huaian) Co Ltd"
+ },
+ {
+  "id": 1170,
+  "name": "Medtrue Enterprise Co. Ltd"
+ },
+ {
+  "id": 1171,
+  "name": "Meril Diagnostics Private Limited"
+ },
+ {
+  "id": 1172,
+  "name": "Meril Endo Surgery Private Ltd"
+ },
+ {
+  "id": 1173,
+  "name": "Metcem Limited"
+ },
+ {
+  "id": 1174,
+  "name": "Mhl Healthcare Ltd"
+ },
+ {
+  "id": 1175,
+  "name": "Micobiomed Co. Ltd"
+ },
+ {
+  "id": 1176,
+  "name": "Microlife"
+ },
+ {
+  "id": 1177,
+  "name": "Mikano International Limited"
+ },
+ {
+  "id": 1178,
+  "name": "Minbow (Fuljian) Corporation"
+ },
+ {
+  "id": 1179,
+  "name": "Modderfontein Laboratory Services"
+ },
+ {
+  "id": 1180,
+  "name": "MRK Healthcare Private Limited"
+ },
+ {
+  "id": 1181,
+  "name": "Nadix Consult Ltd"
+ },
+ {
+  "id": 1182,
+  "name": "Nan An Yuanda Hygiene Products Factory"
+ },
+ {
+  "id": 1183,
+  "name": "Nantong Egens Biotechnology Co. Limited"
+ },
+ {
+  "id": 1184,
+  "name": "Nantong Diagnos Biotechnology Co. Ltd"
+ },
+ {
+  "id": 1185,
+  "name": "Neo Nostics Bioengineering"
+ },
+ {
+  "id": 1186,
+  "name": "New Sensation Sanitary Product Co. Ltd"
+ },
+ {
+  "id": 1187,
+  "name": "Ngobros and Company Nigeria Limited"
+ },
+ {
+  "id": 1188,
+  "name": "Niceday Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1189,
+  "name": "NIGER SANITARY INDUSTRIES LIMITED"
+ },
+ {
+  "id": 1190,
+  "name": "Ningbo Yingmed Medical Instrument"
+ },
+ {
+  "id": 1191,
+  "name": "Nipripharm Drug & Reseach Centre"
+ },
+ {
+  "id": 1192,
+  "name": "Nipro (Thailand) Corporation Limited"
+ },
+ {
+  "id": 1193,
+  "name": "Nipro Corporation Odate Plant"
+ },
+ {
+  "id": 1194,
+  "name": "Nipro Medical Industries Ltd"
+ },
+ {
+  "id": 1195,
+  "name": "Nipro Renal Solutions Spain S.R.L"
+ },
+ {
+  "id": 1198,
+  "name": "Odyssea Pharma Sprl"
+ },
+ {
+  "id": 1199,
+  "name": "Omni Lens Pvt Limited"
+ },
+ {
+  "id": 1200,
+  "name": "Omo Olayemi & Co."
+ },
+ {
+  "id": 1201,
+  "name": "Omron Healthcare Co. Ltd"
+ },
+ {
+  "id": 1202,
+  "name": "On-X Life Technologies Inc."
+ },
+ {
+  "id": 1203,
+  "name": "Orasure Technology Inc."
+ },
+ {
+  "id": 1204,
+  "name": "Osang Healthcare Co."
+ },
+ {
+  "id": 1205,
+  "name": "P.H Healthcare Pvt Ltd"
+ },
+ {
+  "id": 1206,
+  "name": "Pacific Hospital Supply Co. Ltd (PAHSCO)"
+ },
+ {
+  "id": 1207,
+  "name": "Pb Global Industries Ltd"
+ },
+ {
+  "id": 1208,
+  "name": "Pharmadelphia Limited"
+ },
+ {
+  "id": 1209,
+  "name": "Pharmajet Inc."
+ },
+ {
+  "id": 1210,
+  "name": "Pharmaplast S.A.E"
+ },
+ {
+  "id": 1211,
+  "name": "Pharmatouch Limited"
+ },
+ {
+  "id": 1212,
+  "name": "PHC Corporation In Vitro Diagnostics Division, Wakimachi Plant"
+ },
+ {
+  "id": 1213,
+  "name": "Phoenix Rubber Products Co. Ltd"
+ },
+ {
+  "id": 1214,
+  "name": "Pinnacle BioLabs USA"
+ },
+ {
+  "id": 1215,
+  "name": "Poly Medicure Ltd"
+ },
+ {
+  "id": 1216,
+  "name": "Polymer Technology Systems Inc"
+ },
+ {
+  "id": 1217,
+  "name": "Pomafriq Nig. Ltd"
+ },
+ {
+  "id": 1218,
+  "name": "Posh Potties Ltd"
+ },
+ {
+  "id": 1219,
+  "name": "Pregna International Limited, Unit - II"
+ },
+ {
+  "id": 1220,
+  "name": "Premier Medical Corporation Private Limited"
+ },
+ {
+  "id": 1221,
+  "name": "Procter & Gamble Egypt"
+ },
+ {
+  "id": 1222,
+  "name": "Procter & Gamble Germany"
+ },
+ {
+  "id": 1223,
+  "name": "Procter & Gamble Manufacturing Ireland"
+ },
+ {
+  "id": 1224,
+  "name": "Prometheus Bio Inc."
+ },
+ {
+  "id": 1225,
+  "name": "Promisemed Hangzhou Mediech Ltd"
+ },
+ {
+  "id": 1226,
+  "name": "Prooral Co. Ltd"
+ },
+ {
+  "id": 1227,
+  "name": "Pz Cussons Nig. Plc"
+ },
+ {
+  "id": 1228,
+  "name": "Qingdao Hightop Biotech Co. Ltd"
+ },
+ {
+  "id": 1229,
+  "name": "Qingdao London Durex Co. Limited"
+ },
+ {
+  "id": 1230,
+  "name": "Quality Wipes LLC"
+ },
+ {
+  "id": 1231,
+  "name": "Quantum Consumer Products Nigeria Limited"
+ },
+ {
+  "id": 1232,
+  "name": "Quanzhou Chilsea Hygienic Products Co. Ltd"
+ },
+ {
+  "id": 1233,
+  "name": "Quanzhou Focus Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1234,
+  "name": "Quanzhou V-Care Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1235,
+  "name": "Quanzhou Zhengda Daily Use Commodity Co. Limited"
+ },
+ {
+  "id": 1236,
+  "name": "Rapi Gen. Inc."
+ },
+ {
+  "id": 1237,
+  "name": "Japaul House"
+ },
+ {
+  "id": 1238,
+  "name": "PANPHARMA GmbH"
+ },
+ {
+  "id": 1239,
+  "name": "RB SSI Manufacturing (Thailand) Limited"
+ },
+ {
+  "id": 1240,
+  "name": "Reckitt Benckiser Healthcare Manufacturing (Thailand) Limited"
+ },
+ {
+  "id": 1241,
+  "name": "Reckon Diagnostics Pvt Ltd"
+ },
+ {
+  "id": 1242,
+  "name": "RedDress Limited"
+ },
+ {
+  "id": 1243,
+  "name": "Reliance Life Science Pvt Ltd"
+ },
+ {
+  "id": 1244,
+  "name": "RFB Latex Limited"
+ },
+ {
+  "id": 1245,
+  "name": "RFB Latex Limited/ Neomedics Ltd"
+ },
+ {
+  "id": 1246,
+  "name": "Rialto Entrprises Pvt Ltd"
+ },
+ {
+  "id": 1247,
+  "name": "Robonik (India) Pvt. Ltd"
+ },
+ {
+  "id": 1248,
+  "name": "Roche Diabetes Care GmbH"
+ },
+ {
+  "id": 1249,
+  "name": "Roche Diagnostics International Ltd"
+ },
+ {
+  "id": 1250,
+  "name": "Royal Surgicare Private Limited"
+ },
+ {
+  "id": 1251,
+  "name": "Ryhenz Integrated Ventures Limited"
+ },
+ {
+  "id": 1252,
+  "name": "Sadante Chemicals & Industries Limited"
+ },
+ {
+  "id": 1253,
+  "name": "Safeguard Contracptives Pvt Ltd"
+ },
+ {
+  "id": 1254,
+  "name": "Safeshield India Rubber Products Pvt Ltd"
+ },
+ {
+  "id": 1255,
+  "name": "Sankin Industries Nig. Ltd"
+ },
+ {
+  "id": 1256,
+  "name": "Sarstedt AG & Co"
+ },
+ {
+  "id": 1257,
+  "name": "Sartor Health Information & Communication Technologies"
+ },
+ {
+  "id": 1258,
+  "name": "Sauki-Plus Pharmaceuticals and Integrated Services Ltd"
+ },
+ {
+  "id": 1259,
+  "name": "Sd Biosensors Inc"
+ },
+ {
+  "id": 1260,
+  "name": "Seven-Up Bottling Company Ltd"
+ },
+ {
+  "id": 1261,
+  "name": "Shalom Petra Academy"
+ },
+ {
+  "id": 1262,
+  "name": "Shandong Intco Medical Products Co. Ltd"
+ },
+ {
+  "id": 1263,
+  "name": "Shandong Ande Healthcare Apparatus Co. Ltd"
+ },
+ {
+  "id": 1264,
+  "name": "Shandong Qiaopai Group Co. Ltd"
+ },
+ {
+  "id": 1265,
+  "name": "Shandong Qinkai Medical Industry Co. Ltd"
+ },
+ {
+  "id": 1266,
+  "name": "Shandong Weigao Group Medical Polymer Co. Ltd"
+ },
+ {
+  "id": 1267,
+  "name": "Shandong Wuzhou Medical Equipment Co. Ltd"
+ },
+ {
+  "id": 1268,
+  "name": "Shandong Zibo Shanchuan Medical Instruments Co. Limited"
+ },
+ {
+  "id": 1269,
+  "name": "Shanghai Dahua Pharmaceutical Company Limited"
+ },
+ {
+  "id": 1270,
+  "name": "Shaoxing Gangfeng Hospital Products Co Ltd"
+ },
+ {
+  "id": 1271,
+  "name": "Sharma Ortho System Pvt. Ltd"
+ },
+ {
+  "id": 1272,
+  "name": "Shenyang Meishang Industry Co. Ltd"
+ },
+ {
+  "id": 1273,
+  "name": "Shenzhen Urion Technology Co. Ltd"
+ },
+ {
+  "id": 1274,
+  "name": "Shenzhen Zhengkang Technology Co. Ltd"
+ },
+ {
+  "id": 1275,
+  "name": "Shri Durga Surgical"
+ },
+ {
+  "id": 1276,
+  "name": "Shulanphil Ventures"
+ },
+ {
+  "id": 1277,
+  "name": "Shulifang Biotechnology FZE"
+ },
+ {
+  "id": 1278,
+  "name": "Shumei Industrial (Hebei) Co. Ltd"
+ },
+ {
+  "id": 1279,
+  "name": "Siperco (Nigeria) Limited"
+ },
+ {
+  "id": 1280,
+  "name": "Sirmaxo Chemical Pvt. Ltd"
+ },
+ {
+  "id": 1281,
+  "name": "Sk Medicines Ltd"
+ },
+ {
+  "id": 1282,
+  "name": "Skin Beauty Limited"
+ },
+ {
+  "id": 1283,
+  "name": "SMB Corporation of India"
+ },
+ {
+  "id": 1284,
+  "name": "Society for Family Health"
+ },
+ {
+  "id": 1285,
+  "name": "Solobless Pharmacy Limited"
+ },
+ {
+  "id": 1286,
+  "name": "Spinreact. S.A."
+ },
+ {
+  "id": 1287,
+  "name": "Sri Trang Gloves (Thailand) Co. Ltd"
+ },
+ {
+  "id": 1288,
+  "name": "Sritrang Gloves Public Company Ltd"
+ },
+ {
+  "id": 1289,
+  "name": "Ssl Manufacturing (Thailand) Ltd"
+ },
+ {
+  "id": 1290,
+  "name": "St Marys Rubber Private Limited"
+ },
+ {
+  "id": 1291,
+  "name": "Sterimed Medical Devices Pvt Ltd"
+ },
+ {
+  "id": 1292,
+  "name": "Supermax Glove Manufacturing Sdn Bhd."
+ },
+ {
+  "id": 1293,
+  "name": "Suretex Limited"
+ },
+ {
+  "id": 1294,
+  "name": "Suzhou Laishi Transfusion Equipment Co. Ltd"
+ },
+ {
+  "id": 1295,
+  "name": "Taian Dalu Medical Instrument Co. Ltd"
+ },
+ {
+  "id": 1296,
+  "name": "Taizhou Meikang Health Co. Limited"
+ },
+ {
+  "id": 1297,
+  "name": "Tembo Care Limited"
+ },
+ {
+  "id": 1298,
+  "name": "Tg Medical Sdn.Bhd"
+ },
+ {
+  "id": 1299,
+  "name": "Thai Nippon Rubber Industry Prublic Company Limited"
+ },
+ {
+  "id": 1300,
+  "name": "Themis Medicare Ltd"
+ },
+ {
+  "id": 1301,
+  "name": "Tianchang Hengsheng Medical Devices Co. Ltd"
+ },
+ {
+  "id": 1302,
+  "name": "Top Glove Medical (Thailand) Co. Ltd"
+ },
+ {
+  "id": 1303,
+  "name": "Top Glove Sdh Bhd"
+ },
+ {
+  "id": 1304,
+  "name": "Trident Mediquip Limited"
+ },
+ {
+  "id": 1305,
+  "name": "Trinity Biotech IDA"
+ },
+ {
+  "id": 1306,
+  "name": "Ucan Concepts Limited"
+ },
+ {
+  "id": 1307,
+  "name": "UG Global Resources Sdn Bhd"
+ },
+ {
+  "id": 1308,
+  "name": "Ugotech Products and Services Ltd"
+ },
+ {
+  "id": 1309,
+  "name": "Unisai Global Industries Limited"
+ },
+ {
+  "id": 1310,
+  "name": "Varichem Nigeria Limited"
+ },
+ {
+  "id": 1311,
+  "name": "Venille Ltd"
+ },
+ {
+  "id": 1312,
+  "name": "Ventana Medical Systems Inc. (Tucson)"
+ },
+ {
+  "id": 1313,
+  "name": "Vincal Pharmaceutical Limited"
+ },
+ {
+  "id": 1314,
+  "name": "Vitrosens Biotechnology"
+ },
+ {
+  "id": 1315,
+  "name": "Weihai Jierui Medical Products Co. Ltd"
+ },
+ {
+  "id": 1316,
+  "name": "Weiman Products LLC"
+ },
+ {
+  "id": 1317,
+  "name": "Welcome International Co. Ltd"
+ },
+ {
+  "id": 1318,
+  "name": "Wemy Industries Limited"
+ },
+ {
+  "id": 1319,
+  "name": "West-Coast Pharmaceutical Works Limited"
+ },
+ {
+  "id": 1320,
+  "name": "Wuxi Yushou Medical Appliances Co. Limited"
+ },
+ {
+  "id": 1321,
+  "name": "Xiamen Boson Biotech Co. Ltd"
+ },
+ {
+  "id": 1322,
+  "name": "Xiamen Joylink Imp. & Exp. Co. Ltd"
+ },
+ {
+  "id": 1323,
+  "name": "Xiantao Sunbo Protective Products Co. Limited"
+ },
+ {
+  "id": 1324,
+  "name": "Xuancheng Jn Medical Devices Co. Ltd"
+ },
+ {
+  "id": 1325,
+  "name": "Yamaza Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1326,
+  "name": "Yancheng Xinjie Medical Equipment Co. Ltd"
+ },
+ {
+  "id": 1327,
+  "name": "Yangzhou Celgo Manufacturing Co. Ltd"
+ },
+ {
+  "id": 1328,
+  "name": "Yangzhou Holyshine Indutria Co. Limited"
+ },
+ {
+  "id": 1329,
+  "name": "Yangzhou Super Union Import & Export Co. Ltd"
+ },
+ {
+  "id": 1330,
+  "name": "Yasee Biomedical Inc."
+ },
+ {
+  "id": 1331,
+  "name": "Yinkky Boast Ventures"
+ },
+ {
+  "id": 1332,
+  "name": "Yummylooks Sdn Bhd"
+ },
+ {
+  "id": 1333,
+  "name": "Zhejiang Bangli Medical Products Co. Ltd"
+ },
+ {
+  "id": 1334,
+  "name": "Zhejiang Orient Gene Biotech Co. Ltd"
+ },
+ {
+  "id": 1335,
+  "name": "Zhenjiang Huayang Latex Products Co. Ltd"
+ },
+ {
+  "id": 1336,
+  "name": "Zibo Blue Sail Health Technology Co. Ltd"
+ },
+ {
+  "id": 1337,
+  "name": "Zibo Eastmed Healthcare Products Co. Limited"
+ },
+ {
+  "id": 1338,
+  "name": "Zibo Yada Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 1339,
+  "name": "Beijing Wantai Biological Pharmacy Enterprise Co. Ltd"
+ },
+ {
+  "id": 1340,
+  "name": "Anhuihongye Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 1341,
+  "name": "Pharlab Industria Farmaceutica"
+ },
+ {
+  "id": 1342,
+  "name": "Galenika Pharmacia D.O.O."
+ },
+ {
+  "id": 1343,
+  "name": "Jiangsu Webest Medical Product Co. Ltd"
+ },
+ {
+  "id": 1344,
+  "name": "Malik Lifesciences Pvt. Ltd"
+ },
+ {
+  "id": 1345,
+  "name": "Artemis Laboratories Ltd"
+ },
+ {
+  "id": 1346,
+  "name": "Avantika Medex Pvt. Ltd"
+ },
+ {
+  "id": 1347,
+  "name": "ALLIAANCE BIOTECH"
+ },
+ {
+  "id": 1348,
+  "name": "Quanzhou Agree Sanitary Products Co. Ltd"
+ },
+ {
+  "id": 1349,
+  "name": "RB SSL Manufacturing (Thailand) Limited"
+ },
+ {
+  "id": 1350,
+  "name": "Jiangsu Zhenglu Medical Aparatus Co. Ltd"
+ },
+ {
+  "id": 1351,
+  "name": "Furen Pharmaceutical Group Co., Ltd"
+ },
+ {
+  "id": 1352,
+  "name": "Macarthys Laboratories Ltd"
+ },
+ {
+  "id": 1353,
+  "name": "PNAPHARMA BMGH,"
+ },
+ {
+  "id": 1354,
+  "name": "Copmed Pharmaceuticals Pvt. Ltd"
+ },
+ {
+  "id": 1355,
+  "name": "Hebei New Century Pharmaceutical, Co, Ltd"
+ },
+ {
+  "id": 1356,
+  "name": "Shijiazhuang Fengqiang Animal Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 1357,
+  "name": "Organon Pharma (UK) Limited"
+ },
+ {
+  "id": 1358,
+  "name": "Hyenang Pharmaceuticals Limited"
+ },
+ {
+  "id": 1359,
+  "name": "Scilife Pharma (Private) Limited"
+ },
+ {
+  "id": 1360,
+  "name": "Laprovet Hungary Veterinary Pharmaceuticals Ltd"
+ },
+ {
+  "id": 1361,
+  "name": "Hunan Kelun Pharmaceutical Co. Ltd."
+ },
+ {
+  "id": 1362,
+  "name": "BRYOSIS SOFT CAPS PVT.LTD,"
+ },
+ {
+  "id": 1363,
+  "name": "Global Organics Limited"
+ },
+ {
+  "id": 1364,
+  "name": "Labesfal Laboratories Almiro S.A"
+ },
+ {
+  "id": 1365,
+  "name": "GE Healthcare Ireland Limited"
+ },
+ {
+  "id": 1366,
+  "name": "TUTON PHARMACEUTICAL LIMITED"
+ },
+ {
+  "id": 1367,
+  "name": "AMA MEDICAL MANUFACTURING LIMITED"
+ },
+ {
+  "id": 1368,
+  "name": "Biological E. Limited"
+ },
+ {
+  "id": 1369,
+  "name": "HEALTH CARE FORMULATIONS PVT LTD,"
+ },
+ {
+  "id": 1370,
+  "name": "Healthcare Formulations Pvt Ltd"
+ },
+ {
+  "id": 1371,
+  "name": "Pfizer Ireland Pharmaceuticals"
+ },
+ {
+  "id": 1373,
+  "name": "Krux Pharma Pvt. Ltd"
+ },
+ {
+  "id": 1374,
+  "name": "The ACME Laboratories Ltd"
+ },
+ {
+  "id": 1375,
+  "name": "MERCKLE GMBH"
+ },
+ {
+  "id": 1376,
+  "name": "Shandong Kexing Bioproducts CO. LTD"
+ },
+ {
+  "id": 1377,
+  "name": "GLOBELA LABORATORIES PRIVATE LIMITED"
+ },
+ {
+  "id": 1378,
+  "name": "RECIPHARM PHARMASERVICES PVT LTD"
+ },
+ {
+  "id": 1379,
+  "name": "Delpharm Poznan"
+ },
+ {
+  "id": 1380,
+  "name": "Carlos Pharmaceuticals Limited"
+ },
+ {
+  "id": 1381,
+  "name": "EMIL PHARMACEUTICAL INDUSTRIES PVT LTD"
+ },
+ {
+  "id": 1382,
+  "name": "M/S LABORAtE PHARMACEUTICAL INDIA LTD,"
+ },
+ {
+  "id": 1383,
+  "name": "TOT BIOPHARM CO., LTD"
+ },
+ {
+  "id": 1384,
+  "name": "DAILY NEED IND LTD"
+ },
+ {
+  "id": 1385,
+  "name": "UGO LAB PRODUCTIONS NIGERIA LIMITED"
+ },
+ {
+  "id": 1386,
+  "name": "Delpharm Milano S.r.l"
+ },
+ {
+  "id": 1387,
+  "name": "Orley Laboratories Pvt. Ltd"
+ },
+ {
+  "id": 1388,
+  "name": "RPG LIFE SCIENCES LIMITED"
+ },
+ {
+  "id": 1389,
+  "name": "LRE Medical GmbH"
+ },
+ {
+  "id": 1390,
+  "name": "Vital Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 1391,
+  "name": "Accent Pharmaceuticals & Diagnostics"
+ },
+ {
+  "id": 1392,
+  "name": "KGN PHARMACEUT6ICALS PVT.LTD"
+ },
+ {
+  "id": 1393,
+  "name": "Delpharm Gaillard"
+ },
+ {
+  "id": 1394,
+  "name": "MAGZO PHARMACEUTICAL & LABS LTD"
+ },
+ {
+  "id": 1395,
+  "name": "Virjo Healthcare Pvt. Ltd"
+ },
+ {
+  "id": 1396,
+  "name": "AbbVie Limited"
+ },
+ {
+  "id": 1397,
+  "name": "GLUMEX PHARMACEUTICALS MFG. PVT. LTD"
+ },
+ {
+  "id": 1398,
+  "name": "SPENSUS PHARMACEUTICALS PRIVATE LIMITED"
+ },
+ {
+  "id": 1399,
+  "name": "PharmEvo (PVT) Limited"
+ },
+ {
+  "id": 1400,
+  "name": "Mascot Health Series Pvt. Ltd"
+ },
+ {
+  "id": 1401,
+  "name": "KLM LABORATORIES PVT LTD"
+ },
+ {
+  "id": 1402,
+  "name": "Ancalima Lifesciences Limited"
+ },
+ {
+  "id": 1403,
+  "name": "ACDIMA INTERNATIONAL TRADIMG"
+ },
+ {
+  "id": 1404,
+  "name": "SANGHARSH LIFECARE PVT LTD"
+ },
+ {
+  "id": 1405,
+  "name": "M/s. AEVIAS HEALTHCARE"
+ },
+ {
+  "id": 1406,
+  "name": "Novartis Pharmaceutical Manufacturing LLC"
+ },
+ {
+  "id": 1407,
+  "name": "AbbVie S.r.l"
+ },
+ {
+  "id": 1408,
+  "name": "UNICOR PHARMATECH LLP"
+ },
+ {
+  "id": 1409,
+  "name": "CONCORD BIOTECH LIMITED"
+ },
+ {
+  "id": 1410,
+  "name": "TITANIUM TECHNOLOGIES (INDIA) PVT LTD"
+ },
+ {
+  "id": 1411,
+  "name": "HEALTHCARE PHARMACEUTICALS LTD"
+ },
+ {
+  "id": 1412,
+  "name": "ZAHIDI PHARMACEUTICALS PVT. LTD"
+ },
+ {
+  "id": 1413,
+  "name": "M/S FINEBIOTICS PHARMA LTD"
+ },
+ {
+  "id": 1414,
+  "name": "m/s shandon qidu pharmaceutical company limited"
+ },
+ {
+  "id": 1415,
+  "name": "Medisky Pharmaceuticals PVT. Ltd"
+ },
+ {
+  "id": 1416,
+  "name": "OPELLA HEALTHCARE INTERNATIONAL"
+ },
+ {
+  "id": 1417,
+  "name": "SANOFI-AVENTIS S.A"
+ },
+ {
+  "id": 1418,
+  "name": "JOLYD PHARMACY NIGERIA LIMITED"
+ },
+ {
+  "id": 1419,
+  "name": "skant Healthcare Ltd"
+ },
+ {
+  "id": 1420,
+  "name": "RATHOD PHARMA CHEM PVT. LTD"
+ },
+ {
+  "id": 1421,
+  "name": "Jiangsu Shanfang Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 1422,
+  "name": "ANCHORAGE PHARMACEUTICAL INDUSTRIES LIMITED"
+ },
+ {
+  "id": 1423,
+  "name": "Dr. Miltons Laboratories Private Limited"
+ },
+ {
+  "id": 1424,
+  "name": "Dr Miltons Laboratories Private Limited"
+ },
+ {
+  "id": 1425,
+  "name": "Oscar Medicare Pvt Ltd"
+ },
+ {
+  "id": 1426,
+  "name": "MORGAN PILLAY SURGICAL MANUFACTURERS (PTY) LTD"
+ },
+ {
+  "id": 1427,
+  "name": "A-ONE COTTON WOOL & FOODS"
+ },
+ {
+  "id": 1428,
+  "name": "TRANSGREEN NIGERIA LIMITED"
+ },
+ {
+  "id": 1429,
+  "name": "NUBENO HEALTHCARE PVT LTD,"
+ },
+ {
+  "id": 1430,
+  "name": "M/S Medicube Healthcare Private Limited"
+ },
+ {
+  "id": 1431,
+  "name": "Medreich Ltd"
+ },
+ {
+  "id": 1432,
+  "name": "SHANGHAI STARRY PHARMACEUTICAL CO., LTD"
+ },
+ {
+  "id": 1433,
+  "name": "AMAR PRODUCTS"
+ },
+ {
+  "id": 1434,
+  "name": "RICO PHARMACEUTICAL INDUSTRIES LIMITED"
+ },
+ {
+  "id": 1435,
+  "name": "SAG MANUFACTURING S.L.U."
+ },
+ {
+  "id": 1436,
+  "name": "Swift Life Sciences Pvt Ltd"
+ },
+ {
+  "id": 1437,
+  "name": "SIDOM PHARMACEUTICAL NIGERIA LIMITED"
+ },
+ {
+  "id": 1438,
+  "name": "S. C. SANDOZ SRL"
+ },
+ {
+  "id": 1439,
+  "name": "Blutris Healthcare Pvt Ltd"
+ },
+ {
+  "id": 1440,
+  "name": "EUREKA LIFE SCIENCES"
+ },
+ {
+  "id": 1441,
+  "name": "M/S. HINDUSTAN POLYFAB"
+ },
+ {
+  "id": 1442,
+  "name": "AlfaSigma S.p.A"
+ },
+ {
+  "id": 1443,
+  "name": "Ferrer Internacional"
+ },
+ {
+  "id": 1444,
+  "name": "BASE MEDICO PRIVATE LIMITED"
+ },
+ {
+  "id": 1445,
+  "name": "FULTON MEDICINALI S.p.A"
+ },
+ {
+  "id": 1446,
+  "name": "TUV visko Pharmaceutical Industries Limited"
+ },
+ {
+  "id": 1447,
+  "name": "KLUSYL INTERNATIONAL LTD"
+ },
+ {
+  "id": 1448,
+  "name": "N.V. Organon"
+ },
+ {
+  "id": 1449,
+  "name": "HARDIS AND DROMEDAS LIMITED"
+ },
+ {
+  "id": 1450,
+  "name": "Hangzhou Aichek Medical Technology Co Ltd"
+ },
+ {
+  "id": 1451,
+  "name": "KAMLAAMRUT PHARMACEUTICAL LLP"
+ },
+ {
+  "id": 1452,
+  "name": "GENETEK LIFESCIENCES PVT. LTD"
+ },
+ {
+  "id": 1453,
+  "name": "Ningbo Shuangwei Pharmaceutical Co. Ltd"
+ },
+ {
+  "id": 1454,
+  "name": "ANALIFE HEALTHCARE LTD"
+ },
+ {
+  "id": 1455,
+  "name": "M.J. BIOPHARM PVT LIMITED"
+ },
+ {
+  "id": 1456,
+  "name": "AXA PARENTERALS LTD"
+ },
+ {
+  "id": 1457,
+  "name": "MUJID PHARMA PVT LTD"
+ },
+ {
+  "id": 1458,
+  "name": "Haleon CH SARL,"
+ },
+ {
+  "id": 1459,
+  "name": "ACTAVIS LIMITED"
+ },
+ {
+  "id": 1460,
+  "name": "HILTON PHARMA (PVT) LTD"
+ },
+ {
+  "id": 1461,
+  "name": "Swiss Parfental Pvt Ltd"
+ },
+ {
+  "id": 1462,
+  "name": "P&C Products Srl"
+ },
+ {
+  "id": 1463,
+  "name": "EuBiologics Co, Ltd"
+ },
+ {
+  "id": 1464,
+  "name": "MSD International GmbH"
+ },
+ {
+  "id": 1465,
+  "name": "DANO VACCINES & BIOLOGICALS PRIVATE LIMITED"
+ },
+ {
+  "id": 1466,
+  "name": "CEVA ANIMAL HEALTH, LLC"
+ },
+ {
+  "id": 1467,
+  "name": "BIOVETA, a.s, BIOVETA"
+ },
+ {
+  "id": 1468,
+  "name": "LABORATORIOS HIPRA SA"
+ },
+ {
+  "id": 1469,
+  "name": "CEVA-PHYLAXIA VETERINARY BIOLOGICALS CO. LTD"
+ },
+ {
+  "id": 1470,
+  "name": "LLC «BIOTESTLAB»"
+ },
+ {
+  "id": 1471,
+  "name": "Egis Pharmaceuticals PLC"
+ },
+ {
+  "id": 1472,
+  "name": "Zaklady Farmaceutyczne Polpharma SA"
+ },
+ {
+  "id": 1473,
+  "name": "HINDUSTAN PHARMA"
+ },
+ {
+  "id": 1474,
+  "name": "Fosen Pharmaceuticals Ltd"
+ },
+ {
+  "id": 1475,
+  "name": "MICROPHARM LTD UK"
+ },
+ {
+  "id": 1476,
+  "name": "INNOGENE KALBIOTECH PTE LTD"
+ },
+ {
+  "id": 1477,
+  "name": "PT KALBIO GLOBAL MEDIKA"
+ },
+ {
+  "id": 1478,
+  "name": "GSK vaccines S.r.l."
+ },
+ {
+  "id": 1479,
+  "name": "INSTITUTO CLODOMIRO PICADO"
+ },
+ {
+  "id": 1480,
+  "name": "M/s Biological E. Limited"
+ },
+ {
+  "id": 1481,
+  "name": "Trinix Pharma Private Limited"
+ },
+ {
+  "id": 1482,
+  "name": "CMIC CMO Co., Ltd"
+ },
+ {
+  "id": 1483,
+  "name": "OM BIOMEDIC PVT. LTD"
+ },
+ {
+  "id": 1484,
+  "name": "OLIVE PHARMASCIENCE LIMITED"
+ },
+ {
+  "id": 1485,
+  "name": "P & C Products s.r.l."
+ },
+ {
+  "id": 1486,
+  "name": "M/S CHIROS PHARMA"
+ },
+ {
+  "id": 1487,
+  "name": "M/S MICRO LABS LIMITED"
+ },
+ {
+  "id": 1488,
+  "name": "Actoverco Pharmaceutical Company"
+ },
+ {
+  "id": 1489,
+  "name": "Suzhou Erye Pharmaceutical Co., Ltd"
+ },
+ {
+  "id": 1490,
+  "name": "KASHMIK FORMULATION PVT. LTD"
+ },
+ {
+  "id": 1491,
+  "name": "SAM-ACE LIMITED"
+ },
+ {
+  "id": 1492,
+  "name": "M.C.I. Sante Animale"
+ },
+ {
+  "id": 1493,
+  "name": "VENKATESHWARA HATCHERIES PVT.LTD"
+ },
+ {
+  "id": 1494,
+  "name": "M/s. Hetero Biopharma Limited"
+ },
+ {
+  "id": 1495,
+  "name": "HETERO BIOPHARMA LIMITED"
+ },
+ {
+  "id": 1496,
+  "name": "Shenzhen Techdow Pharmaceutical Co., Ltd."
+ },
+ {
+  "id": 1497,
+  "name": "SHENZHEN KANGTAI BIOLOGICAL PRODUCT CO LTD"
+ },
+ {
+  "id": 1498,
+  "name": "Genzyme Ireland Ltd"
+ },
+ {
+  "id": 1499,
+  "name": "SERUM INSTITUTE OF INDIA PVT. LTD."
+ },
+ {
+  "id": 1500,
+  "name": "RYZER PHARMACETICALS"
+ },
+ {
+  "id": 1501,
+  "name": "M/S MEDICO REMEDIES LTD"
+ },
+ {
+  "id": 1502,
+  "name": "Mylan Laboratories SAS"
+ },
+ {
+  "id": 1503,
+  "name": "Hiranis Pharmaceuticals (Pvt.) Ltd"
+ },
+ {
+  "id": 1504,
+  "name": "INDUS PHARM PRIVATE LIMITED"
+ },
+ {
+  "id": 1505,
+  "name": "Aspin Pharma Pvt.Ltd"
+ },
+ {
+  "id": 1506,
+  "name": "M/S MCCOY PHARMA PVT LTD"
+ },
+ {
+  "id": 1507,
+  "name": "PharmEvo (Pvt.) Ltd."
+ },
+ {
+  "id": 1508,
+  "name": "SYNMEDIC LABORATORIES"
+ },
+ {
+  "id": 1509,
+  "name": "M/S CURETECH SKINCARE"
+ },
+ {
+  "id": 1510,
+  "name": "M/S ALPA LABOURATORIES LIMITED"
+ },
+ {
+  "id": 1511,
+  "name": "DEEP PHARMA"
+ },
+ {
+  "id": 1512,
+  "name": "Trinacx Pharmaceutical limited"
+ },
+ {
+  "id": 1513,
+  "name": "Vixa pharmaceutical company limited"
+ }
+]

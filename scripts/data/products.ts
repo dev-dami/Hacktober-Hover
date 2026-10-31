@@ -13,6 +13,11 @@ export interface Issue {
 export interface LoadOptions {
   /** Fixture mode: fictional demo data, no official source URL required. */
   fixture?: boolean;
+  /**
+   * Strict (default, for hand-entered data): row problems are errors.
+   * Lenient (for crawled data): unusable rows are skipped with a warning.
+   */
+  strict?: boolean;
   today?: string;
 }
 
@@ -20,6 +25,8 @@ const REQUIRED: CsvColumn[] = ["product_name", "registration_number", "checked_a
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 // Common NAFDAC shapes: A4-1234, 04-1234, B1-1234, A11-0123, A7-1234L. Warn only; formats vary.
 const REG_NO_SHAPE = /^[A-Z]{0,2}\d{1,2}-\d{3,6}[A-Z]?$/;
+// Placeholders seen in the register instead of a real number.
+const PLACEHOLDER_REG_NO = /^(NA|N\/A|NIL|NONE|NOTAVAILABLE(YET)?|-+)$/;
 
 function emptyToNull(value: string): string | null {
   const trimmed = value.trim().replace(/\s+/g, " ");
@@ -47,17 +54,28 @@ export function loadProductsCsv(text: string, options: LoadOptions = {}) {
   if (unknown.length) issues.push({ level: "error", row: 1, message: `Unknown columns: ${unknown.join(", ")}` });
   if (missing.length || unknown.length) return { records, issues };
 
-  const seen = new Map<string, number>();
+  const strict = options.strict ?? true;
+  const seenNumbers = new Map<string, number>(); // registration number -> first row
+  const seenContent = new Map<string, number>(); // name|strength|manufacturer|number -> first row
   body.forEach((cells, index) => {
     const rowNumber = index + 2;
-    const error = (message: string) => issues.push({ level: "error", row: rowNumber, message });
     const warn = (message: string) => issues.push({ level: "warning", row: rowNumber, message });
+    const error = strict
+      ? (message: string) => issues.push({ level: "error", row: rowNumber, message })
+      : (message: string) => warn(`skipped: ${message}`);
 
     if (cells.length !== columns.length) {
       error(`Expected ${columns.length} cells, found ${cells.length} (check for unquoted commas)`);
       return;
     }
     const raw = Object.fromEntries(columns.map((c, i) => [c, cells[i] ?? ""])) as RawProductRow;
+    if (PLACEHOLDER_REG_NO.test(normalizeRegistrationNumber(raw.registration_number))) {
+      raw.registration_number = "";
+    }
+    if (/\(duplicate\)/i.test(raw.product_name)) {
+      warn(`skipped: "${raw.product_name.trim()}" is marked as a duplicate entry in the source`);
+      return;
+    }
 
     let ok = true;
     for (const column of REQUIRED) {
@@ -102,17 +120,26 @@ export function loadProductsCsv(text: string, options: LoadOptions = {}) {
     if (registrationNumber && !options.fixture && !REG_NO_SHAPE.test(registrationNumber)) {
       warn(`registration_number "${registrationNumber}" has an unusual shape; double-check it`);
     }
-    if (registrationNumber) {
-      const firstRow = seen.get(registrationNumber);
-      if (firstRow) {
-        error(`Duplicate registration_number ${registrationNumber} (first seen on row ${firstRow})`);
-        ok = false;
-      } else {
-        seen.set(registrationNumber, rowNumber);
-      }
+    if (!ok) return;
+
+    // Identical repeats are dropped. Different products sharing a number are both kept:
+    // the official register really contains such conflicts, and the app should surface them.
+    const contentKey = [raw.product_name, raw.strength, raw.manufacturer, registrationNumber]
+      .map((v) => v.toLowerCase().replace(/\s+/g, " ").trim())
+      .join("|");
+    const identicalRow = seenContent.get(contentKey);
+    if (identicalRow) {
+      warn(`skipped: identical to row ${identicalRow} (${registrationNumber})`);
+      return;
+    }
+    seenContent.set(contentKey, rowNumber);
+    const sharedRow = seenNumbers.get(registrationNumber);
+    if (sharedRow) {
+      warn(`registration_number ${registrationNumber} is shared with a different product on row ${sharedRow}; both kept`);
+    } else {
+      seenNumbers.set(registrationNumber, rowNumber);
     }
 
-    if (!ok) return;
     records.push({
       productName: emptyToNull(raw.product_name)!,
       activeIngredients: raw.active_ingredients

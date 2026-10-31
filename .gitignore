@@ -2,6 +2,8 @@
 node_modules
 .next
 .tmp
+apps/nafdac-verify/data/ocr/
+apps/api/storage/
 
 # output
 out

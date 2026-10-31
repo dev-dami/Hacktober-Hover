@@ -58,14 +58,30 @@ describe("loadProductsCsv", () => {
   test("rejects non-NAFDAC sources, future dates and duplicates", () => {
     const bad = REAL_ROW.replace("greenbook.nafdac.gov.ng", "example.com");
     const future = REAL_ROW.replace("2026-10-30", "2027-01-01").replace("a4 - 1234", "A4-9999");
-    const { records, issues } = loadProductsCsv(`${HEADER}\n${REAL_ROW}\n${bad}\n${future}\n`, {
+    const { records, issues } = loadProductsCsv(`${HEADER}\n${REAL_ROW}\n${bad}\n${future}\n${REAL_ROW}\n`, {
       today: "2026-10-31",
     });
     expect(records).toHaveLength(1);
-    const messages = issues.map((i) => i.message).join("\n");
-    expect(messages).toContain("must be an official nafdac.gov.ng page");
-    expect(messages).toContain("Duplicate registration_number A4-1234");
-    expect(messages).toContain("is in the future");
+    const errors = issues.filter((i) => i.level === "error").map((i) => i.message).join("\n");
+    expect(errors).toContain("must be an official nafdac.gov.ng page");
+    expect(errors).toContain("is in the future");
+    expect(issues.find((i) => i.message.includes("identical to row 2"))?.level).toBe("warning");
+  });
+  test("keeps different products that share a number; drops marked duplicates and placeholders", () => {
+    const other = REAL_ROW.replace("Sample Tab", "Other Caps").replace("/products/1", "/products/2");
+    const marked = REAL_ROW.replace("Sample Tab", "Sample Tab (duplicate)");
+    const placeholder = REAL_ROW.replace("a4 - 1234", "NOTAVAILABLEYET").replace("Sample Tab", "Third");
+    const csv = `${HEADER}\n${REAL_ROW}\n${other}\n${marked}\n${placeholder}\n`;
+
+    const lenient = loadProductsCsv(csv, { today: "2026-10-31", strict: false });
+    expect(lenient.records.map((r) => r.productName)).toEqual(["Sample Tab", "Other Caps"]);
+    expect(lenient.issues.every((i) => i.level === "warning")).toBe(true);
+    expect(lenient.issues.map((i) => i.message).join("\n")).toContain("shared with a different product");
+
+    const strict = loadProductsCsv(csv, { today: "2026-10-31" });
+    expect(strict.issues.filter((i) => i.level === "error").map((i) => i.message)).toEqual([
+      "registration_number is required",
+    ]);
   });
   test("rejects missing columns", () => {
     const { issues } = loadProductsCsv("product_name,registration_number\n");
@@ -107,6 +123,14 @@ describe("generate", () => {
     const second = generate(records, 54);
     expect(first).toEqual(second);
     expect(first.valProducts.some((p) => first.trainProducts.includes(p))).toBe(false);
+
+    // Products sharing a registration number never straddle the split.
+    const shared = records.map((r, i) => ({ ...r, productName: `Copy ${i}`, registrationNumber: records[0]!.registrationNumber }));
+    for (const seed of [1, 2, 3, 7]) {
+      // Fixture records have no source URL, so the returned ids are registration numbers.
+      const split = generate([...records, ...shared], seed);
+      expect(split.valProducts.some((p) => split.trainProducts.includes(p))).toBe(false);
+    }
 
     const all = [...first.train, ...first.val];
     const labels = new Set(all.map((e) => e.label));

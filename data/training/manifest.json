@@ -1,0 +1,88 @@
+{
+  "source": "C:\\Users\\hp\\Hacktober-Hover\\data\\processed\\normalized-products.json",
+  "seed": 54,
+  "max_products": "40",
+  "records_available": 8869,
+  "synthetic": true,
+  "note": "Synthetic discrepancy examples derived from verified records. Not evidence of real counterfeits.",
+  "products": {
+    "train": [
+      "https://greenbook.nafdac.gov.ng/products/details/11989",
+      "https://greenbook.nafdac.gov.ng/products/details/8431",
+      "https://greenbook.nafdac.gov.ng/products/details/8703",
+      "https://greenbook.nafdac.gov.ng/products/details/9530",
+      "https://greenbook.nafdac.gov.ng/products/details/4704",
+      "https://greenbook.nafdac.gov.ng/products/details/9460",
+      "https://greenbook.nafdac.gov.ng/products/details/9446",
+      "https://greenbook.nafdac.gov.ng/products/details/10500",
+      "https://greenbook.nafdac.gov.ng/products/details/11994",
+      "https://greenbook.nafdac.gov.ng/products/details/5915",
+      "https://greenbook.nafdac.gov.ng/products/details/4728",
+      "https://greenbook.nafdac.gov.ng/products/details/691",
+      "https://greenbook.nafdac.gov.ng/products/details/6118",
+      "https://greenbook.nafdac.gov.ng/products/details/3848",
+      "https://greenbook.nafdac.gov.ng/products/details/9622",
+      "https://greenbook.nafdac.gov.ng/products/details/2842",
+      "https://greenbook.nafdac.gov.ng/products/details/441",
+      "https://greenbook.nafdac.gov.ng/products/details/12016",
+      "https://greenbook.nafdac.gov.ng/products/details/10917",
+      "https://greenbook.nafdac.gov.ng/products/details/5047",
+      "https://greenbook.nafdac.gov.ng/products/details/73",
+      "https://greenbook.nafdac.gov.ng/products/details/10463",
+      "https://greenbook.nafdac.gov.ng/products/details/11953",
+      "https://greenbook.nafdac.gov.ng/products/details/4909",
+      "https://greenbook.nafdac.gov.ng/products/details/3985",
+      "https://greenbook.nafdac.gov.ng/products/details/12376",
+      "https://greenbook.nafdac.gov.ng/products/details/3748",
+      "https://greenbook.nafdac.gov.ng/products/details/8463",
+      "https://greenbook.nafdac.gov.ng/products/details/11250",
+      "https://greenbook.nafdac.gov.ng/products/details/11941",
+      "https://greenbook.nafdac.gov.ng/products/details/9932",
+      "https://greenbook.nafdac.gov.ng/products/details/4692"
+    ],
+    "val": [
+      "https://greenbook.nafdac.gov.ng/products/details/5919",
+      "https://greenbook.nafdac.gov.ng/products/details/218",
+      "https://greenbook.nafdac.gov.ng/products/details/10203",
+      "https://greenbook.nafdac.gov.ng/products/details/12403",
+      "https://greenbook.nafdac.gov.ng/products/details/10587",
+      "https://greenbook.nafdac.gov.ng/products/details/65",
+      "https://greenbook.nafdac.gov.ng/products/details/7960",
+      "https://greenbook.nafdac.gov.ng/products/details/8337"
+    ]
+  },
+  "counts": {
+    "train": {
+      "total": 376,
+      "byLabel": {
+        "unverified": 64,
+        "record_match": 128,
+        "record_mismatch": 152,
+        "not_found": 32
+      },
+      "byVariant": {
+        "missing_registration_number": 32,
+        "unreadable_manufacturer": 32,
+        "manufacturer_differs": 32,
+        "lookup_not_found": 32,
+        "strength_differs": 24,
+        "exact_match": 32,
+        "not_checked": 32,
+        "registration_number_differs": 32,
+        "formatting_differences": 32,
+        "expired_packaging": 32,
+        "product_name_differs": 32,
+        "manufacturer_and_name_differ": 32
+      }
+    },
+    "val": {
+      "total": 94,
+      "byLabel": {
+        "unverified": 16,
+        "record_match": 32,
+        "not_found": 8,
+        "record_mismatch": 38
+      }
+    }
+  }
+}

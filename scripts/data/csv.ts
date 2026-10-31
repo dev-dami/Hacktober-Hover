@@ -1,3 +1,11 @@
+function escapeCell(value: string): string {
+  return /[",\r\n]/.test(value) ? `"${value.replaceAll('"', '""')}"` : value;
+}
+
+export function toCsv(rows: string[][]): string {
+  return rows.map((row) => row.map(escapeCell).join(",")).join("\n") + "\n";
+}
+
 /** Minimal RFC 4180 CSV parser: quoted fields, escaped quotes, CRLF, and the BOM Excel adds. */
 export function parseCsv(text: string): string[][] {
   const rows: string[][] = [];

@@ -1,106 +1,106 @@
 [
-  {
-    "productName": "SampleMed 500",
-    "activeIngredients": [
-      "Paracetamol"
-    ],
-    "strength": "500 mg",
-    "dosageForm": "Tablet",
-    "registrationNumber": "DEMO-0001",
-    "manufacturer": "ABC Labs Ltd",
-    "applicant": "ABC Labs Ltd",
-    "category": "Drug",
-    "approvalStatus": "Active",
-    "approvalDate": "2024-01-15",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-31",
-    "notes": "Fictional fixture for UI and pipeline testing"
-  },
-  {
-    "productName": "DemoCough Syrup",
-    "activeIngredients": [
-      "Dextromethorphan",
-      "Guaifenesin"
-    ],
-    "strength": "15 mg/5 ml",
-    "dosageForm": "Syrup",
-    "registrationNumber": "DEMO-0002",
-    "manufacturer": "XYZ Labs Ltd",
-    "applicant": "XYZ Labs Ltd",
-    "category": "Drug",
-    "approvalStatus": "Active",
-    "approvalDate": "2023-06-02",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-31",
-    "notes": "Fictional fixture for UI and pipeline testing"
-  },
-  {
-    "productName": "TestaCillin 250",
-    "activeIngredients": [
-      "Amoxicillin"
-    ],
-    "strength": "250 mg",
-    "dosageForm": "Capsule",
-    "registrationNumber": "DEMO-0003",
-    "manufacturer": "Demo Pharma Ltd",
-    "applicant": "Demo Pharma Ltd",
-    "category": "Drug",
-    "approvalStatus": "Active",
-    "approvalDate": "2022-11-20",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-31",
-    "notes": "Fictional fixture for UI and pipeline testing"
-  },
-  {
-    "productName": "ExampleZinc 20",
-    "activeIngredients": [
-      "Zinc sulphate"
-    ],
-    "strength": "20 mg",
-    "dosageForm": "Dispersible tablet",
-    "registrationNumber": "DEMO-0004",
-    "manufacturer": "Example Health Ltd",
-    "applicant": "Example Health Ltd",
-    "category": "Drug",
-    "approvalStatus": "Active",
-    "approvalDate": "2025-03-08",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-31",
-    "notes": "Fictional fixture for UI and pipeline testing"
-  },
-  {
-    "productName": "MockVit C 100",
-    "activeIngredients": [
-      "Ascorbic acid"
-    ],
-    "strength": "100 mg",
-    "dosageForm": "Chewable tablet",
-    "registrationNumber": "DEMO-0005",
-    "manufacturer": "ABC Labs Ltd",
-    "applicant": "ABC Labs Ltd",
-    "category": "Drug",
-    "approvalStatus": "Active",
-    "approvalDate": "2021-09-14",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-31",
-    "notes": "Fictional fixture for UI and pipeline testing"
-  },
-  {
-    "productName": "PlaceholderFer",
-    "activeIngredients": [
-      "Ferrous sulphate",
-      "Folic acid"
-    ],
-    "strength": "200 mg; 0.4 mg",
-    "dosageForm": "Tablet",
-    "registrationNumber": "DEMO-0006",
-    "manufacturer": "Sample Generics Ltd",
-    "applicant": "Sample Generics Ltd",
-    "category": "Drug",
-    "approvalStatus": "Expired",
-    "approvalDate": "2019-04-30",
-    "sourceUrl": null,
-    "checkedAt": "2026-10-31",
-    "notes": "Fictional fixture with a non-active status"
-  }
+ {
+  "productName": "SampleMed 500",
+  "activeIngredients": [
+   "Paracetamol"
+  ],
+  "strength": "500 mg",
+  "dosageForm": "Tablet",
+  "registrationNumber": "DEMO-0001",
+  "manufacturer": "ABC Labs Ltd",
+  "applicant": "ABC Labs Ltd",
+  "category": "Drug",
+  "approvalStatus": "Active",
+  "approvalDate": "2024-01-15",
+  "sourceUrl": null,
+  "checkedAt": "2026-10-31",
+  "notes": "Fictional fixture for UI and pipeline testing"
+ },
+ {
+  "productName": "DemoCough Syrup",
+  "activeIngredients": [
+   "Dextromethorphan",
+   "Guaifenesin"
+  ],
+  "strength": "15 mg/5 ml",
+  "dosageForm": "Syrup",
+  "registrationNumber": "DEMO-0002",
+  "manufacturer": "XYZ Labs Ltd",
+  "applicant": "XYZ Labs Ltd",
+  "category": "Drug",
+  "approvalStatus": "Active",
+  "approvalDate": "2023-06-02",
+  "sourceUrl": null,
+  "checkedAt": "2026-10-31",
+  "notes": "Fictional fixture for UI and pipeline testing"
+ },
+ {
+  "productName": "TestaCillin 250",
+  "activeIngredients": [
+   "Amoxicillin"
+  ],
+  "strength": "250 mg",
+  "dosageForm": "Capsule",
+  "registrationNumber": "DEMO-0003",
+  "manufacturer": "Demo Pharma Ltd",
+  "applicant": "Demo Pharma Ltd",
+  "category": "Drug",
+  "approvalStatus": "Active",
+  "approvalDate": "2022-11-20",
+  "sourceUrl": null,
+  "checkedAt": "2026-10-31",
+  "notes": "Fictional fixture for UI and pipeline testing"
+ },
+ {
+  "productName": "ExampleZinc 20",
+  "activeIngredients": [
+   "Zinc sulphate"
+  ],
+  "strength": "20 mg",
+  "dosageForm": "Dispersible tablet",
+  "registrationNumber": "DEMO-0004",
+  "manufacturer": "Example Health Ltd",
+  "applicant": "Example Health Ltd",
+  "category": "Drug",
+  "approvalStatus": "Active",
+  "approvalDate": "2025-03-08",
+  "sourceUrl": null,
+  "checkedAt": "2026-10-31",
+  "notes": "Fictional fixture for UI and pipeline testing"
+ },
+ {
+  "productName": "MockVit C 100",
+  "activeIngredients": [
+   "Ascorbic acid"
+  ],
+  "strength": "100 mg",
+  "dosageForm": "Chewable tablet",
+  "registrationNumber": "DEMO-0005",
+  "manufacturer": "ABC Labs Ltd",
+  "applicant": "ABC Labs Ltd",
+  "category": "Drug",
+  "approvalStatus": "Active",
+  "approvalDate": "2021-09-14",
+  "sourceUrl": null,
+  "checkedAt": "2026-10-31",
+  "notes": "Fictional fixture for UI and pipeline testing"
+ },
+ {
+  "productName": "PlaceholderFer",
+  "activeIngredients": [
+   "Ferrous sulphate",
+   "Folic acid"
+  ],
+  "strength": "200 mg; 0.4 mg",
+  "dosageForm": "Tablet",
+  "registrationNumber": "DEMO-0006",
+  "manufacturer": "Sample Generics Ltd",
+  "applicant": "Sample Generics Ltd",
+  "category": "Drug",
+  "approvalStatus": "Expired",
+  "approvalDate": "2019-04-30",
+  "sourceUrl": null,
+  "checkedAt": "2026-10-31",
+  "notes": "Fictional fixture with a non-active status"
+ }
 ]

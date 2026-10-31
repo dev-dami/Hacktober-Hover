@@ -31,9 +31,17 @@ interface Variant {
   build(ctx: VariantContext): { scanned: ScannedLabel; reference: Reference } | null;
 }
 
+type PoolField = "productName" | "manufacturer" | "registrationNumber";
+
+/** Distinct values across all records, built once so variants don't rescan the dataset. */
+interface Pools {
+  values: Record<PoolField, string[]>;
+  knownRegistrationNumbers: Set<string>;
+}
+
 interface VariantContext {
   record: ProductRecord;
-  pool: ProductRecord[];
+  pools: Pools;
   rng: () => number;
   validExpiry: string;
   expiredExpiry: string;
@@ -70,17 +78,28 @@ function addMonths(isoDate: string, months: number): string {
   return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}`;
 }
 
-/** A value from another product that differs from `current` after normalization. */
-function otherValue(
-  ctx: VariantContext,
-  get: (r: ProductRecord) => string | null,
-  normalize: (v: string) => string,
-): string | null {
-  const current = get(ctx.record);
-  const candidates = ctx.pool
-    .map(get)
-    .filter((v): v is string => !!v && (!current || normalize(v) !== normalize(current)));
-  return pick([...new Set(candidates)], ctx.rng);
+export function buildPools(records: ProductRecord[]): Pools {
+  const distinct = (field: PoolField) => [...new Set(records.map((r) => r[field]).filter((v): v is string => !!v))];
+  return {
+    values: {
+      productName: distinct("productName"),
+      manufacturer: distinct("manufacturer"),
+      registrationNumber: distinct("registrationNumber"),
+    },
+    knownRegistrationNumbers: new Set(records.map((r) => normalizeRegistrationNumber(r.registrationNumber))),
+  };
+}
+
+/** A value from another product that differs from the target's after normalization. */
+function otherValue(ctx: VariantContext, field: PoolField, normalize: (v: string) => string): string | null {
+  const current = ctx.record[field];
+  const values = ctx.pools.values[field];
+  for (let attempt = 0; attempt < 50; attempt++) {
+    const candidate = pick(values, ctx.rng);
+    if (candidate === null) return null;
+    if (!current || normalize(candidate) !== normalize(current)) return candidate;
+  }
+  return null;
 }
 
 function scannedFrom(record: ProductRecord, expiryDate: string): ScannedLabel {
@@ -103,7 +122,7 @@ function doubledStrength(strength: string | null): string | null {
 
 /** A registration number shaped like the original but absent from the pool. */
 function unknownRegistrationNumber(ctx: VariantContext): string {
-  const known = new Set(ctx.pool.map((r) => normalizeRegistrationNumber(r.registrationNumber)));
+  const known = ctx.pools.knownRegistrationNumbers;
   const reg = ctx.record.registrationNumber;
   const digits = /(\d+)(?!.*\d)/.exec(reg);
   for (let attempt = 0; attempt < 50; attempt++) {
@@ -137,7 +156,7 @@ export const VARIANTS: Variant[] = [
   {
     name: "manufacturer_differs",
     build: (ctx) => {
-      const other = otherValue(ctx, (r) => r.manufacturer, normalizeText);
+      const other = otherValue(ctx, "manufacturer", normalizeText);
       if (!other || !ctx.record.manufacturer) return null;
       return { scanned: { ...scannedFrom(ctx.record, ctx.validExpiry), manufacturer: other }, reference: record(ctx.record) };
     },
@@ -145,7 +164,7 @@ export const VARIANTS: Variant[] = [
   {
     name: "product_name_differs",
     build: (ctx) => {
-      const other = otherValue(ctx, (r) => r.productName, normalizeText);
+      const other = otherValue(ctx, "productName", normalizeText);
       if (!other) return null;
       return { scanned: { ...scannedFrom(ctx.record, ctx.validExpiry), productName: other }, reference: record(ctx.record) };
     },
@@ -161,7 +180,7 @@ export const VARIANTS: Variant[] = [
   {
     name: "registration_number_differs",
     build: (ctx) => {
-      const other = otherValue(ctx, (r) => r.registrationNumber, normalizeRegistrationNumber);
+      const other = otherValue(ctx, "registrationNumber", normalizeRegistrationNumber);
       if (!other) return null;
       return {
         scanned: { ...scannedFrom(ctx.record, ctx.validExpiry), registrationNumber: other },
@@ -172,8 +191,8 @@ export const VARIANTS: Variant[] = [
   {
     name: "manufacturer_and_name_differ",
     build: (ctx) => {
-      const manufacturer = otherValue(ctx, (r) => r.manufacturer, normalizeText);
-      const productName = otherValue(ctx, (r) => r.productName, normalizeText);
+      const manufacturer = otherValue(ctx, "manufacturer", normalizeText);
+      const productName = otherValue(ctx, "productName", normalizeText);
       if (!manufacturer || !productName || !ctx.record.manufacturer) return null;
       return {
         scanned: { ...scannedFrom(ctx.record, ctx.validExpiry), manufacturer, productName },
@@ -254,10 +273,10 @@ export function buildPrompt(scanned: ScannedLabel, reference: Reference, scanDat
   return lines.join("\n");
 }
 
-export function examplesForRecord(target: ProductRecord, pool: ProductRecord[], rng: () => number) {
+export function examplesForRecord(target: ProductRecord, pools: Pools, rng: () => number) {
   const ctx: VariantContext = {
     record: target,
-    pool,
+    pools,
     rng,
     validExpiry: addMonths(target.checkedAt, 6 + Math.floor(rng() * 30)),
     expiredExpiry: addMonths(target.checkedAt, -(1 + Math.floor(rng() * 18))),
@@ -277,19 +296,32 @@ export function examplesForRecord(target: ProductRecord, pool: ProductRecord[], 
   return out;
 }
 
-export function generate(records: ProductRecord[], seed: number, valFraction = 0.2) {
+export interface GenerateOptions {
+  valFraction?: number;
+  /** Sample this many target products (all when omitted). Mismatch values still come from every record. */
+  maxProducts?: number;
+}
+
+export function generate(records: ProductRecord[], seed: number, options: GenerateOptions = {}) {
+  const { valFraction = 0.2, maxProducts = Infinity } = options;
   const rng = createRng(seed);
-  const products = shuffle(records, rng);
-  const valCount = products.length >= 5 ? Math.max(1, Math.round(products.length * valFraction)) : 0;
-  const valProducts = products.slice(0, valCount);
-  const trainProducts = products.slice(valCount);
+  const pools = buildPools(records);
+  const products = shuffle(records, rng).slice(0, maxProducts);
+  // Split by registration number: products that share a number stay on the same side.
+  const numbers = [...new Set(products.map((r) => normalizeRegistrationNumber(r.registrationNumber)))];
+  const valCount = numbers.length >= 5 ? Math.max(1, Math.round(numbers.length * valFraction)) : 0;
+  const valNumbers = new Set(numbers.slice(0, valCount));
+  const isVal = (r: ProductRecord) => valNumbers.has(normalizeRegistrationNumber(r.registrationNumber));
+  const valProducts = products.filter(isVal);
+  const trainProducts = products.filter((r) => !isVal(r));
   // Mismatch values are drawn from all records; only the target product decides the split.
-  const build = (group: ProductRecord[]) => shuffle(group.flatMap((r) => examplesForRecord(r, records, rng)), rng);
+  const build = (group: ProductRecord[]) => shuffle(group.flatMap((r) => examplesForRecord(r, pools, rng)), rng);
+  const ids = (group: ProductRecord[]) => group.map((r) => r.sourceUrl ?? r.registrationNumber);
   return {
     train: build(trainProducts),
     val: build(valProducts),
-    trainProducts: trainProducts.map((r) => r.registrationNumber),
-    valProducts: valProducts.map((r) => r.registrationNumber),
+    trainProducts: ids(trainProducts),
+    valProducts: ids(valProducts),
   };
 }
 
@@ -307,6 +339,8 @@ if (import.meta.main) {
       input: { type: "string", default: resolve(ROOT, "data/processed/normalized-products.json") },
       "out-dir": { type: "string", default: resolve(ROOT, "data/training") },
       seed: { type: "string", default: "54" },
+      // ~12 examples per product: 40 products -> ~480 examples. Use "all" for every record.
+      "max-products": { type: "string", default: "40" },
     },
   });
 
@@ -317,7 +351,8 @@ if (import.meta.main) {
   }
 
   const seed = Number(values.seed);
-  const { train, val, trainProducts, valProducts } = generate(records, seed);
+  const maxProducts = values["max-products"] === "all" ? Infinity : Number(values["max-products"]);
+  const { train, val, trainProducts, valProducts } = generate(records, seed, { maxProducts });
   const toJsonl = (items: Example[]) =>
     items.map(({ prompt, completion }) => JSON.stringify({ prompt, completion })).join("\n") + "\n";
 
@@ -329,6 +364,8 @@ if (import.meta.main) {
   const manifest = {
     source: values.input,
     seed,
+    max_products: values["max-products"],
+    records_available: records.length,
     synthetic: true,
     note: "Synthetic discrepancy examples derived from verified records. Not evidence of real counterfeits.",
     products: { train: trainProducts, val: valProducts },
@@ -339,7 +376,7 @@ if (import.meta.main) {
   };
   await Bun.write(resolve(outDir, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
 
-  console.log(`${records.length} products -> ${train.length} train / ${val.length} val examples in ${outDir}`);
+  console.log(`${trainProducts.length + valProducts.length} of ${records.length} products -> ${train.length} train / ${val.length} val examples in ${outDir}`);
   console.log("By label (train):", manifest.counts.train.byLabel);
-  if (records.length < 5) console.warn("Fewer than 5 products: no validation split was written.");
+  if (trainProducts.length + valProducts.length < 5) console.warn("Fewer than 5 products: no validation split was written.");
 }
