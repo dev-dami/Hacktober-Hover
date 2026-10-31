@@ -1,0 +1,7 @@
+product_name,active_ingredients,strength,dosage_form,registration_number,manufacturer,applicant,category,approval_status,approval_date,source_url,checked_at,notes
+SampleMed 500,Paracetamol,500 mg,Tablet,DEMO-0001,ABC Labs Ltd,ABC Labs Ltd,Drug,Active,2024-01-15,,2026-10-31,Fictional fixture for UI and pipeline testing
+DemoCough Syrup,Dextromethorphan; Guaifenesin,15 mg/5 ml,Syrup,DEMO-0002,XYZ Labs Ltd,XYZ Labs Ltd,Drug,Active,2023-06-02,,2026-10-31,Fictional fixture for UI and pipeline testing
+TestaCillin 250,Amoxicillin,250 mg,Capsule,DEMO-0003,Demo Pharma Ltd,Demo Pharma Ltd,Drug,Active,2022-11-20,,2026-10-31,Fictional fixture for UI and pipeline testing
+ExampleZinc 20,Zinc sulphate,20 mg,Dispersible tablet,DEMO-0004,Example Health Ltd,Example Health Ltd,Drug,Active,2025-03-08,,2026-10-31,Fictional fixture for UI and pipeline testing
+MockVit C 100,Ascorbic acid,100 mg,Chewable tablet,DEMO-0005,ABC Labs Ltd,ABC Labs Ltd,Drug,Active,2021-09-14,,2026-10-31,Fictional fixture for UI and pipeline testing
+PlaceholderFer,Ferrous sulphate; Folic acid,200 mg; 0.4 mg,Tablet,DEMO-0006,Sample Generics Ltd,Sample Generics Ltd,Drug,Expired,2019-04-30,,2026-10-31,Fictional fixture with a non-active status

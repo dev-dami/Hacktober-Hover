@@ -1,0 +1,24 @@
+{
+  "name": "hacktober-hover",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "bun run --filter nafdac-verify dev",
+    "build": "bun run --filter nafdac-verify build",
+    "lint": "bun run --filter nafdac-verify lint",
+    "data:check": "bun scripts/data/normalize.ts --check",
+    "data:normalize": "bun scripts/data/normalize.ts",
+    "data:training": "bun scripts/adaption/generate-training.ts",
+    "data:build": "bun run data:normalize && bun run data:training",
+    "data:demo": "bun scripts/data/normalize.ts --input data/demo/demo-products.csv --output data/demo/demo-products.json --fixture",
+    "test": "bun test scripts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  }
+}
